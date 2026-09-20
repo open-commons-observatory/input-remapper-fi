@@ -51,3 +51,5 @@ tagging, reading and honesty still hold). These are new, found while rebuilding 
 31. **A command is cut off after 300 seconds.** Run long acquisitions with `nohup` and poll a log.
 32. **Background servers vanish between turns.** Start the database with `fi db up` at the start of every command sequence, and export the token before it.
 33. **A handoff kept outside the repository drifts.** The first handoff was a separate file; it was not versioned and nobody would reopen it. The repository itself is the manual (see the decision record on this), read in full at the start of each session and updated as work goes on.
+34. **A gate that did not run looks exactly like a gate that passed.** `fi render >/dev/null && fi export >/dev/null` failed (wrong database: a bare `fi db up` in the template checkout had started the server on the template's data
+    directory), and the next line printed "files changed: 0". Check that each step succeeded before reading a count, and check which database the server is serving (`fi status`, or the server's working directory).

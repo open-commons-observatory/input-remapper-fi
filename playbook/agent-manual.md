@@ -22,6 +22,7 @@ The database server needs the token too, and **at start**: `export GITHUB_TOKEN`
 - The shell is `sh` (dash), not bash: no arrays, no `set -o pipefail`, no `<(...)`. Use `bash script.sh` for bash. Never nest heredocs with the same terminator.
 - One command may run at most 300 seconds. Run long jobs with `nohup ... &` and poll (`fi acquire` on a project with thousands of comments takes minutes).
 - Background servers may disappear between turns; the data directory survives while the sandbox does. `fi db up` is idempotent: call it first. After a reset only git and GitHub remain: `fi db pull` restores the database.
+- **One server serves one data directory, fixed when it starts.** A bare `fi db up` in another checkout (no `FI_HOME`), or the self-test, can leave a server running against a *different* database; `fi db up` then says "already running". Always export `FI_HOME` first, and check that `fi status` shows the database you expect before trusting any "no changes" result. `fi db up` now warns when the server was not started from this `FI_HOME`.
 - `pkill -f` and `pgrep -f` match their own command line and kill your shell: use `pkill -x doltgres`.
 - Never gate anything on a pipe: `cmd | tail` and `cmd | grep -q` hide the exit status or close the pipe early. Capture the output, check the status, then continue.
 

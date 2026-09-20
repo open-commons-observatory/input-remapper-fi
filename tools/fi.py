@@ -158,7 +158,11 @@ def taxonomy_sync(conn):
 # ---------------------------------------------------------------- db up / init / pull / push
 def cmd_db_up(a=None):
     if server_up():
-        print("database server already running")
+        if (home() / "server.pid").exists():
+            print("database server already running")
+        else:   # the data directory is fixed when a server starts; another FI_HOME (or a test) may have started this one
+            print(f"database server already running, but NOT started from {home()}: it may serve a different database. "
+                  "Check with `fi status`; to switch, stop it (`fi db down` from where it was started, or `pkill -x doltgres`) and run `fi db up`.")
         return
     binp = os.environ.get("DOLTGRES_BIN") or shutil.which("doltgres")
     if not binp:
