@@ -28,6 +28,12 @@ $A sql "INSERT INTO problem VALUES ('docs-missing', 'Docs are missing', 'Several
 $A sql "INSERT INTO problem_item VALUES ('docs-missing', 1)" --commit "test: register a problem"
 if $A sql "INSERT INTO tag VALUES (1, 'kind', 'not-a-kind')" 2>/dev/null; then fail "database accepted a tag outside the taxonomy"; fi
 
+# the file and the database must not silently disagree: `check` warns, `apply` refuses with a readable message
+grep -v "^      environment:" tests/fixtures/taxonomy.yaml > "$ATLAS_HOME/tax-drift.yaml"
+DRIFT_OUT="$(ATLAS_TAXONOMY="$ATLAS_HOME/tax-drift.yaml" $A check || true)"   # capture first: `| grep -q` closes the pipe early and pipefail turns that into a failure
+grep -q "taxonomy drift: value cause:environment is in database only" <<<"$DRIFT_OUT" || fail "drift not reported by check"
+if ATLAS_TAXONOMY="$ATLAS_HOME/tax-drift.yaml" $A apply tests/fixtures/batch-ok.tsv 2> "$ATLAS_HOME/drift.err"; then fail "apply must refuse when taxonomy.yaml and the database disagree"; fi
+grep -q "disagree" "$ATLAS_HOME/drift.err" || fail "expected a readable drift message"
 $A check || true
 $A status
 $A render --out "$ATLAS_HOME/out1"
@@ -45,5 +51,8 @@ $A export --dir "$ATLAS_HOME/e1"; $A export --dir "$ATLAS_HOME/e2"
 diff -r "$ATLAS_HOME/e1" "$ATLAS_HOME/e2" >/dev/null || fail "export is not deterministic"
 python tests/check_mkdocs.py
 [ ! -d .doltcfg ] || fail "server state leaked into the repository working directory"
+# undo: dolt_reset removes the last commit (documented in playbook/09-operate.md)
+$A sql "SELECT dolt_reset('--hard', 'HEAD~1')" >/dev/null
+[ "$($A sql "SELECT count(*) AS n FROM problem" | sed -n 3p | tr -d ' ')" = "0" ] || fail "dolt_reset did not undo the last commit"
 $A sql "SELECT 1" >/dev/null   # server still healthy
 echo "ALL TESTS PASSED"

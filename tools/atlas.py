@@ -109,6 +109,30 @@ def taxonomy():
     return t
 
 
+def taxonomy_from_db(conn):
+    tax = {r["name"]: {"multi": r["multi"], "values": {}} for r in conn.execute("SELECT name, multi FROM facet").fetchall()}
+    for r in conn.execute("SELECT facet, value, doc FROM facet_value").fetchall():
+        tax[r["facet"]]["values"][r["value"]] = r["doc"]
+    return tax
+
+
+def taxonomy_drift(conn):
+    """Differences between taxonomy.yaml and what the database holds (empty list = in sync)."""
+    yml, db, out = taxonomy(), taxonomy_from_db(conn), []
+    for f in sorted(set(yml) | set(db)):
+        if f not in db:
+            out.append(f"facet {f!r} is in taxonomy.yaml but not in the database")
+        elif f not in yml:
+            out.append(f"facet {f!r} is in the database but not in taxonomy.yaml")
+        else:
+            for v in sorted(set(yml[f]["values"]) ^ set(db[f]["values"])):
+                where = "taxonomy.yaml only" if v in yml[f]["values"] else "database only"
+                out.append(f"value {f}:{v} is in {where}")
+            if bool(yml[f].get("multi")) != bool(db[f]["multi"]):
+                out.append(f"facet {f!r}: multi differs between taxonomy.yaml and the database")
+    return out
+
+
 def taxonomy_sync(conn):
     t = taxonomy()
     for name, f in t.items():
@@ -358,7 +382,10 @@ def parse_batch(path, tax, item_ids):
 
 def cmd_apply(a):
     with connect() as conn:
-        tax = taxonomy()
+        drift = taxonomy_drift(conn)
+        if drift:
+            die("taxonomy.yaml and the database disagree; run `atlas db init` to load the file (or fix the file):\n  " + "\n  ".join(drift[:8]))
+        tax = taxonomy_from_db(conn)
         ids = {r["n"] for r in conn.execute("SELECT n FROM item").fetchall()}
         stem = pathlib.Path(a.batch).stem
         batch = (re.match(r"\d+", stem) or re.match(r".*", stem)).group(0)
@@ -397,6 +424,7 @@ def cmd_status(a=None):
 def cmd_check(a):
     c, warnings = cfg(), []
     with connect() as conn:
+        warnings += [f"taxonomy drift: {d}" for d in taxonomy_drift(conn)]
         for f in c.get("required_facets", []):
             n = conn.execute("SELECT count(*) AS n FROM analysis a WHERE NOT EXISTS (SELECT 1 FROM tag t WHERE t.item_n=a.item_n AND t.facet=%s)", (f,)).fetchone()["n"]
             if n:
