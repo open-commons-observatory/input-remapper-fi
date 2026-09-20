@@ -1,0 +1,13 @@
+name,multi,page,doc
+cause,True,True,Root cause — use unknown when not established; grow this list as you read
+component,True,False,Which component of input-remapper
+conf,False,False,Confidence of the root cause
+ctype,False,False,What a commit is
+de_os,True,False,Desktop environment or distro involved
+device_type,True,False,What type of input device is involved
+impact,True,False,Effect on the user
+kind,False,True,What the issue is
+layer,True,True,Where in the system the problem sits
+outcome,False,False,How the issue ended
+pr_potential,False,True,Actionability: how likely a PR could close this. Filled after reading; assessed for the current state of the fork (grenudi/input-remapper). This facet is the bridge between the dataset and the contribution plan.
+symptom,True,False,"What the reporter observed — weak labels derived from text; a search aid, not a diagnosis"

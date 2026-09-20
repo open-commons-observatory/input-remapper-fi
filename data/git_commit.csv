@@ -1,0 +1,930 @@
+sha,subject,author,committed
+0017531b22cf9a62d3804410cf3f0109db48c622,#197 Lazy loading groups and system_mapping,sezanzeb,2021-11-21
+001a9afbc71967d799e79552b2d07f4b7864ec64,Split test_macros.py,sezanzeb,2024-12-16
+001cc3b8fad83ff9ebfc5446d359a382cc69391d,access via groups instead of root services with interfaces that are open to everyone,sezanzeb,2020-11-25
+0020377de9371ece53f78a2dc8732f1543150dbf,fixed autoload for gnome,sezanzeb,2021-01-06
+00650001142d554f3623431b69a42ce5e2d9a892,"fixed stuff, dummy configs actually work now",sezanzeb,2020-11-02
+007703cabd11929f0676e05046b3eaff13b148e0,rearranged the ui a bit,sezanzeb,2020-11-25
+0085ff4dd5abcb772863f3786185b2e110b7416a,fixed tests,sezanzeb,2020-12-06
+0120b4342ca85c2ec5f49553f48e7f85c3e5524c,updated badges,sezanzeb,2022-06-11
+0152e5acf5c454c5d474dc52ffeab5705e26c321,forgot to change some alsacontrol stuff to key-mapper in comments,sezanzeb,2020-11-08
+0169c9fd7686921773e2efc7707e1daa2ed34fc1,highlights changes,sezanzeb,2020-11-12
+017aa9ab431ec0e15875b4572eba132a9cf4562a,#46 written key combination didn't release,sezanzeb,2021-02-22
+018e496890e9f533021a153968bd9b2b0f0c848f,update readme,sezanzeb,2020-12-19
+01ab93ef9575b72bf67010e6b7d3c5596437103a,dividing injector.py into multiple files,sezanzeb,2020-12-02
+01d29a5f72424750301c100d7ede9be7babd8666,Update README.md,sezanzeb,2020-11-29
+02a17d51bd6cfe04d1046b0a0738c3d7a7802df5,Copy props to the forwarded UInput (#319),Tobi,2022-02-27
+02efe373891d83064a821e19d1f8ee54367ce402,"creating the symbols file, symlinking, more tests",sezanzeb,2020-11-02
+032ebd09c6df0f9ba1c0c8436c22f6973c277ce2,improved macro parsing error logging,sezanzeb,2020-12-04
+0395c060931825a2ef45f090774a5d02802fe0f7,"minor tweaks, update macro.md",sezanzeb,2021-04-28
+03f2e34c8faf2f42509d0e675d90c270564d8569,make cli not require a running daemon for all commands,sezanzeb,2021-01-11
+040cea0a8b27fa1f5b5062502ccfceb7e55e41f2,showing button names instead of numbers,sezanzeb,2020-12-02
+042d296d0fad5e2386cf3cd17125b4f596a5854f,some simplifications of the Injector class api,sezanzeb,2021-02-13
+04c7e93253098f3db70e29961c28d7c04885c169,Update macros.md,Tobi,2021-07-25
+055132625ecbf28593b6ba9e58d0bba2e7876236,fixed deleting rows,sezanzeb,2020-11-12
+05689ba8046dac4f3bd19d172e6bdd1d64c28b3e,coverage table to the console,sezanzeb,2020-11-26
+057663af3bcdd5d7425f94543b0efd8f26a8cf8d,Dependency injection (#964),Tobi,2024-10-19
+063e4bc8b458e25f7f6a9307b18fdf730e075fcb,Updated copyright year,sezanzeb,2022-01-01
+0665b146cd68ac9e8ba4b6c87f059d65fe0fe078,update development.md,sezanzeb,2020-12-19
+0677e011f69950563d4beeede8de9c769d595376,Improve pipe debug logs (#979),Tobi,2024-10-20
+06995ea3dc5e87b17774ef38a6740eb93cfbc8a4,lint,sezanzeb,2021-01-01
+070e3cc8a43fc18ee8f40150939df8b45018934a,corrected log_info text,sezanzeb,2020-12-05
+0726ccfea3207140ff92ad1b0ce307bd941a8a61,#183 #120 #49 if_single and if_tap,sezanzeb,2021-09-29
+07504d47fbe31e90c4165d80082cc7528c403219,#150 add gettext dependency,sezanzeb,2021-07-21
+07660bf8a3bea74c9a96ffe31a9d4b782b7d20b3,update roadmap,sezanzeb,2020-11-19
+0768cd41247e03fb70fd458dcd7db2223bc4d498,update badge,sezanzeb,2021-01-02
+07c2d86c2663e4cd11cf57216fdbbdc99daf9091,checking write permissions on /dev/uinput,sezanzeb,2020-12-04
+07c76934d57314ee63e55ebcb05248d60d164e3f,Update usage.md,sezanzeb,2020-12-25
+07cc8e1cc6507e7e0a534e72ed6f2d4744d57cfd,#73 #74 #76 improved gamepad support,sezanzeb,2021-04-02
+08226a24f940a4a0c62d61bb4f984c7fc593a08d,Improved test setup (#960),Tobi,2024-10-16
+098d6fa395f1e754c0d8a603843a00214bac3e68,loads mappings with modified variations correctly,sezanzeb,2020-11-16
+09dae2594f525ea0c5e674c9fce761abedf50d7f,made it work on an old ubuntu laptop,sezanzeb,2020-11-29
+0a39a0999d701f802a7bad8588b09c243c07df1c,Explain architecture in docs (#510),Tobi,2022-10-23
+0a40b9f41f7c2844209b6492f229d08cbc563349,Bring pyproject.toml up to standards (#1321),alxpl,2026-07-06
+0a676e7fc5a4c14f33b0fcbf93be654a3d633ac4,falling back to defaults for broken configs,sezanzeb,2021-02-15
+0b713d30c75dacb8a9cc230577a7177033b93e32,test for getdevices ignoring evdev.UInput stuff from key-mapper,sezanzeb,2020-11-18
+0b885df73c7058158df7483aa542b065c7efa7d0,Delete FUNDING.yml,Tobi,2022-07-28
+0cac61149c298541a3860521436954ee8747027f,"Added hold_keys, rearranged test imports, removed deprecated macro capability tracking (#320)",Tobi,2022-03-03
+0ccc47fed8a6a17fc3dc23e3b4a3ee7742c840e8,more beautiful mapping table,sezanzeb,2020-11-03
+0cdb832750e30ec01052ac0c59265f56c72f873f,"update screenshot, update tooltip",sezanzeb,2020-11-15
+0d60fd99779edc6486c92cac3f4ebdf269dcee95,update development.md,sezanzeb,2020-12-27
+0d7f824eebae06acdf02a1e2fd4b8855a2573847,2.2.0,sezanzeb,2025-11-01
+0d990fc7a536ce2c4b4443ccd82db7297d3924e0,#168 add xmodmap fixture,sezanzeb,2021-08-22
+0df237f8de5715d1bca658779c4c7d27f21cd1d2,restored coverage badge,sezanzeb,2021-09-26
+0e1e0be9539e097e637cde947c9194eb8d43fd22,"pyproject.toml, new installation tool, improve github workflows (#1221)",Tobi,2025-12-25
+0e3af46bcd137db234581a3708f2b4baa35bc90e,Removed logfiles (#418),Tobi,2022-06-11
+0ed8b4a4123723d0832c84e6fbe27ecf88cd82af,some rearrangement,sezanzeb,2020-11-02
+0edc0ef0ddbf7d411bf41f9d18c6b8b05778c7d1,Fix rel_to_abs recentering after retriggering (#1055),Tobi,2025-02-02
+0f10d06ab6cf2843928e2c281e9cce1ade2c6154,Input event with origin (#550),jonasBoss,2022-12-15
+0f2129712ccd8d34f7947e8bf96fd9718550c51c,#194 Fixes nested if_tap macros,sezanzeb,2021-10-16
+0f4ebaa2f04467d7315e9906be73a83ebf3eb2bb,Update README.md,sezanzeb,2020-11-29
+0fca3a582830c60277701292b2b9251a7c962ca4,Split test_macros (#1032),Tobi,2025-01-12
+0fd14b426649b795068d3d78fe4d91743fe87a4c,systemd optional in postinst,sezanzeb,2020-12-25
+105c3c88124b821accc0c9006b6fd680cb7a5aaf,update screenshot,sezanzeb,2020-11-15
+10700d8ece7d2779e74175970ffdaa602a0810a1,#200 Fix wheel macro timeout,sezanzeb,2021-11-07
+107f81402e240a26429613e084ceaa9a2ed2a68b,Update uk_UA.po (#1145),Damglador,2025-08-15
+112bfe219c1d2e37535b71fd9a6c2be2766c31a3,".deb package conflicts, minor comment and variable name improvement",sezanzeb,2024-11-04
+115fb787c175e9e7c852be63da4fdd749d605981,Add AppStream metadata (#611),alxpl,2023-02-11
+118f393ed95317cdf22de900cd91f6c67b9cd6ad,icon and readme,sezanzeb,2020-12-20
+13555a94ce95158a31ea62e64816da0f075c664b,wip more gamepad stuff,sezanzeb,2020-11-30
+142ecdd0f8417cb5318b352a5d70e2c316141d96,switch to autoloat presets,sezanzeb,2020-11-25
+14bbd9f7fc8a5e6dce351ea94f8fce604e79c2e3,only considering joystick events for buttons on gamepads,sezanzeb,2021-02-16
+14c00e1612c9ea1a39c66c509f9138066f9036bf,update badge,sezanzeb,2020-12-04
+14f93fab98c709ec04edd342c68fdc5905ce9a4b,more help on mapping names and macros,sezanzeb,2020-12-05
+15a05907c39e471f9367a49a0c53f3308f6ae3f5,daemon reloads the config on apply,sezanzeb,2020-11-29
+15eb0e9653bfb3aee021510f088afde4b36ebb81,Fix if_single on Python 3.11 (#669),jonasBoss,2023-04-07
+15fec08332ba7f8675431ed4f4b33495494506b9,creates dummy but working configs,sezanzeb,2020-11-02
+162e7fcbf7e1ae951fc43e89521e92c39351b07a,Avoiding GObject dependencies for unit tests,sezanzeb,2022-02-06
+163f1b646dfcf4eec58511f5d1b337dececf80a2,"config, more renaming, some glade prototype",sezanzeb,2020-10-31
+17a5a83acfbc24605ef818b8ea0544408ffe9f7b,lint,sezanzeb,2020-12-19
+17df1242fce8c2f814d90285ba9c7a4db879e422,fixed path for deb installation,sezanzeb,2021-01-16
+17e6c1bef90c8342f3385b21be73fcc7fe5601e3,#140 service shouldn't start with -d by default,sezanzeb,2021-07-13
+180bf5aa418e773923865d62c4c1b37c3865506f,1.4.1,sezanzeb,2022-02-27
+1823b7dab17a936340909263872995fe218ab13a,1.2.2,sezanzeb,2021-12-15
+183bc45298c83a6df622049f88336b379901c9e3,Fix root config.json error message (#1185),Tobi,2025-10-19
+184477ac27436928368d13e88e045ae65fdfb6fe,update README.md,sezanzeb,2020-12-19
+18a5bd678dd87f0575a06f22b51750d127d00f25,macro parser,sezanzeb,2020-11-28
+18f1ec61215e2c4eddb435a5ae79e88cb3d2f8ba,using get_keycode instead of evdev,sezanzeb,2020-11-15
+190da9de381485a462a87b254caf320280a94d86,#671 moved pkg_resources import into try/catch,sezanzeb,2023-04-02
+1986d7a2ab78f13964573bac57df3bb694f1df91,Fix CombinationHandler releasing (#578),Tobi,2023-02-19
+19fd2fddeb5ae37c7587ea90cbcdc5f61dfe9aae,started working on injection tests,sezanzeb,2020-11-18
+1a018dbf907ac245d5fe5db7e1dc41c980bb3328,magic numbers,sezanzeb,2020-11-22
+1a16d679cf0b6187737ff9aa37f59987065147cf,cloning mappings,sezanzeb,2020-11-28
+1a2b2d7076798ec8d458fbbe3d96827bc2785e4b,Refactored injection (#263),jonasBoss,2022-04-17
+1b2373133eec23e2041c21cf3e450bb26231d0bf,Support for comments in macros,sezanzeb,2021-10-06
+1bfa95b7720455db75fd0de2c408fb4c7e507b8a,Fix the .desktop reference in metainfo (#1210),Stephen Kitt,2025-11-15
+1c084101ff7e7b8332238464ebf29e9c44c33382,Fixed link to packages.debian.org,Tobi,2022-01-02
+1c77934beac64eced6b38f8275070e96ed969740,"improved tests, some fixes",sezanzeb,2020-11-30
+1c7a6aaa9e42a646859812a8ec99beb902e9bb3e,Hiding irrelevant permission denied error log (#370),Tobi,2022-04-16
+1c7e259b79019f386b435572c52b1ab31711e9b5,Updated pip installation instructions,sezanzeb,2022-01-01
+1c9749c46b89e328ca71d5a75d8c2d631f81edad,Fix joystick for some gamepads (#1341),Tobi,2026-09-11
+1d2336cc140d24620e42ef7961d45e8f60db076c,Update usage.md,sezanzeb,2021-03-21
+1d2fba56d42a754f1861b17f8035313f1bc987f1,autoload fixes the config automatically,sezanzeb,2021-01-03
+1d79ad369b021512f4991974787a4443ef8d18fd,#197 Using timeouts for calls to the daemon in key-mapper-control,sezanzeb,2021-11-04
+1dce0e1016fb7083c3001da5d25855e7d9f2324c,some more improvements on resolving data,sezanzeb,2020-12-03
+1dd995e101f6273dc8ee8dcfac042349c44036a7,tested the Mapping object,sezanzeb,2020-11-08
+1e10f0bd35701dd2293fc9c139397f771e0bdf20,script not needed anymore,sezanzeb,2020-12-03
+1e4ac8759b4f3956095b0905ab0de4f5771a167c,Test setup cleanup (#557),Tobi,2022-11-23
+1eb01770083f461850e0e7f0cb2648251589a2c3,wip,sezanzeb,2020-12-05
+1ee0e6953aae9047d995ca25f9e8c1ab4cbc4777,wip debian package,sezanzeb,2020-11-29
+1f9016e94e438962c518cfb684cf59b2013df0b3,Add french translation (#604),Nicolas Lepage,2023-02-11
+1f92ac086bb083ebbfadb28ad9ce6ebe5ddd45e5,"Avoiding some redundant calls in the GUI, improved test lags",sezanzeb,2022-01-31
+1fd02bea5ad6e8cf596b39bb627c3a66c4dc37f4,update tooltip,sezanzeb,2020-11-16
+1fdf3f9a28285d4fd12091d66742428f507104c3,a meaningful macro example,sezanzeb,2020-11-28
+1ff1f6a702d2e8d8b9bc504b76ad600c6076173c,wip,sezanzeb,2020-11-18
+20331da6a3b31894fe5b80005cf8efa63a902e46,Improved check if system is completely booted (#384),Tobi,2022-05-05
+2089a1780a244692219e6060fab00300dc008ef5,Update utils.py,Tobi,2021-08-23
+208a13c68259a6871a6fca66074b1a2945102be3,updated docstring,sezanzeb,2020-12-06
+209a7aaa67aff4d9802cee06c742e53d3f9fd732,device selection background,sezanzeb,2020-12-26
+20d19b5378afee2b84a2ea9ac695dede09cd922e,more tests for holding,sezanzeb,2021-01-25
+20dfec69df05914096b623144bc702bce10c7aa1,arrow keys,sezanzeb,2020-12-27
+20f66512d403a81d82ee5994f6ffcd355d0a4d47,v 0.3.0,sezanzeb,2020-12-05
+2159328b8e899cf12cded5cd56a8ec896bbb5dbd,correct prefix in .policy,sezanzeb,2020-11-21
+21628a80c1d916fd1fc8d65189c9d792b494f773,"Python 3.14 compatibility, fix test patches, update test docs (#1184)",Tobi,2025-10-19
+216b9d730dc6d55a2f403cf4b79d8392d0909b22,"Mapping to "" "" caused problems, general test improvements (#314)",Tobi,2022-02-26
+22115fef1e03f6cc1b2aae66a7893de7265eda75,minor: fix grammar with logging error,Daniel Hahler,2021-09-06
+22325c0c8d7bdb4c40778b44d8cae7663729ad5c,fixed some installation issues,sezanzeb,2020-11-21
+225bfbd5806f260bcf00df7b7a33780a346e0813,0.6.0,sezanzeb,2021-01-07
+227c507bdeecd6a376d3400cd35c7234dca18140,Merge branch 'main' into beta,sezanzeb,2022-07-23
+228a31589977752e977984cc757b29beb2fb16df,corrected test name,sezanzeb,2020-11-16
+230aac3bf5934e3fe91a21a634e881617ef4f317,Fix rel_to_abs recentering (#1050),Tobi,2025-02-01
+232ba48c586d70bccb6efaed3a450bb03d9ca09f,Clarified some log messages,sezanzeb,2021-11-21
+2391a5f7dc302b5fcb365315e5beffa1a2eeb312,more tests,sezanzeb,2020-11-15
+23a08f4c20b94997eea06d9de327bdb365777012,supports keycodes from mouse-buttons (such as middle-mouse) as well,sezanzeb,2020-11-22
+23af9366887320b19f89da39ffb8c1c6a4bdc31b,"Automatically set ""Use as analog"" if output is analog (#627)",Tobi,2023-02-24
+23e7fd1dce00f0a7a8d2cbd104f555e02f8a6ae4,update mapping tooltip,sezanzeb,2020-11-19
+23e9fab5a890f725635051332473a618a0130f87,Update README.md,sezanzeb,2020-12-17
+246c3a5ec30ccfc35fc19e983be3fd792b54f046,corrected polkit message,sezanzeb,2020-11-22
+248341d11740b43c83b6903ebada3ad0b0abf69a,"fixes for graphics tablets, general improvements",sezanzeb,2021-01-02
+248cc9a79526a19188c517fd6b390514a3467447,"Ruff, black, copyright year (#1342)",Tobi,2026-09-11
+24e3e2f5af6a1277fc150c59b096b0bd0a53cff0,simpler examples,sezanzeb,2020-11-28
+24f0019845587dc6d58403fe87a55c8a58ed5c40,update roadmap,sezanzeb,2020-11-04
+2581ba666c5075c327fab0caf70fad94d9df0d17,Fixes for input combinations (#965),Tobi,2024-10-25
+26081ac612573fd181f3a5f16e43b94bade24ea2,evtest,sezanzeb,2020-11-01
+262b58d86c132b3c335f98fb89834f3b05228831,Reset unreleased keys of macros after stopping,sezanzeb,2025-01-01
+26a6bba2bfc41ec362293ffaae6e33a66b64952f,Document new max_time argument,Tobi,2024-10-25
+26d4e0410489deb0874150a806901cf19c6693ff,"keyword arguments, $variables, improved macro docs",sezanzeb,2021-10-01
+271c250337ed52f73238b4d64e191f65f6bb0e1c,Split tests into unit and integration,sezanzeb,2022-01-17
+278338716f8f7beb25798f20c3c2fb65acad2e57,Add mapping rename and delete hotkeys (#1169),Martin Zarate,2025-09-27
+27a6f04db47cca2c8b3b3a62790d1cc7492db3a4,pressed keys represented by class,sezanzeb,2020-12-31
+27d7b3e8294606c94c87a5033ab69034a159a839,#716 Import ecodes,Poldovico,2023-05-31
+27e911be82896fbe1b20c75fb3f59fd3d575a9aa,Not writing empty xmodmap files anymore (#531),Tobi,2022-11-05
+2803bb841e19232ec08c57bdfca66d0535131dab,1.2.1,sezanzeb,2021-10-20
+287b1250cc629af0193d280e67265f9a12c33208,"no .terminate anymore, proper multiprocessing coverage, some minor cleanup in injector",sezanzeb,2020-12-01
+28854888a31d0f3c910378134bc3c823bed5b877,RX and RY movements as mouse wheel,sezanzeb,2020-12-03
+28bb0bf5e7c29d26aa293c0ec638a4794972c224,Create it_IT.po,albanobattistella,2021-07-12
+28e107b48243d71f4724141bd1bd2cd9804b2652,"fixed bug for simultaneous injections, improved injection log",sezanzeb,2020-12-27
+291b982e25d982e35287ba93e8347d2cb9425fe6,Better macro architecture (#1003),Tobi,2024-12-01
+291d77e38d7620ea20b717e60af0bdc74b8bd3de,update usage.md,sezanzeb,2020-12-19
+2952fb47f0e486da5cba40308fe8a1114586d3b1,some os.path.join refactoring,sezanzeb,2020-11-02
+2991aa8bc97902cff5fa62c1bd163a032029b7a2,test_user.py,sezanzeb,2021-08-17
+29a7b6473d07a8fbcf08524cd3eee48d7f3edccf,"more info on macros in readme, preventing duplicate hold macros running forever",sezanzeb,2020-12-05
+2a0b22c4934c7aa1288557822a5411f7ce7be093,using the offset constant everywhere,sezanzeb,2020-12-02
+2a8dd055ca7fb8518088f13c16c2b2277a62a7df,update usage.md,sezanzeb,2020-12-26
+2a93b63121659778b635a9e9257b19612c1c107d,update readme,sezanzeb,2020-11-15
+2b13931c3010212ef5c11e5200bc3b40122be609,"checking for GLib.GError on bus.get, redundant gi.require_version",sezanzeb,2020-12-04
+2b1a0de45fe1cf387bf1fc4378770b7f79872de5,debug print cleanup,sezanzeb,2020-11-08
+2badf2c5d30f3e072fea0b5aedc7cc6afdaa0980,Mapping media keys (#318),Tobi,2022-02-27
+2c057871a0fd2f7aaa701a4a4adf75af1df7cc48,update installation.md,sezanzeb,2020-12-19
+2c4306e9adefa7c0ca9e4e665f74a5a37c3c68f4,more tests,sezanzeb,2020-12-26
+2c5a4d71f2598b44fe8a579a6d89aff6d0214041,Add `RequiresMountsFor=/var/log` to systemd unit (#369),Raman Gupta,2022-04-15
+2cb39bedef7a00e06a85a965a7916f674f38f149,Fix CI (#730),Tobi,2023-06-24
+2cb463269f694d23ec28597b3670df92763ba4d2,Rename desktop file to allow Dock pinning (#615),Uwe Jugel,2023-02-12
+2d2312080a905b922b98c909fb7e065dce205c3c,semver2,sezanzeb,2022-05-08
+2d87ac87a806413ee0c6f1f6ef22db1419009a0e,not again,sezanzeb,2020-11-18
+2df1bcc525f943afd3125a2fa3f5801674409556,removed unused empty function,sezanzeb,2020-12-02
+2e0b8095a37e6c536d30ffcfcf549e2740129f1d,Update README.md,sezanzeb,2020-12-05
+2e40244e77c65dee9658be57922c281b70cd723b,badges,sezanzeb,2020-11-28
+2efa27e375625e0c8c77fa04d0ad350289ae77ec,improved ubuntu install command,sezanzeb,2021-02-18
+2f242023f5a88de3b5550a8b54752edcbdabed55,Improved logs for communication with the Helper (#387),Tobi,2022-05-05
+2f32589a1d92c3114c7376a9a8c20765b0066052,I think I figured that setxkbmap nightmare out,sezanzeb,2020-10-31
+2f5a66743afa37085d9ead52a5286e1f24ad1125,button to load the default preset,sezanzeb,2020-11-14
+2fa8c16c8ffb086ee97d385e007d6330360e452d,0.8.1,sezanzeb,2021-04-04
+314f770bc58e08f94943378f0d171a3db218296e,fixed commit hash logging and added github url,sezanzeb,2021-02-16
+315ca289cefc9733c9155229a2144b79553876f8,Gamepad fixes (#1274),Tobi,2026-04-15
+3173e9cd9e4e586bb8feb3ab88859185eade6421,updated ubuntu installation instructions for 0.1.0,sezanzeb,2020-11-29
+31753cd00f3d191f82d2b25af9456640bcf6d165,0.3.1,sezanzeb,2020-12-15
+3180f8d86a949ed95b750c01e61b5496709a9599,daemon wont create a config file anymore,sezanzeb,2020-11-25
+3207ea67971527134b3cd3d2772f675839725330,Update copyright year,sezanzeb,2023-02-27
+320fd37ca748097ed225c8cb4c3081e990b76a51,#197 Improved logs,sezanzeb,2021-11-20
+3275d48215fb83af62318317ccc78fa1418eb565,Update buttons-not-showing-up---can-t-map-a-key-in-the-gui.md,sezanzeb,2021-07-19
+327ab9ca90ee5e912a961a1d61d4fd4076e4c7af,optimized get_keycode,sezanzeb,2020-11-23
+330113e06165863de417db5454bc4c98e091bff4,more explicit daemonization,sezanzeb,2021-03-22
+33448378459c7c02029ad730eb70b8975c3a4253,add roadmap entry,sezanzeb,2021-02-15
+334d73b4370155cdcc9c76db89d460f1e89aeabf,increased timeout for TestDBusDaemon,sezanzeb,2022-01-14
+339154b5e121fd638fb35e9df6d98be92ed749f9,default keys for unused keys,sezanzeb,2020-11-08
+34d0c7faadf2083e622f5ca66d9e56a095b0729b,more todo,sezanzeb,2020-10-26
+34f0bee45822026e97383be3b8ad013d2ec516bd,increased grab attempt interval,sezanzeb,2020-12-06
+35967741d853ec640da04d7a7e5efb3c4cb1b712,warning,sezanzeb,2020-11-22
+359d8b687ecc67ab92322e7d83963d9263b1b160,fixed duplicate first rows,sezanzeb,2020-10-31
+362c467baea0e615da5e2ad832759e3f59da7d7a,tests for resolving data paths,sezanzeb,2020-12-04
+3637204bffe9f10e7db87f7200c25c26ac19af98,Frontend Refactor (#375),jonasBoss,2022-07-23
+364170c71bf8d6e63a8fcd0e1c2c872d6f2a8b51,overthrowing the functionality completely,sezanzeb,2020-11-17
+364a361d56b5021fd58e737b9b4ecbb6aa20497d,Update issue templates,sezanzeb,2021-07-19
+365ad11d769954ba45a95175175c9b0ab48ea11a,Update README.md,sezanzeb,2021-03-17
+36b96935c63dbddf716e3edd6a87644b66891727,#107 fixed autoload,sezanzeb,2021-04-29
+36e90eb026e14915e06c023912570247237018c4,removed deprecated comment,sezanzeb,2021-03-22
+3732d9e1e65dc1c3c97b26c56f5e92cdb8e6a95f,#278 Fix compatability with python 3.8 (#280),jonasBoss,2022-02-02
+3798be2e4678ace5a3db0d25b0543a5f401bb8bf,Sanitize device names in paths #507 (#508),sezanzeb,2022-10-30
+37b0b6638e094995266ad57352e652bcd1843a90,renaming test files,sezanzeb,2020-12-02
+3809a5139edf59cc8bb35ea2ddb4d73e4797b062,#488 symlink ru to ru_RU,sezanzeb,2022-10-11
+382ede3d98d5953a0d966ad4fc36b4f4a1e4d542,"show devices, adding rows",sezanzeb,2020-10-31
+38503df837a29b9fd65f6e936fbf7b3f7f8c2a80,Add GObject dependency to setup.py,Stephen Kitt,2021-04-27
+3892789b73313086c57bec600f0acb68022acb1c,pkg_resources.parse_version as drop-in for packaging.version.parse,sezanzeb,2021-12-15
+38ba5ab8b971c5d1f50106f47262724f354dbb71,Improved key-names explanation in usage.md,sezanzeb,2021-10-21
+3922c4ce2d7e20f267d0505ebe32901c1aefe5d3,removing ABS_VOLUME,sezanzeb,2021-02-07
+3940c572e8b370930557629023809f77d1ea5d57,command line shortcut for the permission setup,sezanzeb,2020-12-05
+394c05dfe10215a62927f0eaaff3596d557fbc56,Do not install under the old name any more (#373),Michael J Gruber,2023-03-02
+39905db774738ca99e1d15d307db9dfddf4bef5e,"proper test util imports, switched to the recommended pydbus package",sezanzeb,2020-12-02
+3a178dd6b93f1fbfb0c1a085e21f189442336e73,improved macro tests,sezanzeb,2020-11-28
+3a48d2680e013f5fb0f2d024dad7290511d45cef,Added `key_down` and `key_up` macros (#391),Tobi,2022-05-07
+3b174be31aa5caf440b9079d2fe8dbe909be1049,2.1.1 (#1065),Tobi,2025-02-16
+3b28ab832b2bcedad1ce2ce13be7122a38d1a058,#72 ungrab and earlier grab,sezanzeb,2021-04-26
+3b519a18fc39c4d3b4b3074ca96fbcd46585a9ac,Add global suspend and resume toggle (#1328),shelterx,2026-07-20
+3bce3f50f671b0a6838f72d791723c958838e902,properly reads keycode device for devices that are being injected into,sezanzeb,2020-11-22
+3c210dfab0f0f7936ae72d253563fb27b43e088f,Update README.md,sezanzeb,2020-12-04
+3c8ba4d34af46c2fb366ac9742dae02051410c91,some improved verbosity on groups and missing devices,sezanzeb,2020-12-04
+3c97fd34b43ffe2d00594c4e8052d24f2b4861e2,#65 UI improvements,sezanzeb,2021-03-21
+3ccc2310f8b0a76d9ccb696e7a8d69958d8e94fb,Added link to Ubuntu repo,Tobi,2022-05-09
+3cd30c4bf3f4e75f9ded752891e445b897d49282,Independent uinput (#228),jonasBoss,2022-01-14
+3dcacfecedf6955b0b6ab3ed46b6ffd057d3b441,SharedDict unittests,sezanzeb,2021-10-02
+3ddaa66918fb592b7c089940e076b0ba5200bcbb,improved device grouping,sezanzeb,2021-01-08
+3e0428ca290c60630247bb1d7185d7eed608ae36,ubuntu fixes,sezanzeb,2020-12-01
+3e48d899ea0d4e8649e0f439cf7a8166a144e272,fixed Alt_L not working,sezanzeb,2020-12-03
+3e629d3a5311573fd3476da62c16e62c4c0564e4,autocompletion,sezanzeb,2020-12-06
+3e86e5c1b8ded27654d020800cc1af3a9135ddcb,fixed all tests,sezanzeb,2020-11-30
+3ee8765fb65aa8f91ef5d4cae42f5276f9f4ca97,#65 UI improvements,sezanzeb,2021-03-21
+3f94e4eea00d087edc894c62c09b118ac88508d7,Fix GitHub Actions data directory (#405),jonasBoss,2022-05-17
+3fb42ad4383ad8f339a286d65cc83e3c34e8fbf6,"Catching exceptions in group discovery, updated usage.md",sezanzeb,2021-11-22
+3fdf478e52e4ff9d18af08a508b107826135f6b1,deb packaging seems to work now,sezanzeb,2020-11-29
+3fe52d9c998b3c54d0fdb12bf2155c74fb4807fd,"Moved numlock test to integration folder, black",sezanzeb,2022-01-31
+408beeff7c80d9c0fdfecf8e6c6be29f3be379fd,renamed to TestUser,sezanzeb,2021-08-17
+41864736371ae4c1c082b30467abee6e6bd2ed47,showing permission denied errors,sezanzeb,2020-11-08
+419d80dcebb13d6e1a82245ccb6541f93643d724,AbsToAbsHandler (#440),jonasBoss,2022-07-25
+421749728b6d577b9bf973b7041fd0f2c1fa27de,Clearing pipes on creation (#396),Tobi,2022-05-07
+4284b8c000191fd129b8a346830e0b8860be37ca,"improved macro tooltips, more debug log info",sezanzeb,2020-12-06
+430aef0130e826e52dafa2be83a0bd82ff7024af,"Fixed Pylint issues, added more typehints (#536)",Tobi,2022-11-12
+43702107c05b29d3a441c6dbaeb5e7fe7e93be51,style fixes,sezanzeb,2020-12-27
+43731875adf4cdced874d81285c6ce32fa302596,Use tempfiles instead of hardcoded /tmp (#264),Luna Nova,2022-01-17
+441a7c44abdcd0e3bc98194ad9b4bbc9b32a95c6,"0.7.0, updated copyright notice",sezanzeb,2021-02-22
+444342f5cc862e5971eb1870fbbde735e8113b4f,Use the appropriate user home directory.,Pablo Lopez-Jamar,2021-08-31
+44bc36098fe630491905a19a2ae174f296cff9f8,continued rearrangement,sezanzeb,2020-11-09
+44edcca42caaa79bb34c732a74b3708e031dea62,1.4.0,sezanzeb,2022-01-22
+4532fdbedb77509d720a27f277d438b024698fdc,"#488 po/it, po/sk and po/zh symlinks",sezanzeb,2022-10-12
+453dd2c793548c1b78471069a0bc8ab067785e98,testing list_names,sezanzeb,2020-12-06
+4617d5650641d8cfe3a369b02b4d475d7d2a8a48,testing grab retries and capability modification,sezanzeb,2020-11-19
+462809462a3c97dced3e5506b0158d1aabd544e5,revised is_gamepad,sezanzeb,2021-02-15
+4713511035d3bb081553c4aaf61ae2606e0d9663,Refactored Migrations (#232),jonasBoss,2021-12-15
+47420c894828235f7471dd53e1188b54af499b12,Avoiding redundant save in migration to preserve modification date,sezanzeb,2022-01-19
+47bcefa7f382abc4c7b00cc9876262406c1615d2,#109 New mapping editor with multiline input and improved autocompletion,sezanzeb,2022-01-10
+47ccb4050780ed463ec3778295a69c06a41fc657,Add jonas ko-fi account,Tobi,2023-02-01
+486d33acb4132fa81d77de808b0321905439d062,Add double-click to examples (#681),timmarjo,2023-04-05
+489b23a3abbbb640220b03b339d099fa46da3683,setup.py dependencies,sezanzeb,2020-11-29
+4953e38de083c5949487fc6d693d07f4b3fd409e,Added ru_RU translation and adjusted ru text for policykit file (#487),yngmjgsd,2022-10-09
+497e40ace9709efbcdd1395cf013a0e9f1da65d0,updated instructions for a working ubuntu installation,sezanzeb,2020-11-21
+49be5386b208a19be7a09e554409cdb23d421704,Improved logs and behavior when starting processes (#990),Tobi,2024-10-28
+4a112447e307c7e2327433119124e0da11d7d49f,0.4.1,sezanzeb,2021-01-01
+4a1668ce222ac64df76beff78899c0104f8f5e4f,update roadmap,sezanzeb,2020-10-31
+4a2af1e3bdac58d1f4585c812ecca38b5b96330c,Delete installation.md,sezanzeb,2020-12-20
+4aa4af2f6901ed1abc70cf245f4d5908c5a97d89,Update issue templates,sezanzeb,2021-03-18
+4b50b240a5f429e31bd591aa5e7c5903cc4a736b,Updated AUR installation instructions,Tobi,2023-03-04
+4bad927ffc4f23bc3e80bd7a3d6406e4a8792a8b,"renamed injector class, fixed config path for injection",sezanzeb,2021-01-04
+4c41f8c9e085f8034cafd1ee6d39619070ad7228,Merge branch 'main' into beta,sezanzeb,2023-02-27
+4c73a9514145907818c1fb2c3d317ae841e4bf08,#1 preventing rich.traceback to crash the app,sezanzeb,2020-12-05
+4c73ccc0e107ae6e84ce58909663332438a4a70f,1.2.0,sezanzeb,2021-10-10
+4c78955c678f136c72b4847d47158fcad1550237,improved logging of the commit hash,sezanzeb,2021-01-31
+4c9384f7e3ec3c322d773e5941adb7a6f60267c4,unhighlight rows on change,sezanzeb,2020-11-14
+4d3ce4523b53483b02105c9a847f17f99c03cbc1,Add Brazilian Portuguese translation and update .po files (#708),Rafael Fontenelle,2023-05-16
+4d6af546e005f4189547448cd7b1f580e073a234,DBus timeouts in ms (#1212),Tobi,2025-11-15
+4da1f7f20e01d8c7cfa67cdc3ad6a068079d78bb,Docs: clears misunderstanding on where Macros can be used (#973),KAGEYAM4,2024-10-14
+4e01e43d0c0eb00e792e96de149ea362f038b574,checks for admin rights,sezanzeb,2020-11-08
+4e18f49a6fb84bfa86b30d5c4b737d8480747587,Update README.md,sezanzeb,2020-11-16
+4e1a55b687d070adc48c6aa8b58e6b2c43b0cb78,update readme,sezanzeb,2020-11-22
+4e2d23437c0c135eb53e20983ef5b1562b4d3717,Add systemctl enable for PIP install,Pierre Baumard,2021-02-19
+4e37c9dc693b39af6a4acc48c80e132c4a7a1aa2,fixed bug in device list,sezanzeb,2021-04-02
+4e4d2cbd5be46d002efc6c2f64c1672ec0f8d6ae,idk,sezanzeb,2020-10-31
+4e56c1323d098ddaf363f5f026405283ecbabea6,updated screenshots,sezanzeb,2021-03-22
+4f03a7b484a57b56115c67aa661bfbc628768ba6,More robust log file trimming (#366),Tobi,2022-04-15
+4f20c4a37b8bc15f76d1d138ab7b8b46ad9db756,Update README.md,sezanzeb,2020-12-19
+4f727528fcd5cce36941f9d3094a559db30d4e63,RelToRel (#497),Tobi,2022-11-01
+501f388fc6837fdda3442fb1722101329aa5a55b,showing syntax errors in the ui,sezanzeb,2020-12-05
+505e2dbc3c8bb475d7f41fd72b58bc560a051219,better support for ttys,sezanzeb,2020-12-19
+50d6d21d934ed8da089a265f679a00c3884c16ab,using python-evdev,sezanzeb,2020-11-02
+5173d4d4fcb757d7b6dccb0d43b0af0b90d993a2,Update issue templates,sezanzeb,2021-04-11
+5187e23a926509aaf94adce309703122f54ae68e,fixed autoloading with device names containing dots,sezanzeb,2021-01-03
+519ed2036f867a99f843652320bcae30bf088120,Update README.md,sezanzeb,2020-12-16
+51a717e75e4ed439c6c7882b8c5d4dfb120e49f1,#2 non existing groups,sezanzeb,2020-12-05
+51b6ccfebf4822b42cad8893e0311512f2eb7d5f,more tests,sezanzeb,2020-11-30
+51c6a4f6958b1888510588db68a330ddb8eac8f6,"Added ""keyboard + mouse"" target (#417)",Tobi,2022-06-16
+51c7355fa2ef459d680a597af7d00af5eeb29f6a,removed leftover accelerator,sezanzeb,2021-04-20
+525d06058242bddc49c7680b861ed6b35b466290,Update development.md,sezanzeb,2021-04-08
+526be4f51b61d480353d55163033ebc600c1a52c,improved combination detection,sezanzeb,2021-01-01
+526dccfb99772679b87bb66d1e32437eba79106d,help on combinations,sezanzeb,2021-01-01
+52c76fb65a69bf9e2f74a8f8fea9c99d7f66b21f,"random w, improved parsing debug output",sezanzeb,2020-11-28
+530e70ab11f4de72cd12e7a894ba3d2c1ae9e264,Fixing debug log source file for written keys (#963),Tobi,2024-10-01
+539e31445b01f88a49235108d952975e2475de2a,improved error handling,sezanzeb,2020-11-22
+53bc0ee23d00e5d1b7e75d70cabf02ed360cf2db,update screenshot,sezanzeb,2020-11-16
+545f14f4b758a623e08362a7abbb7838d011ad09,#73 mapping keys that unfocus the window,sezanzeb,2021-03-27
+547adf74ec215cb10c679d25d2c2c9f45e5fc020,update roadmap,sezanzeb,2021-02-16
+54c325210191bce3bee1324775f83d6358594292,Fix for missing input_props attribute (#341),Tobi,2022-03-17
+55227e0b5a28d21d7333c6c8ea1c691e56fd35c4,"Changed ""otherwise"" to ""else"" in macros, added migration (#291)",Tobi,2022-02-08
+5588cbf3c5d24a377905b98202a23a95ad4ee2da,the ui no longer records keycodes if the preset is active (#257),jonasBoss,2022-01-16
+5604e9e18a9dad9b0d689fbceafd080dedb42c98,fixing pkexec in some distros,sezanzeb,2020-12-27
+566823bed494b30c64e2618852f39224d6884fd4,fixed autoloading via udev,sezanzeb,2021-02-12
+568f56cdb438f4ad6db9e96b2900d1228ea736ee,"Hide irrelevant error in postint, doc minimum python version, doc on how to properly map wheels",sezanzeb,2023-09-18
+57162ab251fbf4f9fdbb06db8aaced0a19607612,overwriting global configs within the preset.json files,sezanzeb,2020-12-19
+571ce264c5726eb72bc5d6081e1cfdcfbe134339,test if icons like that work in ubuntu,sezanzeb,2020-11-21
+5744e80a1485604322aa6831b33d627324552204,some rearranged buttons,sezanzeb,2020-10-31
+57492311797784228e149d618f9cc1d393dc0251,updated roadmap,sezanzeb,2021-02-20
+57ee86fe9baf3f13b1a3a7467e7c5d40010f0c6d,#44 more stable check_add_row,sezanzeb,2021-02-20
+58e3526a6e8a383ba4417bc9fac78640fd57b7b7,minor cleanup,sezanzeb,2021-02-14
+58f47883684888c5a3c292ec6ff721ef3b2f21b0,some fixes and improvements,sezanzeb,2020-12-04
+5974228ff16d1991d98b5a2c6cc0f0fd018e7d19,Support python evdev 1.8.0,sezanzeb,2025-02-15
+59bb7d55146460ba8fd7d2322ace99f77647ac2f,moving the cursor with the gamepad,sezanzeb,2020-11-30
+59dc085eb0d3d0a379bc2f068a31cf7511014528,update README.md,sezanzeb,2020-11-26
+59e893fe7e8cbc2b235b0d8860e2293e58b72b5c,got rid of the confusing xkb keycode offset,sezanzeb,2020-12-02
+5a4134fecb71484fea680d144e1e6aaf65e7015e,Improve installation docs (#993),Tobi,2024-10-29
+5a460ebca522c745317b76af65d82a1e1d0db059,outlined some stuff,sezanzeb,2020-10-26
+5aa4b43fe5538bdf92fa8319e6c058b5007045ef,Make reader service exit when pipes break,sezanzeb,2024-11-04
+5ab465a80d4ca0e3e9906bc576674b181fdcea7e,tested reverse mapping,sezanzeb,2020-11-23
+5b863546cd1e73350a4dbc89bfa5f65c93d682a3,Update usage.md,Tobi,2021-07-26
+5c0765dd1af4ebebcaee1b02f0c13e40f62466fd,#73 extended test a bit,sezanzeb,2021-03-27
+5cd015f1cb5e41f84c440853735890f1612931f2,Coloring process name based on pid,sezanzeb,2022-01-18
+5d2db7f7056d6f7ce672bbf046c1ddb3d1331ebc,better approximation of 60hz,sezanzeb,2020-12-02
+5d425c4caf68131d96ea7cffcc1a44f10b923e38,fixed specs,sezanzeb,2022-05-08
+5e150a3209bb75958a332ab4795151888fe366c8,no redundant macro parsings,sezanzeb,2021-02-13
+5e15af87be04f99ed8e775f9c15f84d8074b6656,deprecated logger.warn,sezanzeb,2020-11-20
+5e4ae668ddd6d1f6add2d56041bf8bb3fcc7b980,gtk not running as root anymore,sezanzeb,2021-03-21
+5edd215244e8cf95e8c63c0a4cb697b9e6208966,Update issue templates,sezanzeb,2021-03-15
+5edf376562a7af826b55f2bfdbc05154b3375adc,Update README.md,sezanzeb,2020-11-29
+5f01e43c35852fc71139a729da9dd94556e0e1f6,2 more migration tests,sezanzeb,2020-12-24
+5f1848116bf7521cdbc47a5bb1f4efaf9d88b041,tooltip for autoload,sezanzeb,2020-11-26
+5f3d98162a2f9a94b8dd0ab40fddfff71a706e15,Fix input-remapper-control for Python < 3.12 (#982),DjUlt,2024-10-23
+5f53ae8c7b7e97dd02cf805cba6396637008c9e3,Add python3-pydbus dependency,Tobi,2022-03-23
+5f98c0941dc7fdead51c8047bf682c1e06f7c438,"Fix #445, Fix #444",Jonas Bosse,2022-08-30
+5fe404dd2d609e4916ab1569d619a9be05b18a21,Update README.md,sezanzeb,2020-12-02
+6029aac8389c178368ea33a88b0369feb6faa74a,Added pydantic dependency,sezanzeb,2022-02-03
+60960aa0953cefe97ac6221248666f40d1be10e0,Made tests in PyCharm work,sezanzeb,2022-01-15
+60970caa0ad2807fa533ed8960b3f612f9044514,updated comment for chown,sezanzeb,2021-02-15
+60ae19ea71e348700b26acd1171a9fcec1c10cb1,avoiding error log that doesn't apply,sezanzeb,2021-04-03
+6123d27ee870ae5b54b7838d641769eb953fcef9,update usage.md,sezanzeb,2021-04-03
+6130ef79dff7f57239b56bdb48915829b4c7c89c,Add install scripts for local development (#616),Uwe Jugel,2023-02-12
+61a231e5fe4fece3b55543dc4b52e14b76cec699,showing in UI when grab was not possible,sezanzeb,2020-11-19
+61d591978ddf756ddd385017e0b4c14a05314f5e,ensuring numlock stays the same on grab,sezanzeb,2020-11-19
+61f3065432c3ce817df0db7803921deaa380c109,renamed the folder structure help file,sezanzeb,2020-11-10
+61ffc5def3666e1ab10741bdb1c3f23bfcfeb726,Add default issue template,Tobi,2023-03-06
+62ba26345d0b9e8b886921bac293d6605ae445e5,talks to the daemon,sezanzeb,2020-11-22
+62d79e8aa7c808a2263edfeefae5a65b7dfc9c89,mapping joysticks like a d-pad,sezanzeb,2021-01-01
+634a8c5270abaa45d14fa5deacb7aa2f18befd01,cleaning up history of created uinputs in tests,sezanzeb,2021-02-20
+63c3bca162a20b51dff569c5d13f7f5c3657c11a,fix commit_hash.py generation,sezanzeb,2021-09-29
+63f58f39271d51b7b9aa9e99eaa62aa8d7cbb09c,"Add 2 missing strings for translation, regenerate .pot. (#356)",Jose Riha,2022-03-27
+63f5988d4d45fee27c488122d56351aa14c0e961,horizontal joystick scrolling,sezanzeb,2020-12-27
+6406796c3d21aafb6893fcfaab1d5431fa6129a9,can apply presets,sezanzeb,2020-11-02
+6484ab4972845224e591ec16fb6fdcc9a70b500d,Update docs on special characters,sezanzeb,2021-11-21
+648c88b21680faafa53a2211d0e1108516577275,updated screenshot,sezanzeb,2021-03-21
+65906a3c834cbbf6bd1b53b9c5a7d805765ccd5e,"Filter Eee hotkeys (wifi controls, backlight, leds..)",Jose Riha,2021-04-13
+65b3e05b21451fd3daf0270947ac8bb90e228326,improve modifier workaround description,sezanzeb,2021-09-03
+65b3fa2cbc1f186d38c7b5439d6718b8f491ad7d,"Remove obsolete config code, test setup fixes (#1186)",Tobi,2025-10-19
+661f56d0430378326423eba124011f525c001a0c,more precise mouse gamepad movement,sezanzeb,2020-11-30
+666d6ef9f0b9066487f0352f22d63da08af9a7ab,update README.md,sezanzeb,2020-11-10
+66965984bef5ee337185bcdc7b13aad5341a8aaa,prioritizing events in short bursts in the reader,sezanzeb,2020-12-12
+66a78bb3fb65436e3c8e303a0e5887350c523a2c,more macro tests,sezanzeb,2020-12-06
+66b425bcffc0cdaa65e4334d47d02fd4d616f300,Initial commit,sezanzeb,2020-10-26
+6760bb76fb729dd5be015dbab54ece95c820b44a,#171 fixed is_debug not defined,sezanzeb,2021-08-22
+6797e8826fd42cf86f451bbb9267c61361fdd015,some file refactoring,sezanzeb,2021-02-13
+684a972b969e5195be34240c92f977d96ab11d1d,Option to install only specific components (#1233),Tobi,2026-01-07
+6884d227bd664fa8649bec0efb9eca7d0edb2d39,Update README.md,sezanzeb,2020-12-05
+68eb9dc91492e9232cb26cf6cc5b4febbb529ba3,update tooltip,sezanzeb,2020-12-02
+69f4b98c37a1e7fc26f8d5271de2562cba619089,fixed mapping joysticks as buttons,sezanzeb,2021-03-21
+6a0c0e30e2852c4bd8f853a8e39fe512da180d1f,removed stuff from tests that was removed,sezanzeb,2020-11-18
+6a35d7bcf9852ac710360482cc6b66c328b31cad,reader tests,sezanzeb,2020-11-22
+6a68b894dc44c20ad20fe2b3600adab21410b8a3,Improved docs about limitations,sezanzeb,2021-11-27
+6afa92b8142dbf2003c647244174080796c99543,Removed obsolete destructor for test UInput,sezanzeb,2022-03-17
+6b43e66bdd197a8b2b1ff84cb1e09faab743449a,better handling of duplicate services,sezanzeb,2020-12-04
+6b4b85357fc0b10d55651e2aedb5aacb7bbcf1f3,Showing placeholder text (#658),Tobi,2023-03-20
+6b6c19be138992470e2122be43d1227145838520,Update Slovak translation. (#1083),Jose Riha,2025-03-29
+6bf89a89d91459c3fcfc8c552b2bed054aee49f1,improved device detection,sezanzeb,2020-12-27
+6c1c21e0ab4a0be8cec6190014c1f5db0e7eddca,safer chown,sezanzeb,2021-02-15
+6c2160ff4e99c00eb3b957304375231a4a64a591,possibly fixed the data path,sezanzeb,2020-12-03
+6cae50c43e9007342d5eed57ce36f6deca5b3190,Update macros.md,Tobi,2021-10-01
+6cf52bd80807dfe251689fdb4bad3618f22a61de,debian package,sezanzeb,2020-11-29
+6d64b081d0380fa3eb29f868e951fa9d9e9923f8,config for autoloading presets,sezanzeb,2020-11-20
+6d80f3635f49cf41643c5307d768f3b9cfa1cc08,update roadmap,sezanzeb,2020-11-08
+6d8fa1cbda42ee4b3548e6326a345885cea21c08,clearing the rename field on preset switch,sezanzeb,2020-11-15
+6d9f1c44c56c0564130c3443394c6cf2af25431d,ensuring ownership of all created files and folders,sezanzeb,2020-11-29
+6dc33b379220f1eed8597087a601c375fd7d8ef5,updated screenshots,sezanzeb,2021-03-27
+6dd056541cafcf831cc54af2f02cd9012fae41f1,fixed data path on ubuntu,sezanzeb,2020-12-03
+6e021f98d0e3d1d35bb02d93dbe5e14735eaf213,update usage.md,sezanzeb,2020-12-19
+6f0e8d97fb58d96c12cb2439c9c203883699282c,wip reading keycodes even though the device is grabbed,sezanzeb,2020-11-22
+6f40c936603e5800061438a4d8601d96369a900c,Update development.md,sezanzeb,2021-03-05
+6fa1b52556bd36565dae8de9d7ddc4221e9d41c5,Update README.md,sezanzeb,2020-11-29
+7044e6f000b95635475f681efa32a534498fcda3,fixed tests,sezanzeb,2020-11-02
+7064be391ea3d716ce5179a83a7678d6fc329c4e,input validation for mapping change,sezanzeb,2020-11-08
+70bc804f15c3539c87add5dff7a2082b7358396e,"Logging improvements, updated readme and some linting",sezanzeb,2021-11-23
+70f091f39b4421dc7738bdc02678b953d6dd6acf,"some fixes, cleaner .change function of mapping",sezanzeb,2020-12-02
+70f601f28e3df00d2fee19f8494f672ac49ea1e2,#489 Disabled ctrl + n shortcut for now,sezanzeb,2022-10-11
+70f61c25cd4404ddb44da8f52f722483faad4560,Update README.md,sezanzeb,2021-01-17
+7107c68cffe2831728a8f2605eed94f6b5d5b4ee,more permission stuff,sezanzeb,2020-12-06
+7143fbffc993254333c37ee7235382ea1595fd58,"Improve documentation mapping, fixes #135",Werner Robitza,2021-07-09
+7150be9a7ee6836ace9cae5683f10e4529e15855,indicates if a mapping is going on,sezanzeb,2020-12-02
+716b4bb9219c68f1821f5adb49782d3b3cba03b3,"#222 Showing the keycode instead of ""unknown""",sezanzeb,2021-12-02
+719cb750870a070223f419392d4582da526ab9c8,test delete_preset,sezanzeb,2020-11-16
+71b9f84e9fc128805188400f8733b0b0673b575e,Update maintiner email and copyright year,sezanzeb,2025-11-01
+71de04b626adc25de3f7352774761d590fe91d94,organized the archived xkb code,sezanzeb,2020-11-17
+71f8bf4e1343709e2c0bacac7f77ab736804a0af,New UI (#484),Tobi,2022-10-16
+7237f433699009fd8f13c9095a415036d0fac599,check for {,sezanzeb,2020-11-15
+72c04932db3a82932f93279a54e456ef9e143fb1,update readme.md,sezanzeb,2020-11-18
+735c145c42e6133f78b0f1f2ecce15d98ed768ac,Update development.md,Tobi,2021-08-04
+73f3784980b71e711c8f69dd7b80ee17f6622da2,more tests,sezanzeb,2020-12-03
+743ebd1bdbbedab16cef2f0a3a1173caa9ebcb1b,Combine install scripts into a setup tool (#618),Uwe Jugel,2023-02-17
+748dd3d22830d0cdc8cd43227e10321dcfee318d,typo,sezanzeb,2020-12-06
+74da396fd8693a0d114d7dee577ce064d6023529,unittests for the new permission checks,sezanzeb,2020-12-06
+74e1d83dc66c22f9023477c76d6cfe3de1e8b9ba,update build.sh,sezanzeb,2021-02-06
+74e98e28df5a00ddf260beb5447f0151070d9616,fixed config file doesnt exist,sezanzeb,2020-11-21
+7527f3511bf9020a04ddf29e3ba7022ca385a970,Don't suppress combinations that map to an analog axis (#1054),Tobi,2025-02-04
+753ce5319fb4b2789ec9f5d96c0d506863c7e923,Logging process name and coloring logs based on file path,sezanzeb,2022-01-18
+754e252567ba73d620ea49ee58b68086799c7837,Update usage.md (#337),Tobi,2022-03-12
+7567320a2b215bab431fe2c0f58d0776d0be9095,some more tests,sezanzeb,2020-11-18
+7586ad9942e7c53ce91cddacdc08226aac72957d,Do not exclude buttonless devices that have axes (#956),StelardActek,2024-10-01
+7663512c1c431867c0d5fca1c1edda6ce36e88b8,resized logo,sezanzeb,2021-04-02
+76720b09541940fa5babeeaa0365ecbbff10b4dc,update readme,sezanzeb,2020-11-22
+76c3cadcfaa3f244d62bd911aa6642a86233ffa0,1.3.0,sezanzeb,2022-01-10
+76fd446da02c4ac08c24bff0f2159b729f188bf0,better guidance in the GUI,sezanzeb,2020-12-26
+772fb8da4d20a2b150f6a13b72c6727609c8e2b5,"#61 copying presets, fixed autoload after rename",sezanzeb,2021-03-17
+779263779e771cf4abf5ba05e71f8b155519968a,Remove extra comma in the DEBIAN control file (#286),nouraldeenm0,2022-02-06
+77cc0a950133a5f63b68f670e80864a3609dc071,Add toggle macro (#1183),Arimil,2025-10-19
+77e9f48b03e53f23693ee4637dd2680fad3266b0,Switch to dasbus,sezanzeb,2025-11-02
+781362031457f00c10018c8ebd76eab185e79949,lint,sezanzeb,2020-11-29
+784d767c9dbb8b7057a73197ab985dd7e4db82b7,"magic number RELEASE_TIMEOUT, relax timing in test_reader",sezanzeb,2026-06-13
+78692f40ebe646954be831f64ada1d849ec1514f,more work for event type to mapping key,sezanzeb,2020-12-02
+7870c6d83e50d9234de049cf45ed4b4f3bcaae37,improved get_devices log,sezanzeb,2020-11-21
+78e4fa7eea33c0b930acf0fe256bdecbc4bbaa50,copyright year,sezanzeb,2021-01-02
+796a776485f46cb9eeb9eeb1b0ef973206338afe,"Improved macro exception handling, keystroke sleep cleanup (#397)",Tobi,2022-05-08
+796ccfa2d2a71b2b015c28031ac0710b29d29792,more verbose syntax error,sezanzeb,2021-08-31
+79adf0ecc0fad7c116772188f0f94f7ee7470d32,works with wayland,sezanzeb,2020-11-22
+79e432e031fb4b362387ea93ff0b029ee0e0ac28,Improve i18n (#288),Jose Riha,2022-02-08
+79f11b4e346640728a44738c75412e7048ff7e5f,"#183 timeout for if_single, TestMacros split",sezanzeb,2021-10-02
+7a0ccac5d5e9609d2b0a1d60c61ec30edc539674,Fix btn left confusion (#711),jonasBoss,2023-05-21
+7a34ddd262c9b7d5faadea2209487494ae64bde3,Update README.md,sezanzeb,2020-12-05
+7b2cc56f229c246e9b5107c53dedb7ad939e5047,Update README.md,sezanzeb,2021-01-07
+7b3f272dcbddb5b5bc41a4bbccf717331d5a79e5,Tests compatible with Python 3.14 (#1324),Tobi,2026-07-06
+7c4ecf3cddeed7372c89bb086b58e1db8e17e97a,Optional wait randomness (#986),Tobi,2024-10-25
+7c561dde89bfdb7f9978201f84edb7b9e2e46300,fix #666 (#667),jonasBoss,2023-03-26
+7c7273d0fdb32fe0a30ce1cc9d8030fa852da0c9,update readme,sezanzeb,2020-11-29
+7c88692c861040277b67ca4531025073389b414e,renamed command line arg to print key names,sezanzeb,2020-12-05
+7d2d542d6e86b9522906719ffea5f5be472fe6a9,#75 ctrl+r to refresh the device list,sezanzeb,2021-04-02
+7dfb65766dc34a0e6fb6a256b93b64cba197ab93,started work on injecting keycodes instead of configs-only,sezanzeb,2020-11-17
+7e18bd18c7446f74eb6fe540522a3fc8581a30f1,Document `disable`,Tobi,2023-03-28
+7e30f450ee04f95e6e8d2182f741574e93fe5254,simplified keycode injection,sezanzeb,2020-12-02
+7e60635896fe82405b5e06be3fd3242be8472015,Update it_IT.po (#796),albanobattistella,2023-11-05
+7e70b00e5b50648298b017a1cd880a2115a70710,"full path to the daemon for loading presets, some TODOs, .json file extension, nested mapping in .json config",sezanzeb,2020-11-24
+7e8c14bb0905573079bf69bc2e0d192c0f1f3745,wip,sezanzeb,2020-11-17
+7f3a01012846f6824237f171bca9adffe9004d1b,support to add macro functions with optional parameters eventually,sezanzeb,2020-12-16
+7f4efba7985986bb39eb4ca16657649324082240,"new cli features, more tests",sezanzeb,2021-01-09
+7f93f1e2eb51e60ef2229e37e36261a1e90e77d4,update roadmap,sezanzeb,2020-12-19
+7fcd8fb59fc476769055b89528aadf4d1a0f8171,Greying out the key recording toggle (#298),Tobi,2022-02-12
+7fe512193a683ca69c6fb764c341ae54eeff34c0,#170 add libgtk-3-0,sezanzeb,2021-10-02
+8277005493f8daf30ee4a11cf5559f270b7efdcf,update history.md,sezanzeb,2020-12-19
+828e1635ef48f2cd3b219ab0c2dc805961e8c23d,gamepad config via gui,sezanzeb,2020-12-19
+82b7d936f6f2ae8b878caa14b82b81d8c6239308,asyncio macros,sezanzeb,2020-11-28
+82fad5f26f7fa03f65ac179d42b9c23dbf10bb5a,rename,sezanzeb,2020-10-31
+82fcafe8a17bbc08bb6cc05104f04e93e81da778,tests for macro running and parsing,sezanzeb,2020-11-28
+8329abf7d1d2d064dea9f26ca25531fdc072ef95,#107 extended test a bit,sezanzeb,2021-04-29
+8387d85ed8b44c887576c7c8aa98adce677abccb,Update README.md,sezanzeb,2021-02-06
+83cc610e9d464c8b40bdbeab7961ab04a0950eb2,#537 Removed shebangs in non-executables,sezanzeb,2022-11-19
+845470774841f8afe1805e18429170702d9e73e4,"more tests, disabling keys",sezanzeb,2021-01-01
+84cdcf04673ded6343e8619e88bf0748041a447d,Update Slovak translation (#289),Jose Riha,2022-02-08
+850c60ab502609573dd8a81472c234197097e244,D-Pad direction mapping and joystick purpose configuration,sezanzeb,2020-12-19
+8542b0614f1ab6826d6c320e08672394139890f9,fixed styling,sezanzeb,2020-12-26
+855778c52c5d696a31b336a24a2203e7743c4987,multiple attempts at grabbing the device,sezanzeb,2020-11-19
+855db4a00895782e85b1f4a69eec90f9418518af,pretty preset config files,sezanzeb,2020-11-21
+8561bfac630dc4936078778157294c6d46a1d65c,pylint 9.70,sezanzeb,2020-11-22
+858c5059e53da822faf58f4b460ef0cd902794c0,Using NewType instead of TypeAlias (#652),Tobi,2023-03-06
+8595aa00e2781aa709a1c263946d286cd24226ce,only listing unmodified symbols from xmodmap,sezanzeb,2021-04-02
+85a6487e4418a5f86d82677f0e5e589e00bcc299,#295 Corrected usage.md,sezanzeb,2022-02-12
+86555fdaf9da4fe2349f7f3cbe75acf1aa5b8a8c,"improved, cleaner keycode injection",sezanzeb,2020-12-31
+869be4c38855f0ed182fd5bfbb94d6e29206b2e4,key combinations,sezanzeb,2020-12-31
+86ea319124413650095c4fbe2e7da91700f9b829,Respect XDG_CONFIG_HOME (#1211),Jorenar,2025-11-15
+875527973b7e805d9cb44d73b4a9dcc7ce3f2527,simplified daemon test,sezanzeb,2020-11-22
+87c33563efd86b4896ff7d431e4c65e14e270ade,Update README.md,sezanzeb,2020-12-06
+87ed1188b6ddbdf1830a16664980541890bd49c3,fixed wacom buttons,sezanzeb,2020-12-12
+8827e85023aad220f32d96972fd4624ddc4b17b1,test for correct linux header keycode usage,sezanzeb,2020-12-01
+8864c8bcfd4a7472516c026cbfa3c38772f7719b,ignoring Power Button,sezanzeb,2020-11-22
+88bf56b9a9e775d52cb83e146e186f56a2e45467,update badges,sezanzeb,2020-12-02
+88e4f0e5ba97b63e106a3f6bc346bedd816dc2fb,Merge main into beta (#421),jonasBoss,2022-06-25
+88e88bda1a01d5e8e273bab07a964257966588fd,showing also single matches,sezanzeb,2020-12-06
+89534bfe667aac0bed74ed9fca87e7f7a1f06225,apt remove --purge -> apt purge,sezanzeb,2025-02-15
+899e624071b7181c4e67a947cda293882ef46d59,obsolete comment,sezanzeb,2020-11-16
+89cb0e00d4b9e2978dd2e160178ff58df11584d5,wip,sezanzeb,2020-11-25
+8a496644eb21229cfc981e80e30138d760b83c92,"wip, tests failing, stuff broken",sezanzeb,2020-11-07
+8a980a76b509ebe6c195fdd7c608a1ccaf7da22b,Add mod_tap macro function (#1004),Tobi,2024-12-07
+8a9b8157723cdcce7d8cdeceeea4cd61251e371a,tested mapping metadata saving and loading,sezanzeb,2020-12-02
+8b700fe214649bfa72d02b92ff32ddd3a18cd546,Remove rich.traceback,sezanzeb,2025-02-15
+8b9f98acc2c5285b11e940f3ccfa153181e2401e,update screenshot,sezanzeb,2020-11-19
+8bb6304a1fdabec90c29da6f097b41d0e1d38845,Add translation and lint instructions (#545),Tobi,2022-11-20
+8c1180822d28856a0ad5fcbc1b2b15d814087d3a,Translation for Ukrainian (#505),Saltaformajo,2022-11-14
+8c3f7715799396bf001da5df47068c7766be40ff,Preserve forwarded mouse DPI metadata during injection (#1290),MizuIkk,2026-05-10
+8c52591e47200f98cc2bd60124edac36405fe61c,update HELP.md,sezanzeb,2020-11-18
+8c81b18f686a4606554db463ca3d54d6bd9a1746,fixed error log,sezanzeb,2021-02-25
+8c851f547561b587de1701f4b1fd093686ed1132,update readme,sezanzeb,2021-01-01
+8c85bf5d397625aea2c3aee16c820ae4a6026cca,"got rid of the interval polling architecture, also displaying mouse keycodes in the status bar",sezanzeb,2020-11-22
+8cc63244f5226265e904f3e0b568688db656e508,better rich.traceback initialization,sezanzeb,2020-12-05
+8cfdf3e3b9c639c0d5240e1b4feb6cff9bc717ee,#98 /lib -> /usr/lib,sezanzeb,2021-04-16
+8daf55c196e01a9819fb091baac72721a3b0fb61,#93 support for devices sharing the same name,sezanzeb,2021-04-23
+8e24782a61d3165a1b6988a4767ba68de215522c,started to outline the new save and load methods,sezanzeb,2020-11-17
+8e409ca4b4c9a4d5ed8a934c16384f4221780174,Updated usage.md,sezanzeb,2022-02-03
+8ed042a20601cb1500ceb24f5f9e505a4a37d9fe,Add hint for permission problems to logs if device not found (#1310),Tobi,2026-06-12
+8ed0a72c1011a4874cf76e3c1df17faec6c63879,Ignoring audio devices (#414),Tobi,2022-06-11
+8f0db825fd061139173b99f9d7c76c3689385702,"showing the current keycode, better loading indicator",sezanzeb,2020-11-15
+8f3f42170049efdb63454ebc31f331d3059d00f7,needs python3-cairo in ubuntu,sezanzeb,2021-09-29
+8f5c718672e887157e7ea501370abd2b25efc1ec,some fixes for gamepads,sezanzeb,2020-12-31
+8f79c25bd966f2ea0fd60c8928df6773911c49f9,Fixed autocompletion tests; Group devices using their `uniq` property (#818),Tobi,2023-12-03
+8f8800498c9c92048cc142fda302a3363aadc5a2,Fixed false positive if plus-syntax in comment (#316),Tobi,2022-02-26
+8f985402a46002de852cbecc54a74833c76f9529,split readme,sezanzeb,2020-12-19
+9037afe0f721cae0e265e8b97f27f29c2d492c43,Not attempting to call xmodmap -pke as the service,sezanzeb,2022-01-16
+90b6f51d84e8e15031d160ab9dbea1e32784941e,freed /data of stuff that is only github relevant,sezanzeb,2020-11-26
+916ec6278a33e68e800bb3524c82f69e686e2ce9,bunch of stuff,sezanzeb,2020-10-31
+91b9ad5754006bcd578f2a4e1f82527a7a61304f,can map shoulder buttons,sezanzeb,2020-12-02
+91f11ae14deb88ffbb7c5be2e26dc20ae241381d,updated references to the renamed defaults button,sezanzeb,2020-12-26
+91f304991a87e4a421b96122ebbf16ba1a8b4a1b,testing the injector constructor,sezanzeb,2020-11-19
+91f975320d9f93e74925427bc16eb2848fb9ae3e,Limit forwarded uinput device names (#1304),Mizu Ikki,2026-06-02
+9224bbb4e5ce3af88f87922b091a4b663f7ed780,Improve mouse-button names (#1168),Martin Zarate,2025-10-25
+9253cc7e9085db1270ab43be3e33108a8c06c335,mapping list headers,sezanzeb,2020-10-31
+92bb4b14712e273e05981824e458d3187f29b9b3,calling set_config_dir when the gui starts the service,sezanzeb,2021-10-22
+930e8d8ff7a1c50eb5228659028bdb85054ace5a,Update README.md,sezanzeb,2020-12-05
+93aa3930518354e88e21957e565f9d00a52f495b,improved gamepad button names,sezanzeb,2021-04-02
+94b94b9db63179bef365566ae6efa0a744d7e907,`add` macro (#496),Tobi,2022-10-23
+95b09259d310fe8d2e7fc3f1ffaaea3cd4190118,wip,sezanzeb,2020-12-02
+96395ae57d2569a88586e43200b4ec158e9f6d3a,tests for hold macros,sezanzeb,2020-12-06
+96950e83878be7117b91e3ed56aa656123b32f04,"Parsing `a + b` to `hold_keys(a, b)` (#392)",Tobi,2022-05-07
+96c18c53a2a599fcb1ac1ea9d38357a8a044c260,Mention the psutil dependency in setup.py (#1156),Stephen Kitt,2025-09-01
+96d04c118807b30a54ff30df3c2a01c5fb65b15d,updated comment,sezanzeb,2021-04-29
+96d36cc8962a859d345e459877e427c9783d6e20,Lazy-Loading global uinputs (#339),Tobi,2022-03-17
+977ca425c469b0916dcb1cad756458499f08e1d6,Update README.md,sezanzeb,2021-02-18
+97ae312d063e3c77fa1adaa1952576e1818d3472,started work on macros,sezanzeb,2020-11-27
+97ff743c9915c1824278be2f8b15416783e1784f,Trigger macro syntax check after typing (#394),Tobi,2022-05-07
+98953368a957d5d8f49d8564547434ecf67d144a,some small log improvements,sezanzeb,2021-01-10
+99382dbff1d1a88aabbc584781bd748e71ff279f,automatically switches to the keycode input,sezanzeb,2020-11-12
+9996f0170db294a8f23c92849bc94865fdcb1759,some comment stuff,sezanzeb,2020-11-22
+99bc679b82f2ed998dc00cc917b923920255bd76,#91 #104 added set and ifeq macros,sezanzeb,2021-04-25
+99dd265d9a64c168e8af8fe3321848320e038a29,preventing duplicate macro runs,sezanzeb,2021-02-20
+9a387e09fbfaa9a12b1346e1ebd83c95b7d3979e,some more test fixing,sezanzeb,2020-11-30
+9a41ae04ee4dbb1d2c33299abf5290e909324b10,added some help on debugging device support in development.md,sezanzeb,2021-02-16
+9a4c87057707fcb929795844d31f0d8c80ccb8d3,#552 Strip output symbol (#556),Tobi,2022-11-23
+9a60ae17ff7f32f491880e50359e307ea148d828,more tests,sezanzeb,2020-12-06
+9aa9a8acdb5f8d2c6406e34a1cb8cc3c25d00e4d,More stable macro variable process (#1313),Tobi,2026-06-18
+9ac1fefeb172aaa85717f09ff8f797192aead6b7,"tests for create preset, config lib not needed",sezanzeb,2020-11-02
+9adc300aeefe39c94655738ed52e848808f991f3,Beta ru_RU translation (#593),yngmjgsd,2023-01-11
+9adcc82b05d7efb7241da797055b9ecf94f2b09a,Add mouse_xy macro (#1029),Tobi,2025-01-08
+9afdbe9219d6783293141289131396ca3c3f03dd,avoid waiting for the InputDevice destructor,sezanzeb,2020-11-16
+9ba3ab28233794a6e7753a72698ce5bb8a33a0c2,Add Slovak translation,Jose Riha,2021-06-28
+9cd68976af7e574e71aab122e0c4eb2b9093385c,Delete buttons-not-showing-up.md,sezanzeb,2021-07-19
+9e04df79ca4dca77516a9864d740b9b2d4aef788,2.0.0,sezanzeb,2023-03-20
+9e2323367bbe920d9a8e021130d486cabf1606d1,updated screenshots,sezanzeb,2021-04-02
+9e6a6c7a82037b4cce2fe40da8ebd10d4b7a40f5,0.7.1,sezanzeb,2021-03-18
+9eb1c03abb7053848bb302e7269c199b01f74a78,Change black version in workflow (#1263),Tobi,2026-03-04
+9f469e3ce5030a5f7f82dddc4b8c3a2ac018705a,moved injection-wide infos to a dedicated context class,sezanzeb,2021-02-13
+9fef21597715bd4e11883293d7b565a4a7a6bf13,update badges,sezanzeb,2020-11-29
+a00358317da6d20b81b3630f0067c92328b0ffe9,less show off,sezanzeb,2020-10-31
+a00b96672029b84bcb3561de62fba88d1a336484,Add more i18n strings (#548),Jose Riha,2022-11-19
+a012746a6b3d842943613fe80461bf50be3bc01d,2.0.1,sezanzeb,2023-09-18
+a055662407141c6629611ec9e1b859992819e84e,improved key names,sezanzeb,2021-04-04
+a076d98606b88acb0d0c322e97fd791034157212,Added debug log for messages from the helper,sezanzeb,2022-07-23
+a0fa0e03413e53519b7a8ca64a944d1ae0052123,fixed injection,sezanzeb,2020-12-02
+a1503c6e16433b1bb5ceba6ef97290366e27699e,unused time import,sezanzeb,2020-11-16
+a150b067487b53a6140aa28dec6b940736e74352,"#197 timeouts, service Requires, added key-mapper-control debug log file",sezanzeb,2021-11-14
+a29cdaef74b95304dad815c5b1b3b6c5092189e7,Panic codeword (#1007),Tobi,2024-12-13
+a2b751d2980febad3940b69a0020b1737cef0a55,Update usage.md,sezanzeb,2021-06-07
+a2dc3ef6069982c2795cefd20564a3890f73380a,running without the service on dbus failure,sezanzeb,2020-11-23
+a2def23620f7cac6cc3b3ded1cb38421c92a3a59,update roadmap,sezanzeb,2020-11-08
+a2ed3696ca90669274ca5ec9fd4998b4e91cc17d,Renamed to Input Remapper,Tobi,2022-01-01
+a3250797c4b9103f8c8f267577a213a84603fc30,update readme,sezanzeb,2020-11-17
+a33c9401bc7cf17fc8b12a358dbc616b1341eb87,ctrl+q,sezanzeb,2020-12-26
+a381613641761e3fd70687df58923c21044356a3,got rid of this confusing symlink stuff,sezanzeb,2020-11-15
+a38f65a8892afa7fbe55772d98d5f34197bb617b,improved macro docs,sezanzeb,2020-11-27
+a3f814f06342803c5f0ade9a5a57139efd137808,creating config structure,sezanzeb,2020-10-31
+a402732bc473472fb3f0488e00ed8464157363d7,"refactoring, restructuring",sezanzeb,2020-11-09
+a440b4f7df9a031eaff38da697dc2a99a0d9d372,gamepad buttons as keyboard keys,sezanzeb,2020-11-30
+a4497550495b368abe4162879b953a54e2b11427,prevent some gtk main loop error to appear on close,sezanzeb,2020-12-04
+a4f5d0518f41abed0133af4af7ac5c24d6e136a3,linking the whole dir,sezanzeb,2020-11-02
+a5383f33e4c27628aa72ac8891d895a8e8f5fbaf,#671 added python3-packaging to deb dependencies,sezanzeb,2023-04-04
+a552bc60190be4ccd9b4d5c808850c62574c0f78,"minor setup.py cleanup, readme update",sezanzeb,2021-07-03
+a5b5f562c8d280b572d2c4d628ee874f36137824,#37 mapping left mouse buttons,sezanzeb,2021-04-02
+a6091fed0053419292e94a0ca900f45e5e4887df,button to load the default preset 2,sezanzeb,2020-11-14
+a6208d7f6410e3b22dbf1220e8a482c5a53c56c2,"Update badges, improve coverage configuration and instructions",sezanzeb,2024-10-26
+a685606083c4966e146595781505c73af1ae6d53,"only valid symbols in list, corrects casings",sezanzeb,2021-04-02
+a68d0aeb6052ac492b929532e1bc4394014dd374,drawing tablet improvements,sezanzeb,2021-02-15
+a69c45ea33bcb2d49f81cc617833b99bf1fc862d,Use /usr/bin/env python3 shebang (#992),Tobi,2024-10-29
+a6f6df388f1a390b06800602f2a3cbc7ea82c3d5,#65 device icons,sezanzeb,2021-03-27
+a6ff2946a6741c9ebc17deccde8432bc883da7f3,Minor GUI Layout Improvements (#439),Tobi,2022-07-23
+a7fb3984ba3f811c8980ce7bf2e421227e1f5aac,Fixed a docstring,sezanzeb,2021-02-05
+a821b1e98fdd705f878732e972c0f8487749014b,1.1.0,sezanzeb,2021-09-29
+a84ef5c0cd94d7f075912152197c6889e37db88e,Update history.md,sezanzeb,2021-01-03
+a86dfbf7862f5a524da84d6a646009caf4ece807,Added varying error exit codes,sezanzeb,2022-02-03
+a89fa15693f72a8c0e98d909c4b9c607e933931f,Fixed a bug where not all needed devices where grabbed,Jonas Bosse,2022-10-23
+a8c96c448ea0fab80eea9fe89e22c06bd7d4f0c4,fixed a log,sezanzeb,2020-11-29
+a90286c421d8de68a62be6b08181305bcd09db91,populating the autoload switch state,sezanzeb,2020-11-26
+a917f914ac7e9e5fa97b161ebf05a2f9529492e8,update usage.md,sezanzeb,2021-04-02
+a918829a478e07d0eb0f411be420023e7af2b9c7,some proper cleanup of pending_events,sezanzeb,2020-11-22
+a94a148664a2c6bcc36ee26e77d04860980014d0,readme updates,sezanzeb,2020-12-20
+a94b57e2cbfbc03cedfc3c5fecc5930725945378,Some cleanup in Parser,sezanzeb,2025-01-02
+a983cf91262e61885765a461c2f32893ca0b847b,more checks for graphics tablet capabilities,sezanzeb,2021-02-13
+a9ab691d9040a1363c31967d7ec1a7c52a78fc57,Removed deprecated usage of `hold` from docs,Tobi,2022-05-10
+a9b30ff33a39db05ea28f5837826be40afe9f052,update HELP.md,sezanzeb,2020-11-22
+aa2c55c858ce24fca7fb14ab0947bdac926b96a0,#543 Typos,sezanzeb,2022-11-19
+aa6a50584064f36f3658b5aa5530549d9c7ebd50,"#488 po/it, po/sk and po/zh symlinks",sezanzeb,2022-10-12
+aa8bce2faf146ca9104d0f256c9e480d70a29a53,I just mapped my mouse key,sezanzeb,2020-11-02
+aa9576cb4c02318f66255efe5e86bac1a0aba459,The usage section points to the readme files online now,sezanzeb,2021-10-10
+aa9df32e2bd6c7f163b4a51fba84fe9838763215,some TODOs,sezanzeb,2020-11-19
+ab56263c3b9bb3dc159c8f6553f4c7ffffce7d76,improved numlock correction,sezanzeb,2020-12-16
+abb1b76e853b25d27c35450dcb1717b56488d420,Sanitize preset name (#525),sezanzeb,2022-11-01
+abbbefc7a22653c65a31344144352afc2d3744a7,Removed problematic redundant call to terminate in reader,sezanzeb,2022-01-22
+ac07769854b5c0b3d5e99ee130516243699687ed,Python311 (#555),jonasBoss,2022-11-24
+ac1ba6dba347560817dbeb6be915d1d9a4254d28,creating and selecting presets - super buggy,sezanzeb,2020-10-31
+acdaf5154f244f40784e6e560feaa8392ed497d0,fixed camera check if no key capabilities exist,sezanzeb,2021-02-03
+adaddcd7ef03bf2a46d699e1f746be92a8ad8661,tests for KeycodeInjector,sezanzeb,2020-11-18
+ae56f2c0e35367f4551b46ba593e79240d389eb8,#276 Fix crash when a macro is already running,jonasBoss,2022-01-31
+ae7caa7ec1095f281945c7e770afe3142f9c2042,#471 Fixed link in usage.md,Tobi,2022-09-09
+aed86a3dc3eebba201c2fd34dbccb6aafcc8e83c,update PATHS.md,sezanzeb,2020-11-10
+af20f87a1298153e765b840a2164ba63b9ef937a,1.4.2,sezanzeb,2022-03-19
+b00de9f16a6cc8f1c6bfc18f0c35eef88ecefa2f,more tests,sezanzeb,2020-11-29
+b029d7df25f47318cadc86fed0c4767c0ee37337,more macro tests,sezanzeb,2020-11-28
+b038e27f34272134bf6730373950b07464140cc5,Allow reader-service to be started separately (#980),Tobi,2024-10-27
+b047843545c85543e43f36ecc3b51e343c29c872,Sanitize device names in daemon (#524),Nik Chatzinikolaou,2022-11-01
+b048a2b2a506da105b1d26c260bbb8324656d240,corrected autoload tooltip,sezanzeb,2021-04-13
+b112a18b6238d00e409c57564d1e95b847267cb4,Update usage.md,sezanzeb,2021-03-19
+b139f95ee2f5b622cc316da8e5ec3e70ce829c8a,Add Slovak translation for polkit message (#285),Jose Riha,2022-02-05
+b171845ea1c211672477a46573ed962c5bb9cf9a,linting,sezanzeb,2020-12-01
+b17e02394e1f4f8db39736c5be9f05dd1e95f484,Update README.md,sezanzeb,2020-12-06
+b197f60fe5bd6278025cfb76a343c6951d045760,update roadmap,sezanzeb,2020-11-15
+b1b0ad23884a74f6eea37cbf218ffb5739b59a4f,Add ExecStop to service (#1349),Arimil,2026-09-12
+b233e93eae81537c594d7972e0d07644c127f2f2,Support for strings in macros,sezanzeb,2021-10-05
+b23947334676097f96eb793cfe443a0d54bca719,update readme,sezanzeb,2020-12-24
+b23e6d5340bb3c0e6337196d13af5c69d6b6540d,#219 Using systemd-analyze instead of who,sezanzeb,2021-12-07
+b312c037848212b63d29e33c2dbd08801faf2644,anybadge,sezanzeb,2020-12-20
+b32559826850768da95ebe659aac3fc35e4cb1ad,Fixed various mypy problems (#642),Tobi,2023-03-02
+b3ddefb98a63c5efb152fd4b5f8351c52a2cbb79,displaying and saving mappings into the table,sezanzeb,2020-11-04
+b3e1e4ca1976bb420017c737525151ac37099e6e,Refactorings (#275),jonasBoss,2022-01-31
+b41f1fe3ab05b538566d39723d8de7edba29c3df,Improved info log if xmodmap is not installed,sezanzeb,2021-10-11
+b44861b39635ff25af3fb3978b09879c761abe05,black,sezanzeb,2021-09-26
+b45d2bf8a3e6b23b7e99f6df28451d0f80ed08d6,adjusted button margin,sezanzeb,2021-03-27
+b466b1894fa21cb21c3fd23143c726b907bfdfb1,Install dbus policy in /usr/share,Stephen Kitt,2025-02-15
+b4852a68750dc1cd6f06360c1b6d911d1b9a2b8c,"Revert ""Trigger macro syntax check after typing (#394)"" (#395)",Tobi,2022-05-07
+b4852f1da3349b24ed39466c582597b11ee7ab0e,Improve error status messages (#1024),Tobi,2024-12-28
+b4858703046751020a4cb1d53aeb342f3a184454,update HISTORY.md,sezanzeb,2020-11-29
+b49fc307136559cc1d3b5b4756d701ad0dee8242,Update black formatting,sezanzeb,2024-08-06
+b4f139f23a054dfabc9bb6e1a46ba20ca0045c56,update readme,sezanzeb,2020-10-31
+b4fb561c2d70b16022f08f41e9c332e656ce77c6,Update README.md,sezanzeb,2020-12-04
+b502bd2b8cca4b0e79eb6fecc352a65def877051,update development.md,sezanzeb,2021-01-23
+b52a42794072e02b4c839f616b1fc91ac2b6a724,small gamepad improvements,sezanzeb,2020-12-27
+b52f03adba8739565545d64d3fd30cc51a06370b,modifier combination workaround,sezanzeb,2021-08-31
+b5345ad4c042fed529eba51b2d11007b1caf8630,Making ReaderService terminate automatically after some time (#519),Tobi,2022-11-11
+b56af82caa137b823775bbf49ac9b541db370719,test for reverse mapping split,sezanzeb,2020-11-23
+b581eca3c8ee2b1a654b5c7ace13dbe2382df044,Update readme,sezanzeb,2021-04-25
+b5c03ff89b5a32d65d0d7b5355d3aec7b1df2b8b,docs: remove redundant install step on Fedora (#807),Kristen McWilliam,2023-11-12
+b66def981fd758faa718616f30d40d94839edbb4,Ruff check --fix,sezanzeb,2025-11-09
+b66e14e57a6bddd8a2a6c91db48bd5fda47f07f4,add_filehandler for any path,sezanzeb,2020-11-29
+b68b9581606545f200c9cf0281ea0d1e02774564,polkit,sezanzeb,2020-11-15
+b6f26e1dfa86f3b4eaecfe0d1dc01c6fb5bdf246,Asking for a python-evdev upgrade if outdated (#346),Tobi,2022-03-18
+b75408e3395a74dd46d8443e826646b362c02b11,update tooltip,sezanzeb,2020-12-06
+b806c48a69abfe10114b1370308bb5919635692b,update HELP.md,sezanzeb,2020-11-19
+b881f0a9370b14fa8d766c900af4ffc07da1b7ef,absinfo for older evdev versions,sezanzeb,2020-12-26
+b88b019ce03daae52e2e87d5a9e1a36d75ee8e25,Improved error formatting in status bar (#635),Tobi,2023-02-26
+b88f9d9426609bfd425953ba28f09fcd9ed0a435,more tests,sezanzeb,2020-11-08
+b931544650099f8fcd58156e2c5c5e53abcd7c35,workaround for old pydantic version (#376),jonasBoss,2022-04-21
+b93e2d33676d67b58b3464363b3b0fdeff9b5fc6,Updated issue-template evtest instructions,Tobi,2022-07-02
+b94524c7f979e12b83350665dac017c7a7e86a91,updated screenshots,sezanzeb,2021-03-27
+b96997630c612794836a517e84def77710a0ea20,"cleanup, tests for linux.py",sezanzeb,2020-11-16
+b9787518cf9eb727c5bd4ab83701ead1110842eb,works,sezanzeb,2020-11-18
+b9c015c49d7712a8ec6af28cf910e542732d82ce,#78 filtering yubikey devices,sezanzeb,2021-04-09
+ba0643abcc100a6a6d02b415963a31d5e9d7a318,Update README.md,sezanzeb,2021-01-01
+ba61cbe8c0493bc02025b8fdff439b04aa9f5ec7,move history to readme,sezanzeb,2020-12-19
+ba708cfd0a11f12413745e748967949e4db3db4e,integration test for rows,sezanzeb,2020-11-15
+ba712652a10347125be41e1058ce83333b408a22,Update README.md,gdgrosse,2021-08-25
+bafd923898769851a8a4ba5136e8a046557dd660,update pylint badge,sezanzeb,2021-01-17
+bb0e60ebc30273f0aa47d1788eaa44cfacfc3226,Trigger macro syntax check after typing (#394),sezanzeb,2022-05-07
+bb1af00a63bee0f732688a4fd899014ad1f3a5a5,Updated usage.md,sezanzeb,2022-01-14
+bb2c487380ab2ba4ae5253276957d21dfc5204a3,Updated config file docs,Tobi,2022-06-05
+bb6e4d23fea244530fd5610d7799f541c55e1b4a,Merge branch 'main' into beta,Jonas Bosse,2022-12-06
+bbe4217aadccaee7af8a3998bb53a526c22c25df,logging the commit hash,sezanzeb,2021-01-31
+bc1cd8a9315c00c955f58d01097b612385c08a86,Add parallel macro,sezanzeb,2025-01-02
+bc68fa7f6ec8faf10fb01e4b70426cade6ca50e1,Use gzip compression in .deb for wider compatibility (#576),Didi Kohen,2022-12-12
+bcbb9a4ee0a01bc5bf8be015171524cef7ee707b,more space for macros by resizing the window,sezanzeb,2020-11-27
+bcd60f489536648cee4eefc5b7100c2ef3a4efbc,Add initial i18n support,Jose Riha,2021-06-28
+be33bbd8376792c629a6279a60c9eeefa6bcf071,Use upgrade force-reinstall for setuptools for #564 (#566),Luna Nova,2022-12-02
+be671603377af82fbf3d11495006ce124aee8006,Restrict udev rule to event nodes (#1285),countgitmick,2026-04-19
+be9b0698534f2301987a7c4fa48bf5d20240bda8,consistent member naming,sezanzeb,2020-11-29
+beda21139accec3183a71e76edf05e65657dd731,various improvements,sezanzeb,2021-01-07
+bf93ba6bec85a8733f69d09b8a5a2979c12cc4ee,Update README.md,sezanzeb,2020-11-29
+bfb49cff2fee958e0420995609c87b8ebcab65da,Add installation instructions for Fedora (#719),alxpl,2023-05-29
+c08093d9b3b28dac6897fc7dcb67ac98980627a5,"continues to run without sudo, but warns",sezanzeb,2020-11-08
+c0bc93b3bad1c507502ecbb335d9515bae3e5a11,Improved Test Fixtures (#458),jonasBoss,2022-08-28
+c0df63517b30b1c161c737e02244151536030e5d,more config tests,sezanzeb,2020-11-26
+c17ec3e0914bbfbc44c64673f1200e61ba45c4d1,Update README.md,sezanzeb,2020-11-29
+c1bb228bf47aae361ead26ca55d04f916312f8e5,update readme,sezanzeb,2020-12-19
+c20c70f3241347a40f7f3f5d516de58dd2c66d90,Bypass pkexec for reader-service if user has read access (#1327),shelterx,2026-07-14
+c20e691147fe2656b9283b49ab31446fe23a6c12,"systemd, polkit, cli, handling touchpad devices",sezanzeb,2020-12-24
+c27f37a69127d06f5cc0b1c9c5957b13f498e8e9,Sanitize device names in paths #507 (#508),jonasBoss,2022-10-29
+c28b3186f04a999a54d032d305ce26ee9442d84b,Update README.md,Tobi,2021-09-21
+c2e9e822dd8e1ce0bd2d26829bc67b213769be21,Update README.md,sezanzeb,2020-12-03
+c2f6195196c2b521f0ec01ffd194a098c88dc78e,linting,sezanzeb,2020-11-28
+c31c77bf9cddf2c62365e8eec33e40cfd56b0936,Update README.md,sezanzeb,2020-11-29
+c40f82217b6e9316ed49663e7ec4c154f26d7130,more sophisticated permission checking,sezanzeb,2020-12-05
+c4988566ed4854d82ef0e05c5df5304a1694ea31,"tests, status bar, tooltips",sezanzeb,2020-11-08
+c4c02c931eda5194c7c4b5e1dc4b4c1889aaedba,updated screenshot and badges,sezanzeb,2020-12-03
+c58c3b535208fb8e8ae4952c6f7ebb4d36e51218,"renamed variable, updated docstring/comment",sezanzeb,2020-11-10
+c6300411d61d1000f8beb56cb7b0780e814297f2,Sort groups by unique_key to ensure stable group naming (#1325),Odraude-2,2026-07-16
+c6dbdee179663cfc3db026dba344e202ebaf2ddb,extended helper module docstring,sezanzeb,2021-08-31
+c7094b552a4e0e3ac679dec0546a0e260e4d4a40,feat: add Simplified Chinese translation (#363),Gavin Luo,2022-04-09
+c75bd9f6ea032024e9d14c50b4a21e6a0d8e24d5,fixed icons in ubuntu,sezanzeb,2020-11-29
+c78ccc26b53160fdc48501a03cd0b62e069920f6,updated screenshots,sezanzeb,2021-03-21
+c7a9e447591179aa06e845af5d0255c09091043c,more info for the pip installation,sezanzeb,2020-12-03
+c7b56792935d8dc3e4432a21356ed2535b949292,made injector constructor test safer,sezanzeb,2020-11-19
+c7e6d8a0dbf9c865c0ba9bc04267cd6dab892c86,fix typo in it_IT.po,Nicolas Lepage,2021-07-13
+c969236e5fffd06bbec383931bd340c02dc29764,"mapping is a class now, some simplifications",sezanzeb,2020-11-05
+c96d18cfb80bc48486806bb6216465594ae5f978,highlighting error status messages with an icon,sezanzeb,2020-12-27
+c9b582885e79077b222b0a0e7418f532c90bcaaa,RelToAbs (#442),jonasBoss,2022-10-02
+c9ccce8f6b0ba3498465ddcf92fb5bc786b54a1c,"badges, lint",sezanzeb,2020-12-06
+c9de7ef50b414a97d39b4db106cb6f1061803a1c,Split test_macros up,sezanzeb,2025-01-01
+ca1b14d55c7b95b2d12cde0f3ca7c9b1d8681b1b,fixing pipes for systems with multiple users,sezanzeb,2021-09-03
+caa8f2c57b20eedf9c83b72b816f24c0e7a7b352,fix bug where NullHandler would not work with Axis/Key combination,Jonas Bosse,2023-01-10
+cac6225ba0744de9e85825b14910006636831b41,resizable,sezanzeb,2020-11-10
+cae6cc01ae92a70502f8025b6e66242b9a378704,update readme,sezanzeb,2020-11-26
+cb577cf2b35c1209ca86121f448acba730b15a74,graphics tablet improvements,sezanzeb,2021-02-13
+cb700fdf7a8d50273a2896da0efde615e1ff57f3,renaming and deleting presets,sezanzeb,2020-11-02
+cb7cc67e7f5bdefb07f747a29eee3c6b2acb0a07,repeating macros while holding keys,sezanzeb,2020-12-05
+cb8f5fdfcddef747dd7aec3aed6e709e88f6968b,Fix ReaderService pipe paths built from home directory instead of username (#1356),grenudi,2026-09-14
+cbf97fd44c1865fbc8206276eb5d1697027a9226,mapped a D-Pad button,sezanzeb,2020-12-02
+cc04f991a95a35d55f0be9dbd0edb2438c09dc56,macro improvements,sezanzeb,2020-11-28
+cc050b99be8e5e085c7a0c7273dfd999b9216834,2.1.0 (#1049),Tobi,2025-02-08
+cc63ed927984df624732d46d86b3b1e128a2f7f6,more development info,sezanzeb,2020-12-19
+ccca2a6de4a84bac4f88af73b4f1de6195469e25,Create FUNDING.yml,Tobi,2021-09-03
+ccf1451acfa918405ea578c50536b941653cf206,test for the autoload switch,sezanzeb,2020-11-26
+cd43ca4a4107de17ecb6b720ce14b9b0c2f1a6c6,logging original capabilities,sezanzeb,2021-02-13
+cd8624ac134ec740a84f4b691523e6a451122c39,faster row tests,sezanzeb,2020-12-01
+ce223646ee00990cc4f602d23d9964b1285a46b2,Timeout for set_config_dir,sezanzeb,2021-11-21
+ce73f786bd4db2bdf4d1e803b30e61545370a3a9,Merge branch 'main' into beta,sezanzeb,2022-10-11
+cee8af2af61a8651a099e560437f6cbd89e6a015,loading screen,sezanzeb,2020-11-15
+cf01699c5fba4d24bb81cce5c2f8bf024ffee265,Use packaging.version instead of pkg_resources (#966),Stephen Kitt,2024-10-05
+cf11cae86544ee7637b346b3f495f7a652332e10,improved syntax checking of macros,sezanzeb,2020-12-04
+cf1bc55918858214daa539ef2e5fa62d77da800a,centering the about dialog,sezanzeb,2021-03-22
+cfb130d3d5e9e481539b6a422e43a8dcfc9d28e4,0.8.0,sezanzeb,2021-03-27
+cfb9256ae7f55cb07af81031a4581f062afcd2d7,Fix similar devices stealing the injection on autoload (#1302),Tobi,2026-06-01
+cfdcda4deab202fe5491e71334dc461e86dac548,Rearranged readme,sezanzeb,2022-11-13
+d00476b00221902c79b83ead9e33812e4b5e4fb9,duplicate info log,sezanzeb,2021-04-02
+d011005edd4f68bd6b582b117a194745f56f59c3,New icon (#1222),Tobi,2025-12-23
+d0234efe465d37f9202cda756c82cb1a1af9e3b6,more info about unittests,sezanzeb,2021-08-22
+d02e3eaa138bb14e59e1995da68bb1756cfc7ac6,final commit on sixth,sezanzeb,2020-11-18
+d0cc1b82a808f1b72c2b5dddb836c4342a3117d3,Add service start and stop commands to setup script (#632),Uwe Jugel,2023-03-09
+d0e5f4998f82e0f3ec3d2c5c6a17f3652003586e,Update path in issue templates (#646),jonasBoss,2023-03-05
+d0fa3799d4e0919f895b6a44ce4cf067f992b5f5,Added beta to readme,sezanzeb,2022-05-08
+d13b38ee1e3919a92000f4efc531fc9ea274f093,Some formatting (#371),Tobi,2022-04-18
+d211b39ad21650a0df452e0fa2e0271bbaede223,update roadmap,sezanzeb,2020-11-02
+d279f2bc5eaee4c5870a1290306c9a2d66f115a3,fixed some stuff that was probably leftover from debugging,sezanzeb,2020-11-09
+d2d0fa8a06e059571ccb3562ca5a52917ef48c56,"Try to use pydantic v2, and fallback to pydantic v1 (#773)",Stanislav Zhuk,2023-09-18
+d2fc5a6c058708a5595c3eead541999c33c4feea,Showing the input during GUI usage (#549),Tobi,2022-11-20
+d338ebe7f833b93f961c239f607aad735fca874b,support for linux kernel keycode constants,sezanzeb,2020-11-30
+d3a1b16d6b1dc7abc4dd94b1915a0994a6ecc2c1,testing a short macro in injector tests,sezanzeb,2020-11-28
+d3b971414a0e08e90e9418d841dbdfc02ef8ea35,some pylint and tests,sezanzeb,2020-11-26
+d3c955fe0467d269a189a79afbf7b5156eff4108,Renamed EventProducer to JoystickToMouse,sezanzeb,2021-11-21
+d3d1d9124ffd42b0c034f995534cbb4ba6d31a48,#247 Fixed autoload after rename,sezanzeb,2021-12-31
+d3ff838aa0b591ee5cd6c22fd56d01998a42cee3,some more tests,sezanzeb,2020-12-03
+d48588bddb54b248936c0a3f93eef02821333ec2,"Autocomplete ""disable"" (#634)",Tobi,2023-02-24
+d4a727f864be1e8c364dadd375fcd1e06c5c8fa3,"renaming, keeping unmapped keys at their defaults",sezanzeb,2020-11-10
+d4f0029ae7fb6a3b60b94a6359dfa9d08abb8c76,Update README.md,Tobi,2021-10-02
+d4f2919a388d2deb483682ac326e39fddb2bf812,logging injection capabilities,sezanzeb,2020-12-06
+d55c6d4eeb376e62fba10205b50752636034afe3,Update zh_CN.po (#809),Divenire,2023-11-19
+d59ad26823a2f7d429fd622b802a04dadd581fc7,beautified test output,sezanzeb,2020-11-18
+d5b6188affbe413361332c406b6c23737578ee06,mapping wheel buttons,sezanzeb,2021-01-05
+d5c312fcdb8d18468803bc2db7d3db8a723ef883,"more indicators of an ongoing injection, unused gi imports, update badge",sezanzeb,2020-12-04
+d5d86960bfa9396370d94645937b43304bd245fb,supports modifier-key combinations,sezanzeb,2020-11-16
+d5e74d05e0e0959889157b4ac8a403abf8583499,optimize UInput.can_emit(),Jonas Bosse,2023-01-11
+d5ec0383abe22e546e546729f8ed1cab6fe32361,Merge pull request #641 from sezanzeb/beta,Tobi,2023-03-02
+d5f1405e28adfea26d991faed7b5f3176227671f,efficiently hold forever until released with h(),sezanzeb,2021-01-24
+d605b42bbc474517bec2801163a94d150877fc46,Do not install into /home (#1231),Tobi,2025-12-31
+d6455b4e010b6bd84b714629e52e184d37e3bf0e,permission stuff,sezanzeb,2020-11-16
+d6dd961ee04735a29eedb71480b7e7cbcc7d8ce3,update readme,sezanzeb,2020-10-31
+d6de1bbd3d30a49b8694584a625538d7b264937e,One more check for invalid cwd setups,sezanzeb,2022-01-15
+d71d97136abf3233cddbb64c420052dc35547aa8,Added `None` keyword (#393),Tobi,2022-05-07
+d7291c01203db9808a2f65d8ecc81b0a0702a81b,Update README.md,sezanzeb,2020-12-04
+d7c4ce7dcd83102091e25211101fc3543197aba3,"improved gamepad code, more tests",sezanzeb,2021-01-17
+d7f15d15249314c73b29f0a502733ad231bb09b8,Clarified how to start injections in issue-template,Tobi,2022-07-02
+d7f96c52acc4877424a5f3785602cbe7b48b8c01,Update README.md,sezanzeb,2020-12-19
+d902622b5770278b310c3fc15b2244d2c570d22f,Fix event macro,sezanzeb,2024-12-16
+d902fb204dae9aa42c63ffe68ae57e1e3b8944b7,catching all exceptions (#467),Tobi,2022-09-03
+d93e7f271b5664c8cbcd9a4b012420743cc0191d,seems to be working again,sezanzeb,2020-11-08
+d9a57bab35d29b6b5841e6389fbdd418100f76b6,Updated multi-device combination macros,Tobi,2022-06-08
+d9ee9fb978dcd8da1c3d7b0a8f45388d34e0b162,0.5.0,sezanzeb,2021-01-01
+da8cb58f008366e58982b436c0f69b0542b0a3e5,Not copying source.phys anymore (#329),Tobi,2022-03-03
+dafc157d8ff98848664280db24e6f908696cf66c,only slightly highlight and work for all themes,sezanzeb,2020-11-12
+db0876373f70ecdba484d50918f992b621d3d5b6,removed redundant injection stop,sezanzeb,2020-11-19
+db131abc84c60b2897da54f16b559eacd0fb20d9,Update README.md,sezanzeb,2020-12-03
+db78d336d07438b13cf6336435baf396b7d7b4ef,Add if_capslock and if_numlock (#989),Tobi,2024-10-27
+db7bb69f8e2b03899798dfdd54a4231d0fb81944,"changed default value for joysticks, clears config for new presets",sezanzeb,2021-04-03
+db8c0491c7a67628083cc867d0229aef0222cf76,Update development.md,sezanzeb,2021-03-29
+dc43ab34ef273d96b6f08a9b8995c44d2c2c5e5f,Update it_IT.po,albanobattistella,2021-07-18
+dc8a74b401e68797259ec20e08353747129755f9,updated usage,sezanzeb,2021-04-02
+dda3bd2d8102cefd2216cf412fe5dfaaae49bbeb,"Removed unused imports, updated badges, updated test instructions",sezanzeb,2022-01-18
+ddefaa90ff98a3dd1bc107285737b829c7a40e7a,some improvements on the hold functionality,sezanzeb,2020-12-05
+de0dd8af8ed3f66bc43635e988968a38ae4da3ea,2.0.0-rc (#639),Tobi,2023-03-02
+de240b8965020a7eb2c6fd95a6780b4ac7d470d3,update HISTORY.md,sezanzeb,2020-11-28
+de26525b6ec3461b259839adc05e685b72d8781a,update README.md,sezanzeb,2020-11-27
+de9e5c076bf2f72cdcfec8470d80a6221d87f152,not checking for test in can_read_devices,sezanzeb,2020-11-29
+deb271bbffc521ed557f67e0312258188896571f,Update README.md,sezanzeb,2020-12-05
+df7ce29573e1ffa900ea5ec621a09460347b4b43,Reading keycodes from the mouse,sezanzeb,2020-11-05
+df91ba60c627bee67bdc6c5d7a7b68d801f88731,Sanitize device names in daemon (#524),Nik Chatzinikolaou,2022-11-01
+e060173680ed26b9117831d16c645c856570a9f8,space,sezanzeb,2020-12-05
+e067c4c50fc502216b0f8d2f3d0664f3e598c470,Merge pull request #422 from sezanzeb/beta-main-merge,Tobi,2022-06-25
+e0887b3bd85a0f7b837ae7bddd57c455bd052023,1.0.0,sezanzeb,2021-05-08
+e0c041d72970db1d2e6f1181595f9484eec6347e,Update development.md,sezanzeb,2022-06-23
+e0c92a92020b8e3a81b00819f444208c6c6b5208,Move bin code into the inputremapper module,sezanzeb,2024-10-26
+e13780a208edb888a8203c6fee32061d880e963d,#197 Not running the SharedDict for macros in key-mapper-control,sezanzeb,2021-11-20
+e1649607c10f0b8277780b7d865973628861af25,Update README.md,sezanzeb,2021-03-11
+e18c40c221d6bd919a023b401266f0ee87640a7d,autoloading on udev events,sezanzeb,2021-02-07
+e316c6f36c6495adbc184069efb2a54537e9eedb,Use non-zero exit code if tests fail (#265),Luna Nova,2022-01-17
+e31a1b2bc5d23fe13130afcc242063196335399f,1.5.0,sezanzeb,2022-06-22
+e36a2620b46476a9e9c35c8667c995a34e707a03,Update macros.md,sezanzeb,2021-04-26
+e38018baf4fa258c89df85fd69c88cdc9ba20068,Typo in usage.md (#1367),tempodat,2026-09-13
+e3a56d069ab84ece9637adefcc79b15c8853f1d3,Update README.md,sezanzeb,2020-12-03
+e3d009db71d0b17b6aca55211c718aae5cd570cd,Merge branch 'main' into beta,sezanzeb,2022-06-25
+e4d0818ef05f35a51d510bc90f83e1e3f148d810,update README.md,sezanzeb,2020-11-10
+e4e6130b7048d94a31f3e316e8b888a91e7f7a1a,cleanup,sezanzeb,2021-03-28
+e54d0b9ded89b3cc714672abb8a40df230acbb90,fixed coverage badge,sezanzeb,2020-12-01
+e608bc79390b4e03e9b6b0c50f9e0d6b9f81cb8d,update readme,sezanzeb,2021-01-01
+e651591cecdd6f3049c6149ad759569979526420,"Updated examples.md, added double tap example",Tobi,2022-05-10
+e6e310c7fc7abd4feae4de05ad71c3ef505561c7,testing connecting to the dbus,sezanzeb,2020-11-29
+e6e67624835abee3a19b1a838bb18125dcaee794,updated badges,sezanzeb,2020-11-29
+e701fd3919cdad275be99263ab5576976da0a3c3,update README.md,sezanzeb,2020-12-03
+e7442dde83e36e2e1b3a5d7f9c1987a70fd3dcce,#53 catching GError on SystemBus(),sezanzeb,2021-03-07
+e7949c2d61fd0d0f3b18e850747fec33c39fa2cb,fixed symbol name case in warning tooltip,sezanzeb,2021-04-02
+e7ef652039f41033b3a65cf78d13a2df5182fe4a,obsolete reverse mapping,sezanzeb,2020-12-02
+e82f48ac18f81f9b666b1d20c9e221d090602743,split state.py,sezanzeb,2021-09-29
+e93a530ba4ea622d1f476aa0847da9a06ffc513f,Added Void Linux to install instructions (#1269),Soulful-Sailer,2026-03-18
+e987f2654ed1591d271b363a977b7416adbccfca,"threw some TODOs into it, started on the daemon executable",sezanzeb,2020-11-20
+e99f0947b326ec091e514bf3881d2c4902b1a478,update readme,sezanzeb,2020-12-26
+e9a87d13480c3b1dee654b296578a8f4e2cd31d6,2.2.1 (#1312),Tobi,2026-06-12
+e9b6351a32092b471ec0e187f030997b91cd9339,improved compatibility,sezanzeb,2020-12-26
+ea3b2c904d41cc9680f086b74280bde8e34283b3,Extended docs by foot pedals and keyboard scroll (#127),sarimak,2021-10-02
+ea658b69a598fd693314804b73072357f889092f,Avoid installing data_files incorrectly with pip,Tobi,2021-10-02
+ea88e6537c9fa711bfaf4c5e5acbdaa0106134ce,debian package,sezanzeb,2020-11-29
+eb47e34044da79bdbe5037c3aa986cfa3a177ede,Update issue templates,sezanzeb,2021-04-29
+eb8eabd854023ff47daf6f4fbdd98b0bc39e2e0f,multiprocessing coverage,sezanzeb,2020-11-30
+ebde37856e381926bd470b087952f8ae6705da39,semver,sezanzeb,2022-05-08
+ebf1eeccb7b712903385ef72ff757be9c4304720,updated context comment,sezanzeb,2021-02-13
+ec341d0001e664299418a988fc64645c7139b36d,separated numlock functions to new file,sezanzeb,2021-02-13
+ec67ff07ea8643a849bad017baac8bbfd1820c88,Use raw string literals for regexes (#1216),Stephen Kitt,2025-11-24
+eca6fde65513faf5117b883a129752494c8e3c85,Switch from deprecated types-pkg_resources to types-setuptools,sezanzeb,2024-08-06
+ecc95a6b737b7aaef810869ad26a45493920928a,avoid jumping window contents on load,sezanzeb,2020-11-16
+ece186061dbaa7d916d17464ed1830cb52da9c59,Update README.md,sezanzeb,2020-11-29
+ed1616d64c047a4335fd0d15ec79520ad38e7e19,"improved logs, removed redundant start_reading, fixed unresponsive keyboard",sezanzeb,2020-12-27
+ed2470863344f378c3c1a6756465f19d1f57fe20,saving presets works again,sezanzeb,2020-11-18
+ed2d084a2215cc27e761871c5c59e499675dfc4f,Stricter rules for skipping autoload,sezanzeb,2021-12-06
+ed48306f7f8bfcf3e94d691e4654dd088d146951,asyncio KeycodeInjector,sezanzeb,2020-11-28
+ed4f8faa79d4e4791d18ea7374a3ecf66e5f2c61,Unlink ubuntu service symlinks in postinst (#1060),Tobi,2025-02-09
+edcd3c9e2e1609ffcd5d572a93a7b9444e40339d,#65 fixed name of new presets,sezanzeb,2021-03-18
+edf71e82e03325b935054695771ec174d51e5c4c,add event type to mapping key,sezanzeb,2020-12-02
+ee28c59bedf9336eec4bc34f4592c6815f9e07b7,test for config contents,sezanzeb,2020-10-31
+ee66c82bd09fd826a17c69bd52cd4593099fc791,magic number,sezanzeb,2020-11-22
+ee6b48ac329ee97f034558053e159880c0bf441e,Add github actions workflows (#267),Luna Nova,2022-02-07
+eee46d559b5fa2741f9cf4fdceb8acf29c13f5cd,integration tests for injecting,sezanzeb,2020-11-22
+ef3970f33e4fbc12db18568f7b20d9a86cdaeb9c,#197 Not attempting to autoload if no user is logged in yet,sezanzeb,2021-11-22
+efce80a9113500be2c18147904232619877ce34a,improved get_devices test,sezanzeb,2020-11-16
+eff463e6279d54db3e4776bcbe105fd094210299,#537 Removed shebangs in non-executables,sezanzeb,2022-11-19
+f04594339676cc33e199c36929b40fd11f171987,#59 fixed incorrect release forwarding,sezanzeb,2021-03-16
+f06b3ed601cceb68f79f6b1b2e0d98e8d97fa839,Add optional acceleration to the mouse macro. (#931),jdoda,2024-08-13
+f06d33ad349c2a6200fbd3c2c78ad3caef87b88e,writing combinations by using 'key + key + ...',sezanzeb,2021-02-12
+f0bf6f855c3113704c62839c1fda03d543f9f4a2,removed debug prints,sezanzeb,2020-12-05
+f0e57c52768d1b1807f84696fd1a17fe7d6b6fb0,inserted the unfinished macro parsing and running into the injector,sezanzeb,2020-11-28
+f0fa9aac17c230fb17cc39af833fb6f20a6aecf4,0.6.1,sezanzeb,2021-02-06
+f15f599b5c40d0e3b4e9b11438f0ddff2f1fe7bd,.idea to gitignore,sezanzeb,2020-11-08
+f19110fa60942a9a01264c67c427ff04a58bd6d3,Update development.md,Tobi,2021-08-18
+f1e069cbaac571336250cc36065584bc420a6294,less spam in case of missing read rights on devices,sezanzeb,2020-12-03
+f21e02ec25b0f29f1270e7562308d33bb9682511,separator for joystick config,sezanzeb,2020-12-19
+f2370e4b5979b59791897539423a908621257794,chmod proper permissions,sezanzeb,2020-11-16
+f23b0a0258a0c53af280cf082263db780e8cd985,Using asyncio.run in input-remapper-reader-service (#731),Tobi,2023-06-25
+f29abc8660c6f95f3aa685261511292ac40291b8,beautiful newline,sezanzeb,2020-11-22
+f2bb81f1998b285032ac96e8ac367672cc1d770b,better compatibility by injecting into a dedicated devnode,sezanzeb,2021-02-18
+f311f35fbbf06e7921e7eaa16288ddeaab31cd8d,grammar,sezanzeb,2020-12-06
+f350714a754aef6a2f83c590ff1e5cc87650ca68,added tests for the previous commit,sezanzeb,2021-02-03
+f40eddbd3236368277cb41044d0a3959eae4a65e,Update macros.md,sezanzeb,2021-04-28
+f465043a880ded03743672589f24258c6e3b1ce8,"lint, badges",sezanzeb,2020-12-31
+f484418254e15817c868cc3e357db6bf86687e99,update README.md,sezanzeb,2020-11-28
+f4de4d9026c1bad4bca29db0deadcf3c0a0b5def,Fixed input_props unknown in UInput constructor  (#344),Tobi,2022-03-18
+f50a7063e86bb5df86bcf58084bb94f61511da51,starts and closes,sezanzeb,2020-10-31
+f5151aab27ae0e7d8b1f0c80ce92a718e3a86e71,"Install icon to standard path, fix appstream-builder generation (#841)",Joey Riches,2024-01-27
+f52b261dc546cbd67195dba5158a86d0c9b31fe6,Add zh_TW Traditional Chinese locale (#1299),Peter Dave Hello,2026-06-01
+f537b3851734b374cae685d4361d016c38071fbe,update plus.png,sezanzeb,2021-02-12
+f57db1384cf702417eabf91c4c2e3075dc558a28,Update development.md,sezanzeb,2021-04-03
+f5b91e21171eb239d096e326474c1386e86b48a8,#66 limiting injected names to 80 chars,sezanzeb,2021-03-21
+f5bdafa682e3c41f11d415360b65f243d12e744b,#211 Avoiding psutil dependency to get number of users,sezanzeb,2021-11-24
+f5f1e2048a832bc33629bae658d3774b44d2e549,Checking for problematic variable names in set macros,sezanzeb,2021-10-02
+f5ffd0b1e70cd199a4777418adc905d06899dd0b,unsaved changes dialog,sezanzeb,2020-11-14
+f7144618503ce27dae1ebf80ea9fbf0e82b727e3,"Debug argument help can now be translated, add .pot template",Jose Riha,2021-07-03
+f75a8b6b20d2550fd098474065ebe99151677402,"Split test_gui, rename integration to system",sezanzeb,2025-11-09
+f79d974051f7b65439a01865df857c90f732f386,Update usage.md,sezanzeb,2020-12-25
+f7ad2a672152d5ec8cd9ed1becdee6ea0b96cf9f,shorter shared dict timeout,sezanzeb,2021-04-27
+f7b5588abc854db5cd00c37de72b6c195f6db4d2,more work on distribution,sezanzeb,2020-11-29
+f7e065cf2d891f1498050a650290580aa46d779b,updated comment in setup.py data_files,sezanzeb,2020-12-25
+f812710bd012d1080ddb040700f9405664114030,"macros.py split, improved type checking",sezanzeb,2021-09-29
+f859e91583a999cee35126b260f7dc46886f22b8,Append /usr/local/lib to sys.path if import fails (#1027),Tobi,2025-01-05
+f885b119f0cdf469cb6aa75eb6168186d4ed4540,Update README.md,sezanzeb,2021-03-07
+f885d22318ae0b983a67da3cf83de11e2a18f94c,Ubuntu seems to require the dev package for GtkSource,sezanzeb,2022-01-22
+f8f20d39478f665ecdc19126c6109a31388a85e6,"#82 gitignored commit_hash, /lib/udev",sezanzeb,2021-04-15
+f91daa2fe8b79577d04b0fec1f08693d6fc53d6b,started working on the daemon,sezanzeb,2020-11-20
+f94f878649f4d1a60d983547b4b3a6dfccea07e0,Properly forwarding unmapped gamepad events,sezanzeb,2021-01-25
+f955290b04b57c92b39ad7558d4d3cbf57fb50bf,Merge branch 'main' into beta (#399),jonasBoss,2022-05-11
+f9e7ef1445ad649cd5de066f7718ca365a700c88,#197 Services started via sudo know the correct config path,sezanzeb,2021-10-22
+fb766d510ff568010beee1ee914e302fcefb068b,update README.md,sezanzeb,2020-12-02
+fc52d4fad8a0dc00d16ea7d0bfae89cbd876cd25,still wont work. again.,sezanzeb,2020-11-18
+fc578d9f61658677a07bc3f6c1503c1afe7d61b7,Still moving stuff around,sezanzeb,2020-11-09
+fc57ccb361f2e104fb8b214126bf23696f97e494,"update badges, fixed and extended test_mapping",sezanzeb,2021-09-29
+fc769c804d58ef80d340bf95c5c3536bc84fdb66,materia theme fix,sezanzeb,2020-12-26
+fcfc58287c9e4dbe05e6436eac30fec3eba44b00,`parse` understands that strings are not macros (#315),Tobi,2022-02-26
+fd5b2cca4cca4f149ac9b8b0aac52f580987aec6,Escape portions of paths not intended to be globbed on (#978),Tobi,2024-10-20
+fd759e02ada50ade410bf2a3e27909c7cd584f95,"#63 added e, mouse and wheel macros",sezanzeb,2021-03-19
+fd981b724ffba36c5d7257225523f572887048c3,0.2.0,sezanzeb,2020-12-04
+fe68cdf3d991ecc37806213856a7294a27972bab,Fix grammar in development.md (#1368),TianHengZhuang,2026-09-14
+fea051f781575a5f9619859a390a018e90644023,Update README.md,sezanzeb,2020-12-20
+fecfa01bc60013810288ba05c89f21ebcf4885c5,parsing libinput_list,sezanzeb,2020-11-01
+ffcf9c6b1d3f67ecfdc05d5a196027b787625dd9,linting,sezanzeb,2020-12-04
+ffd333765130af1276f704e45c1a67ef71d368c9,Update README.md,sezanzeb,2020-12-03

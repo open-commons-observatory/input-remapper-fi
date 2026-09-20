@@ -1,13 +1,12 @@
-# Project configuration. Copy this template, then edit these values.
-name: oco-atlas-template          # short name; also names the local data directory
-title: "OCO Atlas template"       # site title
-tagline: "An evidence-backed, versioned map of a project's problems."
-repo: open-commons-observatory/oco-atlas   # GitHub repo that stores the database (in refs/dolt/data)
+name: input-remapper
+title: "input-remapper: problem atlas"
+tagline: "An evidence-backed, versioned map of the problems reported against sezanzeb/input-remapper, and a queue of pull requests that could close them."
+repo: open-commons-observatory/input-remapper-oco-atlas
 source:
-  repo: example/project           # the project being analysed (owner/name)
-  maintainers: []                 # logins whose comments are marked M when reading threads
-database: atlas                   # database name inside Doltgres
-taxonomy: taxonomy.yaml           # the controlled vocabulary
-pie_facet: pr_potential           # facet drawn as a chart on the index page (optional)
-required_facets: [kind, conf]     # `atlas check` warns when an analysed item lacks these
+  repo: sezanzeb/input-remapper
+  maintainers: [sezanzeb, jonasBoss]
+database: atlas
+taxonomy: taxonomy.yaml
+pie_facet: pr_potential
+required_facets: [kind, conf]
 doltgres_version: v1.3.3

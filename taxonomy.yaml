@@ -1,77 +1,180 @@
-# Starter vocabulary. A tag is facet:value and only values listed here are accepted by the database.
-# Quote values that YAML would read as booleans (yes/no/on/off): atlas rejects non-string keys.
-# page: true generates one page per used value under by/<facet>/<value>.md
+# input-remapper vocabulary (converted from the v1 analysis taxonomy).
+# A tag is facet:value and only values listed here are accepted by the database.
 facets:
   kind:
     multi: false
     page: true
-    doc: What the item is.
+    doc: What the issue is
     values:
-      bug: defect in the project
-      regression: used to work, broke after a change
-      feature-request: asks for new behaviour
-      question: asks how something works
+      bug: defect in input-remapper
+      regression: used to work, broke after a code or system update
+      feature-request: asks for new behaviour that does not exist
+      question: asks how something works (usage, config, keysyms)
       support: install, setup or troubleshooting help
       docs: documentation gap, error or typo
       security: security or trust concern
       meta: about the project itself (governance, naming, packaging)
-      spam: noise, off-topic, empty or test item
-  outcome:
+      spam: noise, off-topic, duplicate, empty or test issue
+  ctype:
     multi: false
     page: false
-    doc: How the item ended.
+    doc: What a commit is
     values:
-      fixed: fixed by a code or docs change
-      workaround: a workaround was given or found
-      wontfix: declined by the maintainer
-      not-a-bug: working as designed
-      docs-answer: answered by pointing at existing docs
-      duplicate: closed as duplicate
-      open: still open and active
-      stale: open but inactive for 6+ months
-      unknown: no visible resolution
+      feature: new behaviour added
+      fix: bug or regression fix
+      docs: documentation only
+      build: build system, packaging, CI
+      maintenance: merges, version bumps, housekeeping
+      refactor: code restructure, no behaviour change
+      test: tests only
+      release: release preparation
+  layer:
+    multi: true
+    page: true
+    doc: Where in the system the problem sits
+    values:
+      daemon: input-remapper-service background process
+      gui: GTK configuration UI
+      reader: event reader (reads raw events from input devices via evdev)
+      injector: event injector (writes events to virtual uinput device)
+      mapping: mapping and preset logic (translates one event to another)
+      macro: macro engine (sequences, variables, if/wait expressions)
+      combination: key combination detection and matching
+      config: configuration and preset files (storage, migration, format)
+      device: device detection, discovery and enumeration
+      permissions: udev rules, uinput access, group membership, capabilities
+      install: packaging, service registration, system-level setup
+      docs: documentation only (README, wiki, in-app hints)
   cause:
     multi: true
     page: true
-    doc: Root cause; use unknown when it is not established. Grow this list as you read.
+    doc: Root cause — use unknown when not established; grow this list as you read
     values:
       unknown: not established
       config-error: wrong user configuration
-      regression: broke after a code change in the project
-      missing-feature: requested functionality does not exist
+      regression: broke after a code change in input-remapper
+      wayland-issue: Wayland-specific behaviour or missing protocol support
+      x11-issue: X11-specific behaviour (XInput, XTest, XKB)
+      de-compat: desktop environment compatibility (KDE, GNOME, XFCE quirk)
+      device-quirk: non-standard or undocumented device behaviour
+      permission: missing udev rules, uinput device access, group membership
+      evdev-api: evdev API usage or kernel evdev behaviour
+      uinput-api: uinput API usage or virtual device handling
+      python-version: Python version incompatibility or dependency version
+      race-condition: timing or ordering issue in daemon or reader
+      missing-feature: requested functionality does not exist (feeds feature-request kind)
       doc-gap: documentation missing, wrong or misleading
-      environment: behaviour of the OS, desktop, distro or hardware outside the project
-      upstream-dependency: a dependency or platform API is the root cause
-      design-limit: a deliberate or architectural limitation
-  impact:
+      distro-compat: distro-specific packaging, init system or path issue
+      macro-logic: bug in macro expression parsing or execution
+      combination-logic: key combination detection or matching defect
+      ui-logic: GTK UI logic or state management defect
+      symbol-mapping: wrong or missing keysym, evdev type or code
+      autoload-failure: device plug/unplug autoloading of presets not working (very common cluster)
+  component:
     multi: true
     page: false
-    doc: Effect on the user.
+    doc: Which component of input-remapper
     values:
-      broken: the feature does not work at all
-      degraded: works sometimes or partially
-      crash: crash or hang
-      install-blocked: cannot install or start
-      perf: lag or resource use
-      cosmetic: looks wrong, works fine
-      na: not applicable
-  conf:
+      service: input-remapper-service (systemd unit)
+      gui-app: input-remapper-gtk (GTK application)
+      reader: InputReader / EventReader
+      injector: Injector / InputInjector
+      macros: macro runner and parser
+      presets: preset / config manager
+      keycodes: key symbol and code lookup (input_remapper.configs.input_config)
+      udev: udev rules and device groups
+      ci-build: CI, packaging, Makefile
+  device_type:
+    multi: true
+    page: false
+    doc: What type of input device is involved
+    values:
+      keyboard: physical keyboard
+      mouse: mouse or trackpad
+      gamepad: gamepad or controller
+      joystick: joystick (may overlap with gamepad)
+      tablet: graphics tablet or stylus
+      other: other or unspecified input device
+  de_os:
+    multi: true
+    page: false
+    doc: Desktop environment or distro involved
+    values:
+      x11: X11 / Xorg session
+      wayland: Wayland session (any compositor)
+      kde: KDE Plasma
+      gnome: GNOME Shell
+      xfce: XFCE
+      sway: Sway / wlroots compositor
+      ubuntu: Ubuntu or Debian
+      arch: Arch Linux / Manjaro (was already there — confirm present)
+      fedora: Fedora or RHEL
+      nixos: NixOS
+      opensuse: openSUSE
+      any: any / not specified
+      openrc: OpenRC init system (Gentoo, Alpine, Artix)
+  outcome:
     multi: false
     page: false
-    doc: How the root cause is known.
+    doc: How the issue ended
     values:
-      stated: the maintainer said so
-      reported: a user said so
-      inferred: the analyst's reading; upgrade only when someone states it
+      fixed: fixed in a code or docs commit
+      workaround: a workaround was given or found
+      wontfix: declined by the maintainer
+      not-a-bug: working as designed
+      docs-answer: answered by pointing to existing docs
+      duplicate: closed as duplicate of another issue
+      open: still open and active
+      stale: open but long inactive (no activity 6+ months)
+      unknown: no visible resolution or conclusion
   pr_potential:
     multi: false
     page: true
-    doc: Actionability (contribution lens). What kind of change would close it.
+    doc: 'Actionability: how likely a PR could close this. Filled after reading; assessed for the current state
+      of the fork (grenudi/input-remapper). This facet is the bridge between the dataset and the contribution plan.'
     values:
-      code-fix: a targeted code change would close it
-      docs-fix: a documentation or in-app hint change would close it
-      needs-design: needs maintainer discussion before a PR
-      upstream-dep: root cause is upstream; needs an upstream change
-      close-duplicate: close as duplicate; no code needed
-      wontfix: maintainer would decline
+      code-fix: a targeted code change would close it (small to medium effort)
+      docs-fix: a documentation update or in-app hint would close it
+      needs-design: needs architectural discussion or maintainer buy-in before a PR
+      upstream-dep: root cause is upstream (kernel, evdev, GTK, Wayland protocol); fix requires upstream change
+      close-duplicate: should be closed as duplicate; no code needed
+      wontfix: maintainer would likely decline; not actionable
       unknown: not yet assessed
+  conf:
+    multi: false
+    page: false
+    doc: Confidence of the root cause
+    values:
+      stated: maintainer said
+      reported: reporter said
+      inferred: my reading
+  impact:
+    multi: true
+    page: false
+    doc: Effect on the user
+    values:
+      broken-remap: remapping has no effect at all
+      partial-remap: remapping works sometimes, in some conditions, or partially
+      crash: daemon or GUI crashes or hangs
+      install-blocked: cannot install, start, or enable the service
+      perf: input lag, CPU use or resource problem
+      ui-bug: GUI cosmetic or workflow problem (does not affect remapping itself)
+      na: not applicable
+  symptom:
+    multi: true
+    page: false
+    doc: What the reporter observed — weak labels derived from text; a search aid, not a diagnosis
+    values:
+      mapping-not-working: remapping or injection has no visible effect
+      key-stuck: key stays pressed or repeats unexpectedly
+      daemon-not-starting: input-remapper-service will not start or exits immediately
+      gui-crash: the GTK UI crashes, freezes or fails to open
+      permission-error: permission denied accessing uinput or device node
+      wrong-output: wrong key, button or axis value is emitted
+      combination-not-firing: a key combination does not trigger as configured
+      macro-error: macro fails to parse or execute
+      device-not-detected: the input device does not appear in the UI or reader
+      lag: noticeable input lag or delay
+      install-fail: installation, pip install or package manager step fails
+      wayland-broken: works on X11 but broken or not functional on Wayland
+      service-unit-issue: systemd service file, enable/disable or autostart problem

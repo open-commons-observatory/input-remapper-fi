@@ -1,0 +1,117 @@
+facet,value,doc
+cause,autoload-failure,device plug/unplug autoloading of presets not working (very common cluster)
+cause,combination-logic,key combination detection or matching defect
+cause,config-error,wrong user configuration
+cause,de-compat,"desktop environment compatibility (KDE, GNOME, XFCE quirk)"
+cause,device-quirk,non-standard or undocumented device behaviour
+cause,distro-compat,"distro-specific packaging, init system or path issue"
+cause,doc-gap,"documentation missing, wrong or misleading"
+cause,evdev-api,evdev API usage or kernel evdev behaviour
+cause,macro-logic,bug in macro expression parsing or execution
+cause,missing-feature,requested functionality does not exist (feeds feature-request kind)
+cause,permission,"missing udev rules, uinput device access, group membership"
+cause,python-version,Python version incompatibility or dependency version
+cause,race-condition,timing or ordering issue in daemon or reader
+cause,regression,broke after a code change in input-remapper
+cause,symbol-mapping,"wrong or missing keysym, evdev type or code"
+cause,ui-logic,GTK UI logic or state management defect
+cause,uinput-api,uinput API usage or virtual device handling
+cause,unknown,not established
+cause,wayland-issue,Wayland-specific behaviour or missing protocol support
+cause,x11-issue,"X11-specific behaviour (XInput, XTest, XKB)"
+component,ci-build,"CI, packaging, Makefile"
+component,gui-app,input-remapper-gtk (GTK application)
+component,injector,Injector / InputInjector
+component,keycodes,key symbol and code lookup (input_remapper.configs.input_config)
+component,macros,macro runner and parser
+component,presets,preset / config manager
+component,reader,InputReader / EventReader
+component,service,input-remapper-service (systemd unit)
+component,udev,udev rules and device groups
+conf,inferred,my reading
+conf,reported,reporter said
+conf,stated,maintainer said
+ctype,build,"build system, packaging, CI"
+ctype,docs,documentation only
+ctype,feature,new behaviour added
+ctype,fix,bug or regression fix
+ctype,maintenance,"merges, version bumps, housekeeping"
+ctype,refactor,"code restructure, no behaviour change"
+ctype,release,release preparation
+ctype,test,tests only
+de_os,any,any / not specified
+de_os,arch,Arch Linux / Manjaro (was already there — confirm present)
+de_os,fedora,Fedora or RHEL
+de_os,gnome,GNOME Shell
+de_os,kde,KDE Plasma
+de_os,nixos,NixOS
+de_os,openrc,"OpenRC init system (Gentoo, Alpine, Artix)"
+de_os,opensuse,openSUSE
+de_os,sway,Sway / wlroots compositor
+de_os,ubuntu,Ubuntu or Debian
+de_os,wayland,Wayland session (any compositor)
+de_os,x11,X11 / Xorg session
+de_os,xfce,XFCE
+device_type,gamepad,gamepad or controller
+device_type,joystick,joystick (may overlap with gamepad)
+device_type,keyboard,physical keyboard
+device_type,mouse,mouse or trackpad
+device_type,other,other or unspecified input device
+device_type,tablet,graphics tablet or stylus
+impact,broken-remap,remapping has no effect at all
+impact,crash,daemon or GUI crashes or hangs
+impact,install-blocked,"cannot install, start, or enable the service"
+impact,na,not applicable
+impact,partial-remap,"remapping works sometimes, in some conditions, or partially"
+impact,perf,"input lag, CPU use or resource problem"
+impact,ui-bug,GUI cosmetic or workflow problem (does not affect remapping itself)
+kind,bug,defect in input-remapper
+kind,docs,"documentation gap, error or typo"
+kind,feature-request,asks for new behaviour that does not exist
+kind,meta,"about the project itself (governance, naming, packaging)"
+kind,question,"asks how something works (usage, config, keysyms)"
+kind,regression,"used to work, broke after a code or system update"
+kind,security,security or trust concern
+kind,spam,"noise, off-topic, duplicate, empty or test issue"
+kind,support,"install, setup or troubleshooting help"
+layer,combination,key combination detection and matching
+layer,config,"configuration and preset files (storage, migration, format)"
+layer,daemon,input-remapper-service background process
+layer,device,"device detection, discovery and enumeration"
+layer,docs,"documentation only (README, wiki, in-app hints)"
+layer,gui,GTK configuration UI
+layer,injector,event injector (writes events to virtual uinput device)
+layer,install,"packaging, service registration, system-level setup"
+layer,macro,"macro engine (sequences, variables, if/wait expressions)"
+layer,mapping,mapping and preset logic (translates one event to another)
+layer,permissions,"udev rules, uinput access, group membership, capabilities"
+layer,reader,event reader (reads raw events from input devices via evdev)
+outcome,docs-answer,answered by pointing to existing docs
+outcome,duplicate,closed as duplicate of another issue
+outcome,fixed,fixed in a code or docs commit
+outcome,not-a-bug,working as designed
+outcome,open,still open and active
+outcome,stale,open but long inactive (no activity 6+ months)
+outcome,unknown,no visible resolution or conclusion
+outcome,wontfix,declined by the maintainer
+outcome,workaround,a workaround was given or found
+pr_potential,close-duplicate,should be closed as duplicate; no code needed
+pr_potential,code-fix,a targeted code change would close it (small to medium effort)
+pr_potential,docs-fix,a documentation update or in-app hint would close it
+pr_potential,needs-design,needs architectural discussion or maintainer buy-in before a PR
+pr_potential,unknown,not yet assessed
+pr_potential,upstream-dep,"root cause is upstream (kernel, evdev, GTK, Wayland protocol); fix requires upstream change"
+pr_potential,wontfix,maintainer would likely decline; not actionable
+symptom,combination-not-firing,a key combination does not trigger as configured
+symptom,daemon-not-starting,input-remapper-service will not start or exits immediately
+symptom,device-not-detected,the input device does not appear in the UI or reader
+symptom,gui-crash,"the GTK UI crashes, freezes or fails to open"
+symptom,install-fail,"installation, pip install or package manager step fails"
+symptom,key-stuck,key stays pressed or repeats unexpectedly
+symptom,lag,noticeable input lag or delay
+symptom,macro-error,macro fails to parse or execute
+symptom,mapping-not-working,remapping or injection has no visible effect
+symptom,permission-error,permission denied accessing uinput or device node
+symptom,service-unit-issue,"systemd service file, enable/disable or autostart problem"
+symptom,wayland-broken,works on X11 but broken or not functional on Wayland
+symptom,wrong-output,"wrong key, button or axis value is emitted"
