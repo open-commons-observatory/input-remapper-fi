@@ -1,0 +1,11 @@
+# {{ row.facet }}: `{{ row.value }}`
+
+{{ definition[0].doc if definition else "(no definition in the taxonomy)" }}
+
+{{ items | length }} analysed items carry this tag. [Back to index](../../index.md)
+
+| Item | State | Title | Summary |
+|---|---|---|---|
+{% for r in items %}
+| [#{{ r.n }}](https://github.com/{{ vars.source }}/issues/{{ r.n }}) | {{ r.state }} | {{ r.title | cell(70) }} | {{ r.summary | cell(200) }} |
+{% endfor %}

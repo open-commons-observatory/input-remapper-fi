@@ -1,0 +1,1 @@
+SELECT a.item_n AS n, i.title, i.state, i.is_pr, a.summary FROM tag t JOIN analysis a ON a.item_n = t.item_n JOIN item i ON i.n = t.item_n WHERE t.facet = %(facet)s AND t.value = %(value)s ORDER BY a.item_n;

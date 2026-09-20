@@ -1,0 +1,77 @@
+# Starter vocabulary. A tag is facet:value and only values listed here are accepted by the database.
+# Quote values that YAML would read as booleans (yes/no/on/off): atlas rejects non-string keys.
+# page: true generates one page per used value under by/<facet>/<value>.md
+facets:
+  kind:
+    multi: false
+    page: true
+    doc: What the item is.
+    values:
+      bug: defect in the project
+      regression: used to work, broke after a change
+      feature-request: asks for new behaviour
+      question: asks how something works
+      support: install, setup or troubleshooting help
+      docs: documentation gap, error or typo
+      security: security or trust concern
+      meta: about the project itself (governance, naming, packaging)
+      spam: noise, off-topic, empty or test item
+  outcome:
+    multi: false
+    page: false
+    doc: How the item ended.
+    values:
+      fixed: fixed by a code or docs change
+      workaround: a workaround was given or found
+      wontfix: declined by the maintainer
+      not-a-bug: working as designed
+      docs-answer: answered by pointing at existing docs
+      duplicate: closed as duplicate
+      open: still open and active
+      stale: open but inactive for 6+ months
+      unknown: no visible resolution
+  cause:
+    multi: true
+    page: true
+    doc: Root cause; use unknown when it is not established. Grow this list as you read.
+    values:
+      unknown: not established
+      config-error: wrong user configuration
+      regression: broke after a code change in the project
+      missing-feature: requested functionality does not exist
+      doc-gap: documentation missing, wrong or misleading
+      environment: behaviour of the OS, desktop, distro or hardware outside the project
+      upstream-dependency: a dependency or platform API is the root cause
+      design-limit: a deliberate or architectural limitation
+  impact:
+    multi: true
+    page: false
+    doc: Effect on the user.
+    values:
+      broken: the feature does not work at all
+      degraded: works sometimes or partially
+      crash: crash or hang
+      install-blocked: cannot install or start
+      perf: lag or resource use
+      cosmetic: looks wrong, works fine
+      na: not applicable
+  conf:
+    multi: false
+    page: false
+    doc: How the root cause is known.
+    values:
+      stated: the maintainer said so
+      reported: a user said so
+      inferred: the analyst's reading; upgrade only when someone states it
+  pr_potential:
+    multi: false
+    page: true
+    doc: Actionability (contribution lens). What kind of change would close it.
+    values:
+      code-fix: a targeted code change would close it
+      docs-fix: a documentation or in-app hint change would close it
+      needs-design: needs maintainer discussion before a PR
+      upstream-dep: root cause is upstream; needs an upstream change
+      close-duplicate: close as duplicate; no code needed
+      wontfix: maintainer would decline
+      unknown: not yet assessed

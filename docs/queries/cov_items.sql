@@ -1,0 +1,1 @@
+SELECT CASE WHEN i.is_pr THEN 'pull requests' ELSE 'issues' END AS kind, count(*) AS total, count(a.item_n) AS analysed FROM item i LEFT JOIN analysis a ON a.item_n = i.n GROUP BY i.is_pr ORDER BY i.is_pr;

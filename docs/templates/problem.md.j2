@@ -1,0 +1,11 @@
+# {{ problem[0].title }}
+
+Status: `{{ problem[0].status }}`. {{ items | length }} items. [Back to registry](../problems.md)
+
+{{ problem[0].summary }}
+
+| Item | State | Title | Summary |
+|---|---|---|---|
+{% for r in items %}
+| [#{{ r.n }}](https://github.com/{{ vars.source }}/issues/{{ r.n }}) | {{ r.state }} | {{ r.title | cell(70) }} | {{ r.summary | cell(200) }} |
+{% endfor %}

@@ -1,0 +1,4 @@
+# tests: a valid batch
+i1 | - | kind:question conf:stated cause:doc-gap pr_potential:docs-fix depth=full | The user could not find how to uninstall; the maintainer answered with commands.
+i2 | - | kind:feature-request conf:reported cause:missing-feature pr_potential:needs-design depth=thread | Asks for a dark theme; no reply yet.
+i3 | - | kind:bug conf:stated cause:doc-gap cause:environment pr_potential:code-fix depth=full | Crash on start after an upgrade on Fedora; a packaging fix was pushed.

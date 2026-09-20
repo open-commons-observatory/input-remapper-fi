@@ -1,0 +1,9 @@
+# Triage queue: items a pull request could close
+
+{{ rows | length }} analysed items have `pr_potential` of `code-fix` or `docs-fix`.
+
+| Item | Potential | Causes | Summary |
+|---|---|---|---|
+{% for r in rows %}
+| [#{{ r.n }}](https://github.com/{{ vars.source }}/issues/{{ r.n }}) | {{ r.pr_potential }} | {{ r.causes | cell }} | {{ r.title | cell(60) }}: {{ r.summary | cell(180) }} |
+{% endfor %}

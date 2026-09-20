@@ -1,0 +1,1 @@
+SELECT a.item_n AS n, i.title, p.value AS pr_potential, (SELECT string_agg(t.value, ', ' ORDER BY t.value) FROM tag t WHERE t.item_n = a.item_n AND t.facet = 'cause') AS causes, a.summary FROM analysis a JOIN item i ON i.n = a.item_n JOIN tag p ON p.item_n = a.item_n AND p.facet = 'pr_potential' AND p.value IN ('code-fix','docs-fix') ORDER BY p.value, a.item_n;

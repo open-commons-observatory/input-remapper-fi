@@ -1,0 +1,7 @@
+[
+ {"number":1,"title":"How do I uninstall?","state":"closed","created_at":"2021-01-01T10:00:00Z","closed_at":"2021-01-02T10:00:00Z","user":{"login":"alice"},"comments":2,"labels":[{"name":"question"}]},
+ {"number":2,"title":"Please add a dark theme","state":"open","created_at":"2021-02-01T10:00:00Z","closed_at":null,"user":{"login":"bob"},"comments":0,"labels":[]},
+ {"number":3,"title":"Crash on start after upgrade","state":"closed","created_at":"2021-03-01T10:00:00Z","closed_at":"2021-03-05T10:00:00Z","user":{"login":"carol"},"comments":5,"labels":[{"name":"bug"},{"name":"fedora"}]},
+ {"number":4,"title":"Fix typo in README","state":"closed","created_at":"2021-03-06T10:00:00Z","closed_at":"2021-03-07T10:00:00Z","user":{"login":"dave"},"comments":1,"labels":[],"pull_request":{"merged_at":"2021-03-07T10:00:00Z"}},
+ {"number":5,"title":"Window flickers","state":"open","created_at":"2021-04-01T10:00:00Z","closed_at":null,"user":null,"comments":1,"labels":[]}
+]

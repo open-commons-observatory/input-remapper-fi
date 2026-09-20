@@ -1,0 +1,34 @@
+# {{ vars.title }}
+
+{{ vars.tagline }}
+
+| Corpus | Count |
+|---|---|
+| Issues and PRs | {{ totals[0].items }} ({{ totals[0].prs }} are PRs) |
+| Analysed so far | {{ totals[0].analysed }} (see [coverage](coverage.md)) |
+| Tags applied | {{ totals[0].tags }} |
+| Recurring problems registered | {{ totals[0].problems }} (see [problems](problems.md)) |
+
+{% set pie = by_facet | selectattr('facet', 'equalto', vars.pie_facet) | list if vars.pie_facet else [] %}
+{% if pie %}
+## {{ vars.pie_facet }}
+
+```mermaid
+pie showData title {{ vars.pie_facet }}
+{% for r in pie %}
+    "{{ r.value }}" : {{ r.n }}
+{% endfor %}
+```
+
+{% endif %}
+{% for facet, rows in by_facet | groupby('facet') %}
+## By {{ facet }}
+
+| {{ facet }} | Items |
+|---|---|
+{% for r in rows %}
+| [{{ r.value }}](by/{{ facet }}/{{ r.value }}.md) | {{ r.n }} |
+{% endfor %}
+
+{% endfor %}
+Also: [triage queue](triage.md), [provenance](provenance.md).

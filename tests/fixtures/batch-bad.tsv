@@ -1,0 +1,5 @@
+# tests: every line is invalid on purpose
+i1 | - | kind:bug kind:question conf:stated | single-valued facet given two values
+i2 | - | colour:red depth=full | unknown facet
+i3 | - | cause:not-a-cause | value outside the taxonomy
+i99 | - | kind:bug | no such item

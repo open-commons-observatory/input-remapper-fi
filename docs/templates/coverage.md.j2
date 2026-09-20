@@ -1,0 +1,31 @@
+# Coverage: what has and has not been read
+
+Numbers here are computed from the database at render time, never recalled.
+
+| | Total | Analysed | Share |
+|---|---|---|---|
+{% for r in items %}
+| {{ r.kind }} | {{ r.total }} | {{ r.analysed }} | {{ (100 * r.analysed / r.total) | round(0) | int }}% |
+{% endfor %}
+
+Commits acquired: {{ totals[0].commits }} (not analysed by this version of the schema).
+
+## How deeply items were read
+
+| Depth | Items |
+|---|---|
+{% for r in depth %}
+| {{ r.depth }} | {{ r.n }} |
+{% endfor %}
+
+## Tags that say "unknown"
+
+{% if unknown %}
+| Facet | unknown | of | Share |
+|---|---|---|---|
+{% for r in unknown %}
+| {{ r.facet }} | {{ r.unknown }} | {{ r.total }} | {{ (100 * r.unknown / r.total) | round(0) | int }}% |
+{% endfor %}
+{% else %}
+None.
+{% endif %}

@@ -1,0 +1,5 @@
+.doltcfg/
+_site/
+__pycache__/
+*.pyc
+.cache/

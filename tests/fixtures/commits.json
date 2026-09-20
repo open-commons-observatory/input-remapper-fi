@@ -1,0 +1,4 @@
+[
+ {"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","commit":{"message":"Fix uninstall docs\n\nlong body","author":{"name":"Maint","date":"2021-01-02T09:00:00Z"}}},
+ {"sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","commit":{"message":"Handle upgrade crash","author":{"name":"Maint","date":"2021-03-04T09:00:00Z"}}}
+]

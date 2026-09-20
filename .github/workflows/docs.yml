@@ -1,0 +1,68 @@
+name: Publish site from the database
+# Runs in atlas instances (repos created from this template). Skips cleanly while no database has been pushed.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['docs/**', 'tools/**', 'taxonomy.yaml', 'atlas.yaml', 'data/**', 'mkdocs.yml', 'requirements.txt', '.github/workflows/docs.yml']
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      present: ${{ steps.hasdb.outputs.present }}
+    env:
+      ATLAS_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Keep the database outside the checkout (the runner context is only available in steps)
+        run: echo "ATLAS_HOME=$RUNNER_TEMP/atlas" >> "$GITHUB_ENV"
+      - id: hasdb
+        name: Is there a database in this repository yet?
+        run: |
+          if git ls-remote --exit-code origin refs/dolt/data >/dev/null 2>&1; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::No database pushed to this repository yet (run: python tools/atlas.py db push). Nothing to publish."
+          fi
+      - if: steps.hasdb.outputs.present == 'true'
+        uses: actions/setup-python@v7
+        with: { python-version: '3.12', cache: pip }
+      - if: steps.hasdb.outputs.present == 'true'
+        run: pip install -r requirements.txt && tools/install-doltgres.sh "$HOME/.local/bin" && echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - if: steps.hasdb.outputs.present == 'true'
+        name: Clone the database from this repository (hidden ref refs/dolt/data)
+        run: python tools/atlas.py db pull && python tools/atlas.py status
+      - if: steps.hasdb.outputs.present == 'true'
+        name: Render pages and CSV export from the database
+        run: python tools/atlas.py render && python tools/atlas.py export
+      - if: steps.hasdb.outputs.present == 'true'
+        name: Check committed pages and CSV match the database (deterministic output)
+        run: |
+          test -z "$(git status --porcelain docs/generated mkdocs.yml data)" || {
+            echo "::error::committed generated files differ from a fresh render of the database"
+            git status --porcelain docs/generated mkdocs.yml data; exit 1; }
+      - if: steps.hasdb.outputs.present == 'true'
+        run: zensical build
+      - if: steps.hasdb.outputs.present == 'true'
+        uses: actions/configure-pages@v6
+      - if: steps.hasdb.outputs.present == 'true'
+        uses: actions/upload-pages-artifact@v5
+        with: { path: _site }
+  deploy:
+    needs: build
+    if: needs.build.outputs.present == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

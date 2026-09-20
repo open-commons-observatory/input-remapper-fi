@@ -1,0 +1,10 @@
+# Every generated page: which template, which SQL queries (docs/queries/) feed it, where it is written.
+# for_each: render once per row of that query; its columns are bound as %(column)s and {column} in `out`.
+pages:
+  - {template: index.md.j2,       out: index.md,             queries: {totals: totals.sql, by_facet: by_facet.sql}}
+  - {template: coverage.md.j2,    out: coverage.md,          queries: {items: cov_items.sql, depth: cov_depth.sql, unknown: cov_unknown.sql, totals: totals.sql}}
+  - {template: triage.md.j2,      out: triage.md,            queries: {rows: triage.sql}}
+  - {template: problems.md.j2,    out: problems.md,          queries: {problems: problems.sql, unassigned: unassigned.sql}}
+  - {template: problem.md.j2,     out: "problems/{id}.md",   for_each: {query: problem_ids.sql}, queries: {problem: problem_def.sql, items: problem_items.sql}}
+  - {template: facet_value.md.j2, out: "by/{facet}/{value}.md", for_each: {query: fv_pages.sql}, queries: {definition: fv_def.sql, items: fv_items.sql}}
+  - {template: provenance.md.j2,  out: provenance.md,        queries: {db: db_commit.sql, totals: totals.sql}}
