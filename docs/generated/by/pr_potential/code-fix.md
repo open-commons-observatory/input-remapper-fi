@@ -2,12 +2,11 @@
 
 a targeted code change would close it (small to medium effort)
 
-20 analysed items carry this tag. [Back to index](../../index.md)
+19 analysed items carry this tag. [Back to index](../../index.md)
 
 | Item | State | Title | Summary |
 |---|---|---|---|
 | [#15](https://github.com/sezanzeb/input-remapper/issues/15) | CLOSED | OpenRC init script needed | Request for OpenRC and sysv init scripts. Maintainer asked for a PR; community members posted working OpenRC and runit scripts in comments but no official merge. PR potential: add init scripts to pac… |
-| [#66](https://github.com/sezanzeb/input-remapper/issues/66) | CLOSED | UInputError: uinput device name must not be longer than 80 characters | UInput device name too long (>80 chars) for Microsoft 2.4GHz Transceiver v9.0. Reported then self-resolved. PR potential: truncate device names to 80 chars in uinput creation. |
 | [#75](https://github.com/sezanzeb/input-remapper/issues/75) | CLOSED | Feature request: refresh list of devices | Request to refresh the device list from the GUI without restarting the app. No maintainer response visible; still open. PR potential: add a refresh button to device list. |
 | [#83](https://github.com/sezanzeb/input-remapper/issues/83) | CLOSED | rpm-package | Request for RPM packaging for Fedora. Community members contributed COPR repo and spec file discussions. Also surfaces python-evdev upstream maintenance concern (gvalkov). Maintainer added as co-main… |
 | [#88](https://github.com/sezanzeb/input-remapper/issues/88) | OPEN | Pretty printed evdev event output via the GUI | Request for evdev event monitor/viewer in the GUI (show currently pressed keys, help debug n-key rollover). Mentioned as potential addition to about/help popup. |

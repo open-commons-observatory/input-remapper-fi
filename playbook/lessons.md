@@ -34,3 +34,8 @@ tagging, reading and honesty still hold). These are new, found while rebuilding 
     real on the first instance.
 19. **Do not nest heredocs with the same terminator, and do not `pkill -f` a pattern that appears in your own command line.** Both hang or kill the shell.
     Put the inner script in its own file.
+20. **Doltgres does not support `ILIKE` yet** (it answers "ILIKE is not yet supported"). Use `lower(col) LIKE '%term%'`. Keyword searches over summaries are a good way to find
+    clusters, but read the hits: a search for "focus" found the real per-app-switching cluster (7 items) plus four unrelated items.
+21. **A match in a file is not the feature existing.** When verifying an old request against current source, grep for file names first, then read the matching lines
+    (`uninstall` and `focus` matched things that had nothing to do with the request). Record the upstream commit and date you verified against.
+22. **Group before you plan PRs, and prune before you group.** Checking 2021-era "docs-fix" items against current docs removed four of them (already covered) before any PR was written.

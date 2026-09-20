@@ -74,4 +74,5 @@ facets:
       upstream-dep: root cause is upstream; needs an upstream change
       close-duplicate: close as duplicate; no code needed
       wontfix: maintainer would decline
+      resolved: closed with a fix, answer or workaround; no change to the project is needed
       unknown: not yet assessed

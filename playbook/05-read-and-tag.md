@@ -31,3 +31,10 @@ replaced. The batch is one database transaction and one commit. Keep applied bat
 
 Summaries are your own words: no copied passages, no speculation about people. Record how each claim is known with `conf`:
 `stated` (the maintainer said it), `reported` (a user said it), `inferred` (your reading).
+
+## Bulk edits: `.sql` batches
+
+A re-tag that touches many items (for example a vocabulary change) is a `batches/NNNN-<what>.sql` file: plain `UPDATE`/`INSERT` statements, each ending
+with `;` at the end of a line. `atlas apply` runs the whole file in **one transaction** (the database's constraints are the validator) and commits
+it as one commit; a failing statement leaves everything untouched. Use explicit item numbers, not sub-selects, so replaying the file later gives the
+same result. Keep the evidence for the rule in a comment at the top of the file.

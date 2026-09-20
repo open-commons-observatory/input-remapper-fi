@@ -380,11 +380,30 @@ def parse_batch(path, tax, item_ids):
     return rows, errors
 
 
+def apply_sql_batch(conn, a):
+    """A .sql batch is a reviewable bulk edit (e.g. a re-tag). One transaction: the database's own constraints are the validator."""
+    text = pathlib.Path(a.batch).read_text(encoding="utf-8")
+    n = sum(1 for st in re.split(r";[ \t]*\n", text) if "\n".join(l for l in st.splitlines() if not l.strip().startswith("--")).strip())
+    if a.dry_run:
+        print(f"ok: {n} statements would be applied in one transaction")
+        return
+    try:
+        with conn.transaction():
+            run_sql_file(conn, a.batch)
+    except psycopg.Error as e:
+        print(f"REJECTED: {str(e).splitlines()[0]}; nothing was written", file=sys.stderr)
+        sys.exit(1)
+    print(f"applied {n} statements from {pathlib.Path(a.batch).name}")
+    commit(conn, f"apply {pathlib.Path(a.batch).stem}: {n} statements")
+
+
 def cmd_apply(a):
     with connect() as conn:
         drift = taxonomy_drift(conn)
         if drift:
             die("taxonomy.yaml and the database disagree; run `atlas db init` to load the file (or fix the file):\n  " + "\n  ".join(drift[:8]))
+        if a.batch.endswith(".sql"):
+            return apply_sql_batch(conn, a)
         tax = taxonomy_from_db(conn)
         ids = {r["n"] for r in conn.execute("SELECT n FROM item").fetchall()}
         stem = pathlib.Path(a.batch).stem

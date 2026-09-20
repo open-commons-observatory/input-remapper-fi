@@ -139,6 +139,7 @@ facets:
       upstream-dep: root cause is upstream (kernel, evdev, GTK, Wayland protocol); fix requires upstream change
       close-duplicate: should be closed as duplicate; no code needed
       wontfix: maintainer would likely decline; not actionable
+      resolved: closed with a fix, answer or workaround; no change to the project is needed
       unknown: not yet assessed
   conf:
     multi: false

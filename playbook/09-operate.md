@@ -13,7 +13,7 @@ python tools/atlas.py next -n 12    # where to continue
   changed.
 - **History and undo:** every batch is a database commit. `SELECT * FROM dolt_log`, `dolt_diff('HEAD~1','HEAD','tag')`, and
   `SELECT ... FROM tag AS OF 'HEAD~3'` show what changed and when; `SELECT dolt_reset('--hard', 'HEAD~1')` undoes a bad batch.
-- **Rebuild from scratch:** re-apply the archived batches in order (`atlas db init`, `atlas acquire`, `atlas apply` each file).
+- **Rebuild from scratch:** re-apply the archived batches in order, `.tsv` and `.sql` alike (`atlas db init`, `atlas acquire`, then `atlas apply` each file).
 - **Autonomous rounds** (an agent working unattended): run rounds of 12; after each, `apply` + `db push`; stop on a scope question,
   a rate limit, or when context is running low. The last pushed commit is the resume point.
 - **Ephemeral environments:** call `atlas db up` first, `db pull` if the data directory is empty, and `db push` after every batch.

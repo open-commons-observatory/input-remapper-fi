@@ -34,6 +34,14 @@ DRIFT_OUT="$(ATLAS_TAXONOMY="$ATLAS_HOME/tax-drift.yaml" $A check || true)"   # 
 grep -q "taxonomy drift: value cause:environment is in database only" <<<"$DRIFT_OUT" || fail "drift not reported by check"
 if ATLAS_TAXONOMY="$ATLAS_HOME/tax-drift.yaml" $A apply tests/fixtures/batch-ok.tsv 2> "$ATLAS_HOME/drift.err"; then fail "apply must refuse when taxonomy.yaml and the database disagree"; fi
 grep -q "disagree" "$ATLAS_HOME/drift.err" || fail "expected a readable drift message"
+# .sql batches: one transaction; a failing statement must leave everything untouched
+pot() { $A sql "SELECT value FROM tag WHERE item_n = $1 AND facet = 'pr_potential'" | sed -n 3p | tr -d ' '; }
+[ "$(pot 3)" = "code-fix" ] || fail "fixture precondition"
+if $A apply tests/fixtures/retag-bad.sql 2> "$ATLAS_HOME/sqlbad.err"; then fail "bad .sql batch was accepted"; fi
+grep -q "nothing was written" "$ATLAS_HOME/sqlbad.err" || fail "expected a rejection message for the .sql batch"
+[ "$(pot 3)" = "code-fix" ] || fail "a rejected .sql batch changed the database"
+$A apply tests/fixtures/retag-ok.sql
+[ "$(pot 1)" = "resolved" ] && [ "$(pot 2)" = "wontfix" ] || fail ".sql batch was not applied"
 $A check || true
 $A status
 $A render --out "$ATLAS_HOME/out1"
@@ -53,6 +61,7 @@ python tests/check_mkdocs.py
 [ ! -d .doltcfg ] || fail "server state leaked into the repository working directory"
 # undo: dolt_reset removes the last commit (documented in playbook/09-operate.md)
 $A sql "SELECT dolt_reset('--hard', 'HEAD~1')" >/dev/null
-[ "$($A sql "SELECT count(*) AS n FROM problem" | sed -n 3p | tr -d ' ')" = "0" ] || fail "dolt_reset did not undo the last commit"
+[ "$(pot 1)" = "docs-fix" ] || fail "dolt_reset did not undo the last commit (the .sql re-tag)"
+[ "$($A sql "SELECT count(*) AS n FROM problem" | sed -n 3p | tr -d ' ')" = "1" ] || fail "dolt_reset must not undo earlier commits"
 $A sql "SELECT 1" >/dev/null   # server still healthy
 echo "ALL TESTS PASSED"

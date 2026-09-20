@@ -2,12 +2,11 @@
 
 a documentation update or in-app hint would close it
 
-46 analysed items carry this tag. [Back to index](../../index.md)
+43 analysed items carry this tag. [Back to index](../../index.md)
 
 | Item | State | Title | Summary |
 |---|---|---|---|
 | [#5](https://github.com/sezanzeb/input-remapper/issues/5) | CLOSED | Can't install on pop!_os 20.10 | Pop!_OS install failed: python3-evdev not pulled as a dependency. Resolved with apt -f install. Maintainer said README would be updated. PR potential: dependency note in README. |
-| [#11](https://github.com/sezanzeb/input-remapper/issues/11) | CLOSED | how to remove | Empty issue body; user wanted to know how to uninstall. Maintainer replied with removal commands for apt, pacman, pip. Documentation gap. |
 | [#16](https://github.com/sezanzeb/input-remapper/issues/16) | CLOSED | 3 parameter macro | User wanted three-modifier macro (ctrl+alt+down) and got a syntax error; maintainer explained nested macro syntax m(ctrl, m(alt, k(down))). Classic docs gap; nested syntax was not in the docs. |
 | [#17](https://github.com/sezanzeb/input-remapper/issues/17) | CLOSED | Wrong user in systemd daemon | User alarmed that get_user() returned root in systemd daemon on Arch+Wayland+GNOME. Maintainer stated this is expected and normal; the injection uses the user config via D-Bus. Docs gap: expected dae… |
 | [#18](https://github.com/sezanzeb/input-remapper/issues/18) | CLOSED | Only works after first unlock | Mapping not active on lockscreen (pop-os, before first login). Maintainer explained the service waits for user login before injecting, and provided a workaround via runuser + --config-dir flag. Fix:… |
@@ -18,7 +17,6 @@ a documentation update or in-app hint would close it
 | [#56](https://github.com/sezanzeb/input-remapper/issues/56) | CLOSED | Is there any way to quickly switch between mappings (via cli, etc) or… | How to switch presets per focused application? Maintainer confirmed not possible on Wayland; pointed to CLI docs. Docs gap: FAQ entry for Wayland limitation on per-app presets. |
 | [#68](https://github.com/sezanzeb/input-remapper/issues/68) | CLOSED | Add ability to reserve key as modifier/disable it completely | Request to disable/reserve a key as a pure modifier (caps lock as modifier, no default action). Maintainer pointed to "disable" mapping option in docs. UI discoverability gap: "disable" keyword not o… |
 | [#69](https://github.com/sezanzeb/input-remapper/issues/69) | CLOSED | Keys no longer detected in UI after first "apply" | Keys not detected in UI after first Apply. Root cause: injection was active, so the device was grabbed. Must use Restore Defaults to temporarily release the grab. Documented in usage.md but UI could… |
-| [#81](https://github.com/sezanzeb/input-remapper/issues/81) | CLOSED | Uninstalling when setup.py was used? | How to uninstall when setup.py was used (not apt/pip). Maintainer provided workaround (find + rm). setup.py removed from docs. Docs gap: uninstall instructions for unusual install methods. |
 | [#94](https://github.com/sezanzeb/input-remapper/issues/94) | CLOSED | Key-Mapper Settings Not Persistent | Settings not persisting after reboot on Manjaro+GNOME+Wayland. User had not enabled the Autoload toggle. Classic onboarding gap; the UI could make autoload more discoverable on first use. |
 | [#100](https://github.com/sezanzeb/input-remapper/issues/100) | CLOSED | Feature Request: Distinction between mouse press and mouse release. | How to map mouse button press and release separately. Maintainer explained m(a, h()).k(b) syntax: m injects key-down, h() holds until release, k(b) fires on release. Also noted that context-menu rele… |
 | [#104](https://github.com/sezanzeb/input-remapper/issues/104) | CLOSED | Toggle on/off script needed | How to toggle injection on/off via CLI shortcut. Maintainer pointed to CLI docs (key-mapper-control --command stop/autoload). User solved with desktop keyboard shortcut. Also: cross-device combinatio… |
@@ -50,5 +48,4 @@ a documentation update or in-app hint would close it
 | [#243](https://github.com/sezanzeb/input-remapper/issues/243) | OPEN | Home row mods fine tune | Home row mods (if_tap) require waiting time before shift activates. Alternative: if_single with timeout works slightly differently. Complex macro composition needed (nested if_single); maintainer exp… |
 | [#256](https://github.com/sezanzeb/input-remapper/issues/256) | CLOSED | could not open uinput device in write mode | Could not open uinput device in write mode (input-remapper 1.x). Maintainer asked for lsmod/uinput status; no follow-up. Redirected to #29. |
 | [#268](https://github.com/sezanzeb/input-remapper/issues/268) | CLOSED | Key-Mapper | Cannot find BTN_RIGHT as a mapping target after upgrading to 1.3.0. Root: 1.3.0 introduced predefined device types (keyboard/mouse/gamepad) and mouse-button outputs are only shown when "mouse" is sel… |
-| [#269](https://github.com/sezanzeb/input-remapper/issues/269) | CLOSED | Add python3-devel requirement to installation instructions for pip | python3-devel not mentioned in pip install instructions for Fedora. Maintainer added the note to the README. |
 | [#270](https://github.com/sezanzeb/input-remapper/issues/270) | CLOSED | `BTN_BACK` and `BTN_FORWARD` seem to do nothing | BTN_BACK and BTN_FORWARD do nothing for browser navigation. Root: naming in input-event-codes.h is confusing; BTN_SIDE and BTN_EXTRA are what browsers actually use for back/forward. Docs gap: add a n… |

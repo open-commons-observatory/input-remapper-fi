@@ -7,15 +7,16 @@ An evidence-backed, versioned map of the problems reported against sezanzeb/inpu
 | Issues and PRs | 1099 (259 are PRs) |
 | Analysed so far | 192 (see [coverage](coverage.md)) |
 | Tags applied | 1662 |
-| Recurring problems registered | 0 (see [problems](problems.md)) |
+| Recurring problems registered | 5 (see [problems](problems.md)) |
 
 ## pr_potential
 
 ```mermaid
 pie showData title pr_potential
-    "unknown" : 89
-    "docs-fix" : 46
-    "code-fix" : 20
+    "resolved" : 74
+    "docs-fix" : 43
+    "code-fix" : 19
+    "unknown" : 19
     "needs-design" : 18
     "upstream-dep" : 13
     "wontfix" : 6
@@ -78,9 +79,10 @@ pie showData title pr_potential
 
 | pr_potential | Items |
 |---|---|
-| [unknown](by/pr_potential/unknown.md) | 89 |
-| [docs-fix](by/pr_potential/docs-fix.md) | 46 |
-| [code-fix](by/pr_potential/code-fix.md) | 20 |
+| [resolved](by/pr_potential/resolved.md) | 74 |
+| [docs-fix](by/pr_potential/docs-fix.md) | 43 |
+| [code-fix](by/pr_potential/code-fix.md) | 19 |
+| [unknown](by/pr_potential/unknown.md) | 19 |
 | [needs-design](by/pr_potential/needs-design.md) | 18 |
 | [upstream-dep](by/pr_potential/upstream-dep.md) | 13 |
 | [wontfix](by/pr_potential/wontfix.md) | 6 |

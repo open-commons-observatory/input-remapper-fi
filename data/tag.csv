@@ -7,7 +7,7 @@ item_n,facet,value
 1,kind,support
 1,layer,install
 1,outcome,fixed
-1,pr_potential,unknown
+1,pr_potential,resolved
 1,symptom,install-fail
 2,cause,distro-compat
 2,cause,permission
@@ -19,7 +19,7 @@ item_n,facet,value
 2,layer,install
 2,layer,permissions
 2,outcome,fixed
-2,pr_potential,unknown
+2,pr_potential,resolved
 2,symptom,daemon-not-starting
 2,symptom,install-fail
 3,cause,missing-feature
@@ -35,7 +35,7 @@ item_n,facet,value
 4,layer,config
 4,layer,daemon
 4,outcome,fixed
-4,pr_potential,unknown
+4,pr_potential,resolved
 5,cause,distro-compat
 5,cause,doc-gap
 5,component,ci-build
@@ -60,7 +60,7 @@ item_n,facet,value
 6,layer,injector
 6,layer,install
 6,outcome,fixed
-6,pr_potential,unknown
+6,pr_potential,resolved
 6,symptom,install-fail
 6,symptom,mapping-not-working
 7,cause,distro-compat
@@ -74,7 +74,7 @@ item_n,facet,value
 7,layer,gui
 7,layer,install
 7,outcome,fixed
-7,pr_potential,unknown
+7,pr_potential,resolved
 7,symptom,daemon-not-starting
 8,cause,autoload-failure
 8,cause,de-compat
@@ -87,7 +87,7 @@ item_n,facet,value
 8,layer,config
 8,layer,daemon
 8,outcome,fixed
-8,pr_potential,unknown
+8,pr_potential,resolved
 8,symptom,mapping-not-working
 8,symptom,service-unit-issue
 9,cause,de-compat
@@ -110,7 +110,7 @@ item_n,facet,value
 10,layer,combination
 10,layer,gui
 10,outcome,fixed
-10,pr_potential,unknown
+10,pr_potential,resolved
 10,symptom,combination-not-firing
 10,symptom,gui-crash
 11,cause,doc-gap
@@ -118,7 +118,7 @@ item_n,facet,value
 11,kind,question
 11,layer,install
 11,outcome,docs-answer
-11,pr_potential,docs-fix
+11,pr_potential,resolved
 12,cause,device-quirk
 12,cause,missing-feature
 12,component,injector
@@ -130,7 +130,7 @@ item_n,facet,value
 12,layer,injector
 12,layer,reader
 12,outcome,fixed
-12,pr_potential,unknown
+12,pr_potential,resolved
 12,symptom,mapping-not-working
 13,cause,device-quirk
 13,cause,missing-feature
@@ -143,7 +143,7 @@ item_n,facet,value
 13,layer,injector
 13,layer,reader
 13,outcome,fixed
-13,pr_potential,unknown
+13,pr_potential,resolved
 13,symptom,mapping-not-working
 15,cause,missing-feature
 15,component,service
@@ -180,7 +180,7 @@ item_n,facet,value
 19,kind,support
 19,layer,install
 19,outcome,fixed
-19,pr_potential,unknown
+19,pr_potential,resolved
 19,symptom,install-fail
 21,cause,missing-feature
 21,cause,permission
@@ -204,7 +204,7 @@ item_n,facet,value
 23,layer,daemon
 23,layer,install
 23,outcome,fixed
-23,pr_potential,unknown
+23,pr_potential,resolved
 23,symptom,daemon-not-starting
 24,cause,doc-gap
 24,conf,stated
@@ -227,7 +227,7 @@ item_n,facet,value
 25,layer,daemon
 25,layer,device
 25,outcome,fixed
-25,pr_potential,unknown
+25,pr_potential,resolved
 25,symptom,mapping-not-working
 27,cause,device-quirk
 27,cause,evdev-api
@@ -247,7 +247,7 @@ item_n,facet,value
 28,kind,bug
 28,layer,gui
 28,outcome,fixed
-28,pr_potential,unknown
+28,pr_potential,resolved
 28,symptom,gui-crash
 29,cause,distro-compat
 29,cause,permission
@@ -267,7 +267,7 @@ item_n,facet,value
 30,layer,combination
 30,layer,macro
 30,outcome,fixed
-30,pr_potential,unknown
+30,pr_potential,resolved
 32,cause,missing-feature
 32,cause,wayland-issue
 32,conf,stated
@@ -284,7 +284,7 @@ item_n,facet,value
 33,layer,injector
 33,layer,mapping
 33,outcome,fixed
-33,pr_potential,unknown
+33,pr_potential,resolved
 33,symptom,mapping-not-working
 35,cause,regression
 35,component,injector
@@ -294,7 +294,7 @@ item_n,facet,value
 35,kind,bug
 35,layer,injector
 35,outcome,fixed
-35,pr_potential,unknown
+35,pr_potential,resolved
 35,symptom,key-stuck
 36,cause,device-quirk
 36,component,injector
@@ -305,7 +305,7 @@ item_n,facet,value
 36,layer,device
 36,layer,injector
 36,outcome,fixed
-36,pr_potential,unknown
+36,pr_potential,resolved
 36,symptom,lag
 36,symptom,mapping-not-working
 37,cause,missing-feature
@@ -317,14 +317,14 @@ item_n,facet,value
 37,layer,injector
 37,layer,reader
 37,outcome,fixed
-37,pr_potential,unknown
+37,pr_potential,resolved
 40,cause,distro-compat
 40,component,ci-build
 40,conf,stated
 40,kind,meta
 40,layer,install
 40,outcome,fixed
-40,pr_potential,unknown
+40,pr_potential,resolved
 41,cause,distro-compat
 41,component,gui-app
 41,conf,stated
@@ -333,7 +333,7 @@ item_n,facet,value
 41,kind,bug
 41,layer,install
 41,outcome,fixed
-41,pr_potential,unknown
+41,pr_potential,resolved
 41,symptom,install-fail
 42,cause,symbol-mapping
 42,cause,x11-issue
@@ -360,7 +360,7 @@ item_n,facet,value
 44,kind,bug
 44,layer,gui
 44,outcome,fixed
-44,pr_potential,unknown
+44,pr_potential,resolved
 44,symptom,gui-crash
 46,cause,macro-logic
 46,component,macros
@@ -371,7 +371,7 @@ item_n,facet,value
 46,layer,injector
 46,layer,macro
 46,outcome,fixed
-46,pr_potential,unknown
+46,pr_potential,resolved
 46,symptom,key-stuck
 47,cause,macro-logic
 47,component,macros
@@ -382,7 +382,7 @@ item_n,facet,value
 47,layer,injector
 47,layer,macro
 47,outcome,fixed
-47,pr_potential,unknown
+47,pr_potential,resolved
 47,symptom,key-stuck
 48,cause,distro-compat
 48,component,service
@@ -401,7 +401,7 @@ item_n,facet,value
 49,layer,combination
 49,layer,macro
 49,outcome,fixed
-49,pr_potential,unknown
+49,pr_potential,resolved
 49,symptom,lag
 50,cause,missing-feature
 50,cause,wayland-issue
@@ -417,7 +417,7 @@ item_n,facet,value
 53,kind,bug
 53,layer,daemon
 53,outcome,fixed
-53,pr_potential,unknown
+53,pr_potential,resolved
 53,symptom,daemon-not-starting
 56,cause,doc-gap
 56,cause,wayland-issue
@@ -442,7 +442,7 @@ item_n,facet,value
 58,layer,device
 58,layer,reader
 58,outcome,workaround
-58,pr_potential,unknown
+58,pr_potential,resolved
 59,cause,macro-logic
 59,cause,symbol-mapping
 59,component,injector
@@ -453,7 +453,7 @@ item_n,facet,value
 59,layer,injector
 59,layer,macro
 59,outcome,fixed
-59,pr_potential,unknown
+59,pr_potential,resolved
 59,symptom,key-stuck
 60,cause,device-quirk
 60,conf,stated
@@ -470,7 +470,7 @@ item_n,facet,value
 61,kind,feature-request
 61,layer,gui
 61,outcome,fixed
-61,pr_potential,unknown
+61,pr_potential,resolved
 64,cause,device-quirk
 64,conf,stated
 64,device_type,mouse
@@ -486,7 +486,7 @@ item_n,facet,value
 65,kind,feature-request
 65,layer,gui
 65,outcome,fixed
-65,pr_potential,unknown
+65,pr_potential,resolved
 66,cause,device-quirk
 66,component,injector
 66,conf,inferred
@@ -495,13 +495,13 @@ item_n,facet,value
 66,kind,bug
 66,layer,injector
 66,outcome,workaround
-66,pr_potential,code-fix
+66,pr_potential,resolved
 67,cause,missing-feature
 67,conf,stated
 67,kind,feature-request
 67,layer,config
 67,outcome,fixed
-67,pr_potential,unknown
+67,pr_potential,resolved
 68,cause,doc-gap
 68,conf,stated
 68,kind,question
@@ -527,7 +527,7 @@ item_n,facet,value
 71,kind,feature-request
 71,layer,gui
 71,outcome,fixed
-71,pr_potential,unknown
+71,pr_potential,resolved
 72,cause,missing-feature
 72,component,service
 72,conf,stated
@@ -545,7 +545,7 @@ item_n,facet,value
 73,layer,device
 73,layer,reader
 73,outcome,fixed
-73,pr_potential,unknown
+73,pr_potential,resolved
 73,symptom,device-not-detected
 74,cause,device-quirk
 74,component,injector
@@ -556,7 +556,7 @@ item_n,facet,value
 74,layer,device
 74,layer,injector
 74,outcome,fixed
-74,pr_potential,unknown
+74,pr_potential,resolved
 74,symptom,mapping-not-working
 75,cause,missing-feature
 75,component,gui-app
@@ -573,7 +573,7 @@ item_n,facet,value
 76,kind,bug
 76,layer,device
 76,outcome,fixed
-76,pr_potential,unknown
+76,pr_potential,resolved
 76,symptom,device-not-detected
 77,cause,distro-compat
 77,component,ci-build
@@ -592,7 +592,7 @@ item_n,facet,value
 78,kind,feature-request
 78,layer,reader
 78,outcome,fixed
-78,pr_potential,unknown
+78,pr_potential,resolved
 79,cause,missing-feature
 79,component,injector
 79,conf,stated
@@ -601,7 +601,7 @@ item_n,facet,value
 79,layer,injector
 79,layer,mapping
 79,outcome,fixed
-79,pr_potential,unknown
+79,pr_potential,resolved
 80,cause,missing-feature
 80,component,service
 80,conf,stated
@@ -614,7 +614,7 @@ item_n,facet,value
 81,kind,question
 81,layer,install
 81,outcome,docs-answer
-81,pr_potential,docs-fix
+81,pr_potential,resolved
 83,cause,distro-compat
 83,conf,stated
 83,de_os,fedora
@@ -678,7 +678,7 @@ item_n,facet,value
 93,layer,config
 93,layer,device
 93,outcome,fixed
-93,pr_potential,unknown
+93,pr_potential,resolved
 93,symptom,device-not-detected
 94,cause,doc-gap
 94,conf,stated
@@ -703,7 +703,7 @@ item_n,facet,value
 98,kind,bug
 98,layer,install
 98,outcome,fixed
-98,pr_potential,unknown
+98,pr_potential,resolved
 98,symptom,install-fail
 99,cause,missing-feature
 99,component,injector
@@ -712,7 +712,7 @@ item_n,facet,value
 99,kind,feature-request
 99,layer,injector
 99,outcome,fixed
-99,pr_potential,unknown
+99,pr_potential,resolved
 100,cause,doc-gap
 100,conf,stated
 100,kind,question
@@ -746,7 +746,7 @@ item_n,facet,value
 103,kind,bug
 103,layer,reader
 103,outcome,fixed
-103,pr_potential,unknown
+103,pr_potential,resolved
 103,symptom,mapping-not-working
 104,cause,doc-gap
 104,conf,stated
@@ -763,7 +763,7 @@ item_n,facet,value
 107,kind,bug
 107,layer,daemon
 107,outcome,fixed
-107,pr_potential,unknown
+107,pr_potential,resolved
 107,symptom,mapping-not-working
 109,cause,missing-feature
 109,component,gui-app
@@ -773,7 +773,7 @@ item_n,facet,value
 109,layer,gui
 109,layer,macro
 109,outcome,fixed
-109,pr_potential,unknown
+109,pr_potential,resolved
 110,cause,doc-gap
 110,conf,stated
 110,device_type,mouse
@@ -838,7 +838,7 @@ item_n,facet,value
 120,kind,feature-request
 120,layer,macro
 120,outcome,fixed
-120,pr_potential,unknown
+120,pr_potential,resolved
 122,cause,distro-compat
 122,cause,permission
 122,component,service
@@ -880,7 +880,7 @@ item_n,facet,value
 125,layer,injector
 125,layer,permissions
 125,outcome,workaround
-125,pr_potential,unknown
+125,pr_potential,resolved
 125,symptom,mapping-not-working
 126,cause,doc-gap
 126,cause,x11-issue
@@ -942,7 +942,7 @@ item_n,facet,value
 142,kind,bug
 142,layer,install
 142,outcome,fixed
-142,pr_potential,unknown
+142,pr_potential,resolved
 142,symptom,install-fail
 144,cause,de-compat
 144,conf,inferred
@@ -991,7 +991,7 @@ item_n,facet,value
 150,kind,bug
 150,layer,install
 150,outcome,fixed
-150,pr_potential,unknown
+150,pr_potential,resolved
 150,symptom,install-fail
 151,cause,doc-gap
 151,conf,stated
@@ -1069,7 +1069,7 @@ item_n,facet,value
 170,kind,bug
 170,layer,install
 170,outcome,fixed
-170,pr_potential,unknown
+170,pr_potential,resolved
 170,symptom,install-fail
 171,cause,distro-compat
 171,conf,stated
@@ -1078,7 +1078,7 @@ item_n,facet,value
 171,kind,bug
 171,layer,install
 171,outcome,workaround
-171,pr_potential,unknown
+171,pr_potential,resolved
 171,symptom,install-fail
 172,cause,distro-compat
 172,component,service
@@ -1132,7 +1132,7 @@ item_n,facet,value
 181,kind,bug
 181,layer,install
 181,outcome,workaround
-181,pr_potential,unknown
+181,pr_potential,resolved
 181,symptom,install-fail
 183,cause,missing-feature
 183,component,macros
@@ -1140,7 +1140,7 @@ item_n,facet,value
 183,kind,feature-request
 183,layer,macro
 183,outcome,fixed
-183,pr_potential,unknown
+183,pr_potential,resolved
 184,cause,de-compat
 184,cause,permission
 184,component,gui-app
@@ -1162,14 +1162,14 @@ item_n,facet,value
 185,layer,device
 185,layer,injector
 185,outcome,fixed
-185,pr_potential,unknown
+185,pr_potential,resolved
 186,cause,missing-feature
 186,component,macros
 186,conf,stated
 186,kind,feature-request
 186,layer,macro
 186,outcome,fixed
-186,pr_potential,unknown
+186,pr_potential,resolved
 187,cause,device-quirk
 187,component,reader
 187,conf,stated
@@ -1217,7 +1217,7 @@ item_n,facet,value
 197,layer,daemon
 197,layer,device
 197,outcome,fixed
-197,pr_potential,unknown
+197,pr_potential,resolved
 197,symptom,mapping-not-working
 198,cause,missing-feature
 198,component,macros
@@ -1276,7 +1276,7 @@ item_n,facet,value
 204,kind,bug
 204,layer,install
 204,outcome,workaround
-204,pr_potential,unknown
+204,pr_potential,resolved
 204,symptom,install-fail
 205,cause,missing-feature
 205,component,injector
@@ -1333,7 +1333,7 @@ item_n,facet,value
 211,kind,bug
 211,layer,install
 211,outcome,fixed
-211,pr_potential,unknown
+211,pr_potential,resolved
 212,cause,autoload-failure
 212,cause,de-compat
 212,component,service
@@ -1355,7 +1355,7 @@ item_n,facet,value
 213,kind,bug
 213,layer,install
 213,outcome,workaround
-213,pr_potential,unknown
+213,pr_potential,resolved
 213,symptom,install-fail
 216,cause,config-error
 216,conf,inferred
@@ -1377,7 +1377,7 @@ item_n,facet,value
 218,conf,stated
 218,kind,meta
 218,outcome,fixed
-218,pr_potential,unknown
+218,pr_potential,resolved
 220,cause,missing-feature
 220,cause,x11-issue
 220,component,keycodes
@@ -1396,7 +1396,7 @@ item_n,facet,value
 221,layer,injector
 221,layer,macro
 221,outcome,fixed
-221,pr_potential,unknown
+221,pr_potential,resolved
 221,symptom,key-stuck
 222,cause,symbol-mapping
 222,component,reader
@@ -1431,7 +1431,7 @@ item_n,facet,value
 225,kind,bug
 225,layer,install
 225,outcome,workaround
-225,pr_potential,unknown
+225,pr_potential,resolved
 226,cause,doc-gap
 226,conf,inferred
 226,kind,question
@@ -1447,7 +1447,7 @@ item_n,facet,value
 229,layer,injector
 229,layer,macro
 229,outcome,fixed
-229,pr_potential,unknown
+229,pr_potential,resolved
 229,symptom,key-stuck
 231,cause,distro-compat
 231,cause,python-version
@@ -1458,7 +1458,7 @@ item_n,facet,value
 231,kind,bug
 231,layer,install
 231,outcome,workaround
-231,pr_potential,unknown
+231,pr_potential,resolved
 231,symptom,install-fail
 234,cause,missing-feature
 234,component,macros
@@ -1479,7 +1479,7 @@ item_n,facet,value
 240,kind,feature-request
 240,layer,macro
 240,outcome,fixed
-240,pr_potential,unknown
+240,pr_potential,resolved
 241,cause,de-compat
 241,cause,x11-issue
 241,component,macros
@@ -1517,12 +1517,12 @@ item_n,facet,value
 247,kind,bug
 247,layer,config
 247,outcome,fixed
-247,pr_potential,unknown
+247,pr_potential,resolved
 248,cause,missing-feature
 248,conf,stated
 248,kind,meta
 248,outcome,fixed
-248,pr_potential,unknown
+248,pr_potential,resolved
 252,cause,missing-feature
 252,cause,wayland-issue
 252,conf,stated
@@ -1535,7 +1535,7 @@ item_n,facet,value
 253,kind,meta
 253,layer,config
 253,outcome,fixed
-253,pr_potential,unknown
+253,pr_potential,resolved
 256,cause,permission
 256,component,injector
 256,conf,inferred
@@ -1576,7 +1576,7 @@ item_n,facet,value
 266,conf,stated
 266,kind,meta
 266,outcome,fixed
-266,pr_potential,unknown
+266,pr_potential,resolved
 268,cause,doc-gap
 268,conf,stated
 268,kind,question
@@ -1590,7 +1590,7 @@ item_n,facet,value
 269,kind,feature-request
 269,layer,install
 269,outcome,fixed
-269,pr_potential,docs-fix
+269,pr_potential,resolved
 270,cause,doc-gap
 270,cause,symbol-mapping
 270,conf,stated
@@ -1621,7 +1621,7 @@ item_n,facet,value
 276,layer,injector
 276,layer,macro
 276,outcome,fixed
-276,pr_potential,unknown
+276,pr_potential,resolved
 276,symptom,mapping-not-working
 278,cause,python-version
 278,component,gui-app
@@ -1631,7 +1631,7 @@ item_n,facet,value
 278,kind,bug
 278,layer,install
 278,outcome,fixed
-278,pr_potential,unknown
+278,pr_potential,resolved
 278,symptom,install-fail
 281,cause,distro-compat
 281,cause,python-version
@@ -1642,7 +1642,7 @@ item_n,facet,value
 281,kind,bug
 281,layer,install
 281,outcome,workaround
-281,pr_potential,unknown
+281,pr_potential,resolved
 281,symptom,install-fail
 282,cause,de-compat
 282,cause,evdev-api
@@ -1660,4 +1660,4 @@ item_n,facet,value
 283,conf,inferred
 283,kind,meta
 283,outcome,fixed
-283,pr_potential,unknown
+283,pr_potential,resolved

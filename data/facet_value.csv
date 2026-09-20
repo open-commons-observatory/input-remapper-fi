@@ -99,6 +99,7 @@ pr_potential,close-duplicate,should be closed as duplicate; no code needed
 pr_potential,code-fix,a targeted code change would close it (small to medium effort)
 pr_potential,docs-fix,a documentation update or in-app hint would close it
 pr_potential,needs-design,needs architectural discussion or maintainer buy-in before a PR
+pr_potential,resolved,"closed with a fix, answer or workaround; no change to the project is needed"
 pr_potential,unknown,not yet assessed
 pr_potential,upstream-dep,"root cause is upstream (kernel, evdev, GTK, Wayland protocol); fix requires upstream change"
 pr_potential,wontfix,maintainer would likely decline; not actionable
