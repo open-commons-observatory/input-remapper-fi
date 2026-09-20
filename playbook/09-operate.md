@@ -17,3 +17,19 @@ python tools/atlas.py next -n 12    # where to continue
 - **Autonomous rounds** (an agent working unattended): run rounds of 12; after each, `apply` + `db push`; stop on a scope question,
   a rate limit, or when context is running low. The last pushed commit is the resume point.
 - **Ephemeral environments:** call `atlas db up` first, `db pull` if the data directory is empty, and `db push` after every batch.
+
+## Updating an atlas from the template
+
+An atlas is created from the template with a clean history, so there is no automatic link back. To take template fixes:
+
+```bash
+git remote add template https://github.com/open-commons-observatory/oco-atlas.git   # once
+git fetch template
+git checkout template/main -- tools tests .github playbook docs/templates docs/queries docs/pages.yaml requirements.txt db
+python tools/atlas.py render && python tools/atlas.py export && bash tests/run.sh
+git add -A && git commit -m "update tooling from template"
+```
+
+This replaces the tooling and documentation and leaves your data and configuration alone (`atlas.yaml`, `taxonomy.yaml`, `SCOPE.md`,
+`batches/`, `decisions/`, `data/`, `docs/generated/`). If you customised a template or query, run `git diff template/main -- docs/templates`
+first. A schema change would ship as a numbered migration in `db/migrations/` (none exists yet).

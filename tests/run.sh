@@ -43,6 +43,7 @@ HASH=$(grep -o 'commit `[0-9a-z]*`' "$O/provenance.md" | grep -o '[0-9a-z]\{12\}
 
 $A export --dir "$ATLAS_HOME/e1"; $A export --dir "$ATLAS_HOME/e2"
 diff -r "$ATLAS_HOME/e1" "$ATLAS_HOME/e2" >/dev/null || fail "export is not deterministic"
+python tests/check_mkdocs.py
 [ ! -d .doltcfg ] || fail "server state leaked into the repository working directory"
 $A sql "SELECT 1" >/dev/null   # server still healthy
 echo "ALL TESTS PASSED"

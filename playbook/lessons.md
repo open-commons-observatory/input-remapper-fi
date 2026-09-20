@@ -28,3 +28,9 @@ tagging, reading and honesty still hold). These are new, found while rebuilding 
 16. **GitHub contexts are scoped.** `runner.*` and `steps.*` do not exist in job-level `env:`; the workflow is rejected as a whole and shows up as a
     failed run named after the file path, with no jobs. Set such values in a step (`echo "X=$RUNNER_TEMP/x" >> "$GITHUB_ENV"`). Local tests cannot
     catch this; only a real run does.
+17. **Quote every user-supplied value you write into YAML.** `site_name: proj: title` is a syntax error; use `| tojson`. The default title had no colon, so
+    only a real project exposed it: test with hostile input (colons, quotes, `#`), not just the happy path.
+18. **Generated repos have no upgrade path unless you write one.** Document how an instance takes template fixes ([operate](09-operate.md)) and use it for
+    real on the first instance.
+19. **Do not nest heredocs with the same terminator, and do not `pkill -f` a pattern that appears in your own command line.** Both hang or kill the shell.
+    Put the inner script in its own file.
