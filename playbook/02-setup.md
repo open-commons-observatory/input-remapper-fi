@@ -25,3 +25,7 @@ Servers do not persist in every environment (for example some sandboxes drop bac
 
 `tests/run.sh` and the self-test workflow check the tooling with their own fixture vocabulary (`tests/fixtures/`), so keep them in
 your atlas. If you customise the page templates, update the page names the test looks for.
+
+**Credentials belong to the server process.** `db push` and `db pull` are executed by the database server, so `GITHUB_TOKEN` must be exported *when the
+server starts*. If a push fails with `could not read Username`, the server was started without it: export the token, then `atlas db down` and `atlas db up`.
+`atlas db push` reports a failed push as an error; always check its exit status before pushing the repository, because CI clones the database from GitHub.

@@ -2,7 +2,7 @@
 """atlas: acquire -> read -> tag -> validate -> render, on a version-controlled Postgres-compatible
 database (Doltgres). One tool, one config (atlas.yaml), one vocabulary (taxonomy.yaml).
 
-  atlas db up|init|pull|push     manage the database server and its copy in GitHub (refs/dolt/data)
+  atlas db up|down|init|pull|push  manage the database server and its copy in GitHub (refs/dolt/data)
   atlas acquire                  fetch issues, PRs and commits from GitHub into the database
   atlas next [-n 12]             which unread items come next (state lives in the database)
   atlas read N [N...]            print threads to read (API, never HTML)
@@ -167,13 +167,32 @@ def cmd_db_up(a=None):
                    GIT_CONFIG_VALUE_0="Authorization: Basic " + base64.b64encode(f"x-access-token:{tok}".encode()).decode())
     log = open(h / "server.log", "ab")
     # cwd outside the repo: Doltgres writes .doltcfg/ (auth databases) into its working directory.
-    subprocess.Popen([binp, "-data-dir", str(h / "data")], cwd=h, stdout=log, stderr=log, env=env, start_new_session=True)
+    proc = subprocess.Popen([binp, "-data-dir", str(h / "data")], cwd=h, stdout=log, stderr=log, env=env, start_new_session=True)
+    (h / "server.pid").write_text(str(proc.pid))
     for _ in range(60):
         if server_up():
             print("database server up")
             return
         time.sleep(0.5)
     die(f"server did not start; see {h / 'server.log'}")
+
+
+def cmd_db_down(a=None):
+    """Stop the server that `atlas db up` started. Restart it after exporting GITHUB_TOKEN if push or clone needs credentials."""
+    import signal
+    pidfile = home() / "server.pid"
+    if not pidfile.exists():
+        die(f"no {pidfile}; the server was not started by atlas. Stop the doltgres process yourself.")
+    try:
+        os.kill(int(pidfile.read_text()), signal.SIGTERM)
+    except ProcessLookupError:
+        pass
+    for _ in range(40):
+        if not server_up():
+            break
+        time.sleep(0.25)
+    pidfile.unlink(missing_ok=True)
+    print("database server stopped" if not server_up() else "server still answering; stop it manually")
 
 
 def db_exists(name):
@@ -219,7 +238,13 @@ def cmd_db_push(a=None):
         remotes = [r["name"] for r in conn.execute("SELECT name FROM dolt_remotes").fetchall()]
         if "origin" not in remotes:
             conn.execute(sql.SQL("SELECT dolt_remote('add', 'origin', {})").format(sql.Literal(repo_url())))
-        out = conn.execute("SELECT dolt_push('origin', 'main')").fetchone()
+        try:
+            out = conn.execute("SELECT dolt_push('origin', 'main')").fetchone()
+        except psycopg.Error as e:
+            msg = str(e).splitlines()[0]
+            hint = ("\n  The server was probably started without GITHUB_TOKEN. Export it, then run `atlas db down` and `atlas db up`, and push again."
+                    if "Username" in str(e) or "credential" in str(e).lower() else "")
+            die(f"database push FAILED, GitHub does not have your latest data: {msg}{hint}")
         print("pushed database to", repo_url())
         print(list(out.values())[0])
 
@@ -502,7 +527,7 @@ def main():
     sub = p.add_subparsers(dest="cmd", required=True)
     db = sub.add_parser("db", help="database server and its GitHub copy")
     dbs = db.add_subparsers(dest="sub", required=True)
-    for name, fn in (("up", cmd_db_up), ("init", cmd_db_init), ("pull", cmd_db_pull), ("push", cmd_db_push)):
+    for name, fn in (("up", cmd_db_up), ("down", cmd_db_down), ("init", cmd_db_init), ("pull", cmd_db_pull), ("push", cmd_db_push)):
         dbs.add_parser(name).set_defaults(fn=fn)
     s = sub.add_parser("acquire", help="fetch issues, PRs, commits")
     s.add_argument("--items-only", action="store_true")

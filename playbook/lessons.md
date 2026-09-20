@@ -39,3 +39,5 @@ tagging, reading and honesty still hold). These are new, found while rebuilding 
 21. **A match in a file is not the feature existing.** When verifying an old request against current source, grep for file names first, then read the matching lines
     (`uninstall` and `focus` matched things that had nothing to do with the request). Record the upstream commit and date you verified against.
 22. **Group before you plan PRs, and prune before you group.** Checking 2021-era "docs-fix" items against current docs removed four of them (already covered) before any PR was written.
+23. **A push you did not check did not happen.** `atlas db push ... | tail -1 && git push` printed a credential hint, the chain continued, and GitHub kept a stale database.
+    Never pipe a gating command through `tail`; check its exit status. The server needs `GITHUB_TOKEN` at *start*, not at call time.
