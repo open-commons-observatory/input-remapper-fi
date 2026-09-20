@@ -47,3 +47,7 @@ tagging, reading and honesty still hold). These are new, found while rebuilding 
 27. **Parse hand-written YAML before using it.** An unquoted `: ` inside a value (`processes: how work flows: review`) broke the vocabulary again, one hour after lesson 17. Load the file in Python first.
 28. **A closed pipe is not an error for a read-only command, but is for a writer.** `fi status | head` should stop quietly; `fi db init | head` must not die between a migration and its commit. Tests capture output first.
 29. **A health metric cannot tell busy from gone.** Read activity numbers next to what the maintainer said, and record the risk as an entry with both as evidence.
+30. **The shell here is `sh`.** No arrays, no `set -o pipefail`, no process substitution. Two long commands failed silently at the first bash-only line.
+31. **A command is cut off after 300 seconds.** Run long acquisitions with `nohup` and poll a log.
+32. **Background servers vanish between turns.** Start the database with `fi db up` at the start of every command sequence, and export the token before it.
+33. **A handoff kept outside the repository drifts.** The first handoff was a separate file; it was not versioned and nobody would reopen it. The repository itself is the manual (see the decision record on this), read in full at the start of each session and updated as work goes on.

@@ -16,7 +16,7 @@ v1 stored one markdown file per issue/PR/commit and used a Python reference impl
 | P08 atomic batch loop | `atlas apply` (same batch format) |
 | P09 read issues at depth | `atlas read` |
 | P10 audit hidden text | built into `atlas read` (comment-count check) |
-| P13 verify against another version | manual, `depth=source` ([phase 7](07-problems-and-prs.md)) |
+| P13 verify against another version | manual, `depth=source` ([phase 7](07-register-and-changes.md)) |
 | P14 constraints catalogue | [planned] (rule-catalogue lens) |
 | P15 analysis documents | generated pages plus hand-written documents in your atlas repo |
 | P16 indexes and statistics | SQL queries and templates; `atlas render` |

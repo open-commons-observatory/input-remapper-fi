@@ -13,6 +13,8 @@ with numbers computed from the database when the pages were rendered.
   [`batches/`](batches/) (every batch of tagging, in order).
 - **Method:** [`playbook/`](playbook/README.md).
 
+**AI agents:** read [AGENTS.md](AGENTS.md) first, then [ROADMAP.md](ROADMAP.md). This repository is its own operating manual.
+
 ## Continue the analysis
 
 ```bash

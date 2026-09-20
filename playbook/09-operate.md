@@ -25,7 +25,7 @@ An FI repository is created from the template with a clean history, so there is 
 ```bash
 git remote add template https://github.com/open-commons-observatory/foss-insights.git   # once
 git fetch template
-git checkout template/main -- tools tests .github playbook docs/templates docs/queries docs/pages.yaml requirements.txt db
+git checkout template/main -- AGENTS.md tools tests .github playbook docs/templates docs/queries docs/pages.yaml requirements.txt db
 python tools/fi.py render && python tools/fi.py export && bash tests/run.sh
 git add -A && git commit -m "update tooling from template"
 ```

@@ -16,7 +16,7 @@ Skipping a phase is normal; not saying that you skipped it is the mistake ([prin
 | 9 | Operate across sessions | `fi db pull`, `fi status` | [operate](09-operate.md) |
 | 10 | Assess project health | `fi acquire`, `fi render` | [project health](10-project-health.md) |
 
-Also: [methodology](methodology.md) (what was taken from ITIL 4, ISO 14764, ISO 25010 and CHAOSS, and why), [principles](principles.md), [lenses](lenses.md) (goal presets), [lessons](lessons.md) (what went wrong
+Also: [agent manual](agent-manual.md) (environment, procedures and checks for AI agents; the entry point is [AGENTS.md](../AGENTS.md)), [methodology](methodology.md) (what was taken from ITIL 4, ISO 14764, ISO 25010 and CHAOSS, and why), [principles](principles.md), [lenses](lenses.md) (goal presets), [lessons](lessons.md) (what went wrong
 while building this), [migration from v1](migration-from-v1.md). The archived v1 documents are `*-v1.md`.
 
 ## The loop in five lines

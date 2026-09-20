@@ -3,7 +3,7 @@ name: Template documentation site
 on:
   push:
     branches: [main]
-    paths: ['README.md', 'playbook/**', 'decisions/**', '.github/workflows/template-docs.yml']
+    paths: ['README.md', 'AGENTS.md', 'ROADMAP.md', 'playbook/**', 'decisions/**', '.github/workflows/template-docs.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,6 +25,7 @@ jobs:
         run: |
           mkdir -p site-src
           cp README.md site-src/index.md
+          cp AGENTS.md ROADMAP.md site-src/
           cp -r playbook site-src/playbook
           cp -r decisions site-src/decisions
           cat > mkdocs.yml <<'YML'
