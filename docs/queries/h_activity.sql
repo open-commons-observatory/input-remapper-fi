@@ -1,0 +1,1 @@
+SELECT CAST(extract(year FROM c.created) AS int) AS year, sum(CASE WHEN m.login IS NOT NULL THEN 1 ELSE 0 END) AS by_maintainers, sum(CASE WHEN m.login IS NULL AND strpos(c.author, '[bot]') = 0 THEN 1 ELSE 0 END) AS by_others FROM item_comment c LEFT JOIN maintainer m ON m.login = c.author GROUP BY 1 ORDER BY 1;

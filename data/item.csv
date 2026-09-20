@@ -1098,3 +1098,4 @@ n,title,is_pr,state,created,closed,author,comments,labels
 1368,docs: fix grammar in development.md,True,MERGED,2026-09-14,2026-09-14,TianHengZhuang,0,
 1369,Cross Device Simultaneous Inputs Breaking Macros,False,OPEN,2026-09-17,,GriffSZ,0,
 1370,Joystick macros,True,OPEN,2026-09-19,,sezanzeb,0,
+1371,mypy,True,OPEN,2026-09-20,,sezanzeb,0,

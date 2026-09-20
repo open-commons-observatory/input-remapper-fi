@@ -1,8 +1,20 @@
 # Presets that follow the focused application are impossible on Wayland, and the docs do not say so
 
-Status: `open`. 7 items. [Back to registry](../problems.md)
+`problem` · status `open` · 7 evidence items · [Back to the register](../register.md)
 
 Users keep asking for presets that switch by focused application or window (seven items over five years). The maintainer answers each time that Wayland hides window focus, so it cannot work on every desktop. Verified at upstream cb8f5fd: README, usage.md and examples.md do not state this limit or the workaround (input-remapper-control bound to a desktop shortcut, or an X11 window-watcher script). Candidate PR: an FAQ entry. The feature itself is not being asked of the maintainer.
+
+| Facet | Values |
+|---|---|
+| change_type | perfective |
+| conf | inferred |
+| dimension | information-technology, partners |
+| effort | small |
+| quality | interaction-capability |
+| risk | low |
+| value | medium |
+
+## Evidence
 
 | Item | State | Title | Summary |
 |---|---|---|---|

@@ -27,7 +27,7 @@ v1 stored one markdown file per issue/PR/commit and used a Python reference impl
 | P21 rebuild and replay | re-apply archived batches, or `dolt_log` / `AS OF` |
 | P22 honest coverage reporting | `atlas status`; the coverage page |
 | P23 autonomous rounds | [phase 9](09-operate.md); the database is the checkpoint |
-| P24 problem registry | `problem` and `problem_item` tables |
+| P24 problem registry | the `register`, `register_item` and `register_tag` tables ([register](07-register-and-changes.md)) |
 | P25 review the finished dataset | [phase 6](06-quality-and-honesty.md) |
 
 **Batch files are compatible.** A v1 batch line (`i93 | - | kind:bug ... depth=full | summary`) applies unchanged with `atlas apply`.

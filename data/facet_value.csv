@@ -19,6 +19,11 @@ cause,uinput-api,uinput API usage or virtual device handling
 cause,unknown,not established
 cause,wayland-issue,Wayland-specific behaviour or missing protocol support
 cause,x11-issue,"X11-specific behaviour (XInput, XTest, XKB)"
+change_type,adaptive,"keeps the software working as its environment changes (OS, desktop, dependencies, hardware)"
+change_type,additive,adds functionality that does not exist yet
+change_type,corrective,fixes a defect users hit
+change_type,perfective,"improves performance, usability or maintainability of behaviour that exists"
+change_type,preventive,"restructures so future change is cheaper and safer, with no visible behaviour change (refactoring, tests)"
 component,ci-build,"CI, packaging, Makefile"
 component,gui-app,input-remapper-gtk (GTK application)
 component,injector,Injector / InputInjector
@@ -58,6 +63,13 @@ device_type,keyboard,physical keyboard
 device_type,mouse,mouse or trackpad
 device_type,other,other or unspecified input device
 device_type,tablet,graphics tablet or stylus
+dimension,information-technology,"code, architecture, tests, documentation and tooling"
+dimension,partners,"upstream dependencies, distributions, packagers and platforms the project relies on"
+dimension,people,"maintainers, contributors, users and the community around the project"
+dimension,processes,"how work flows: review, release, CI, support, triage"
+effort,large,"architectural, multi-step or needs coordination"
+effort,medium,several files or a design discussion
+effort,small,"a focused change, reviewable in one sitting"
 impact,broken-remap,remapping has no effect at all
 impact,crash,daemon or GUI crashes or hangs
 impact,install-blocked,"cannot install, start, or enable the service"
@@ -103,6 +115,18 @@ pr_potential,resolved,"closed with a fix, answer or workaround; no change to the
 pr_potential,unknown,not yet assessed
 pr_potential,upstream-dep,"root cause is upstream (kernel, evdev, GTK, Wayland protocol); fix requires upstream change"
 pr_potential,wontfix,maintainer would likely decline; not actionable
+quality,compatibility,coexists and interoperates with other software and platforms
+quality,flexibility,adapts to new environments and installs (was portability)
+quality,functional-suitability,"does the right things, completely and correctly"
+quality,interaction-capability,how easy and pleasant it is to use and learn (was usability)
+quality,maintainability,"cost and safety of changing it (modularity, testability, analysability)"
+quality,performance-efficiency,"speed, resource use, capacity"
+quality,reliability,"keeps working, recovers from failure"
+quality,safety,avoids harm to people or the environment
+quality,security,protects data and access
+risk,high,could break many users or the project's viability
+risk,low,contained; easy to revert
+risk,medium,touches shared behaviour; needs care
 symptom,combination-not-firing,a key combination does not trigger as configured
 symptom,daemon-not-starting,input-remapper-service will not start or exits immediately
 symptom,device-not-detected,the input device does not appear in the UI or reader
@@ -116,3 +140,6 @@ symptom,permission-error,permission denied accessing uinput or device node
 symptom,service-unit-issue,"systemd service file, enable/disable or autostart problem"
 symptom,wayland-broken,works on X11 but broken or not functional on Wayland
 symptom,wrong-output,"wrong key, button or axis value is emitted"
+value,high,"removes a serious or widespread problem, or a project-level risk"
+value,low,nice to have
+value,medium,clear benefit for a group of users or maintainers

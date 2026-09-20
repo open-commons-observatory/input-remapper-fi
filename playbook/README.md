@@ -1,6 +1,6 @@
 # The method
 
-An FI repository is built in nine phases. Each phase is one short document and, mostly, one `fi` command.
+An FI repository is built in ten phases. Each phase is one short document and, mostly, one `fi` command.
 Skipping a phase is normal; not saying that you skipped it is the mistake ([principle 13](principles.md)).
 
 | # | Phase | Command | Document |
@@ -11,11 +11,12 @@ Skipping a phase is normal; not saying that you skipped it is the mistake ([prin
 | 4 | Design the vocabulary | (edit `taxonomy.yaml`) | [vocabulary](04-vocabulary.md) |
 | 5 | Read and tag in rounds | `fi next`, `fi read`, `fi apply` | [read and tag](05-read-and-tag.md) |
 | 6 | Keep it honest | `fi status`, `fi check` | [quality and honesty](06-quality-and-honesty.md) |
-| 7 | Group into problems and PRs | `fi sql` | [problems and PRs](07-problems-and-prs.md) |
+| 7 | Register problems, requests, improvements and risks; plan changes | `fi apply *.yaml` | [register and changes](07-register-and-changes.md) |
 | 8 | Publish | `fi render`, `fi export`, `fi db push` | [publish](08-publish.md) |
 | 9 | Operate across sessions | `fi db pull`, `fi status` | [operate](09-operate.md) |
+| 10 | Assess project health | `fi acquire`, `fi render` | [project health](10-project-health.md) |
 
-Also: [principles](principles.md) (13 rules), [lenses](lenses.md) (goal presets), [lessons](lessons.md) (what went wrong
+Also: [methodology](methodology.md) (what was taken from ITIL 4, ISO 14764, ISO 25010 and CHAOSS, and why), [principles](principles.md), [lenses](lenses.md) (goal presets), [lessons](lessons.md) (what went wrong
 while building this), [migration from v1](migration-from-v1.md). The archived v1 documents are `*-v1.md`.
 
 ## The loop in five lines

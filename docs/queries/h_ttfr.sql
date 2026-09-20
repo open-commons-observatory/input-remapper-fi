@@ -1,0 +1,1 @@
+SELECT CAST(extract(year FROM i.created) AS int) AS year, (min(c.created) - i.created) AS days FROM item i JOIN item_comment c ON c.item_n = i.n AND c.author <> i.author AND strpos(c.author, '[bot]') = 0 WHERE NOT i.is_pr GROUP BY i.n, i.created ORDER BY 1, 2;

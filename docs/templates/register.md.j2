@@ -1,0 +1,33 @@
+# Register
+
+Everything worth acting on, in one list (the ITIL 4 *continual improvement register*). Entry types: **problem** (a root cause behind many items),
+**request** (a new capability), **improvement** (refactoring, tests, docs, process) and **risk** (something that could hurt the project).
+A problem that has a workaround but no fix is a **known error**. Each entry says what kind of change it is ([ISO/IEC/IEEE 14764](../playbook/methodology.md)),
+and how much value, effort and risk it carries.
+
+{% if entries %}
+{% for type, rows in entries | groupby('type') %}
+## {{ type }} ({{ rows | length }})
+
+| Entry | Status | Change | Value | Effort | Risk | Evidence |
+|---|---|---|---|---|---|---|
+{% for e in rows %}
+| [{{ e.title | cell(70) }}](register/{{ e.id }}.md) | {{ e.status }} | {{ e.change_type }} | {{ e.value }} | {{ e.effort }} | {{ e.risk }} | {{ e.n_items }} |
+{% endfor %}
+
+{% endfor %}
+{% else %}
+No entries yet.
+
+{% endif %}
+## Actionable items not yet in a register entry ({{ unassigned | length }})
+
+{% if unassigned %}
+| Item | Potential | Title |
+|---|---|---|
+{% for r in unassigned %}
+| [#{{ r.n }}](https://github.com/{{ vars.source }}/issues/{{ r.n }}) | {{ r.pr_potential }} | {{ r.title | cell(80) }} |
+{% endfor %}
+{% else %}
+None.
+{% endif %}

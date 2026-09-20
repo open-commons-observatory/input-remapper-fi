@@ -1,0 +1,4 @@
+[
+ {"tag_name":"v1.0","created_at":"2021-02-01T00:00:00Z","published_at":"2021-02-01T00:00:00Z","prerelease":false},
+ {"tag_name":"v1.1-rc","created_at":"2022-01-01T00:00:00Z","published_at":"2022-01-01T00:00:00Z","prerelease":true}
+]

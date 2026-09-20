@@ -1,1 +1,1 @@
-SELECT t.item_n AS n, i.title, t.value AS pr_potential FROM tag t JOIN item i ON i.n = t.item_n WHERE t.facet = 'pr_potential' AND t.value IN ('code-fix','docs-fix') AND NOT EXISTS (SELECT 1 FROM problem_item pi WHERE pi.item_n = t.item_n) ORDER BY t.value, t.item_n;
+SELECT t.item_n AS n, i.title, t.value AS pr_potential FROM tag t JOIN item i ON i.n = t.item_n WHERE t.facet = 'pr_potential' AND t.value IN ('code-fix','docs-fix') AND NOT EXISTS (SELECT 1 FROM register_item ri WHERE ri.item_n = t.item_n) ORDER BY t.value, t.item_n;

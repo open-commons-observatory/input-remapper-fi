@@ -4,10 +4,10 @@ An evidence-backed, versioned map of the problems reported against sezanzeb/inpu
 
 | Corpus | Count |
 |---|---|
-| Issues and PRs | 1099 (259 are PRs) |
+| Issues and PRs | 1100 (260 are PRs) |
 | Analysed so far | 192 (see [coverage](coverage.md)) |
 | Tags applied | 1662 |
-| Recurring problems registered | 5 (see [problems](problems.md)) |
+| Register entries (problems, requests, improvements, risks) | 11 (see [register](register.md)) |
 
 ## pr_potential
 
@@ -87,4 +87,4 @@ pie showData title pr_potential
 | [upstream-dep](by/pr_potential/upstream-dep.md) | 13 |
 | [wontfix](by/pr_potential/wontfix.md) | 6 |
 
-Also: [triage queue](triage.md), [provenance](provenance.md).
+Also: [project health](health.md), [triage queue](triage.md), [register](register.md), [provenance](provenance.md).

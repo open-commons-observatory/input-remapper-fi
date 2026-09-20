@@ -7,7 +7,7 @@
 | Issues and PRs | {{ totals[0].items }} ({{ totals[0].prs }} are PRs) |
 | Analysed so far | {{ totals[0].analysed }} (see [coverage](coverage.md)) |
 | Tags applied | {{ totals[0].tags }} |
-| Recurring problems registered | {{ totals[0].problems }} (see [problems](problems.md)) |
+| Register entries (problems, requests, improvements, risks) | {{ totals[0].register }} (see [register](register.md)) |
 
 {% set pie = by_facet | selectattr('facet', 'equalto', vars.pie_facet) | list if vars.pie_facet else [] %}
 {% if pie %}
@@ -31,4 +31,4 @@ pie showData title {{ vars.pie_facet }}
 {% endfor %}
 
 {% endfor %}
-Also: [triage queue](triage.md), [provenance](provenance.md).
+Also: [project health](health.md), [triage queue](triage.md), [register](register.md), [provenance](provenance.md).

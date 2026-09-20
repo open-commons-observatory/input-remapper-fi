@@ -1,8 +1,14 @@
 # Asks that upstream already meets
 
-Status: `closed`. 4 items. [Back to registry](../problems.md)
+`problem` · status `closed` · 4 evidence items · [Back to the register](../register.md)
 
 Verified at upstream cb8f5fd (2026-09-14): #66 a uinput device name longer than 80 characters is truncated (injector.py: name[:80]); #11 and #81 uninstalling is documented (README: sudo python3 -m install.uninstall); #269 python3-devel is listed in the README dependencies. No PR needed; their pr_potential is re-tagged resolved.
+
+| Facet | Values |
+|---|---|
+| conf | inferred |
+
+## Evidence
 
 | Item | State | Title | Summary |
 |---|---|---|---|

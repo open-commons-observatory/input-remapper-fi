@@ -76,3 +76,60 @@ facets:
       wontfix: maintainer would decline
       resolved: closed with a fix, answer or workaround; no change to the project is needed
       unknown: not yet assessed
+  change_type:
+    multi: false
+    page: true
+    doc: What kind of change this is (ISO/IEC/IEEE 14764 maintenance types). Reactive = corrective + adaptive; proactive = the rest.
+    values:
+      corrective: fixes a defect users hit
+      adaptive: keeps the software working as its environment changes (OS, desktop, dependencies, hardware)
+      perfective: improves performance, usability or maintainability of behaviour that exists
+      preventive: restructures so future change is cheaper and safer, with no visible behaviour change (refactoring, tests)
+      additive: adds functionality that does not exist yet
+  quality:
+    multi: true
+    page: true
+    doc: Which product-quality characteristic is affected (ISO/IEC 25010:2023).
+    values:
+      functional-suitability: does the right things, completely and correctly
+      performance-efficiency: speed, resource use, capacity
+      compatibility: coexists and interoperates with other software and platforms
+      interaction-capability: how easy and pleasant it is to use and learn (was usability)
+      reliability: keeps working, recovers from failure
+      security: protects data and access
+      maintainability: cost and safety of changing it (modularity, testability, analysability)
+      flexibility: adapts to new environments and installs (was portability)
+      safety: avoids harm to people or the environment
+  dimension:
+    multi: true
+    page: false
+    doc: Which of ITIL 4's four dimensions the entry belongs to; the lens for a project-level assessment.
+    values:
+      people: maintainers, contributors, users and the community around the project
+      information-technology: code, architecture, tests, documentation and tooling
+      partners: upstream dependencies, distributions, packagers and platforms the project relies on
+      processes: "how work flows: review, release, CI, support, triage"
+  value:
+    multi: false
+    page: false
+    doc: Relative benefit if the register entry is resolved (register entries only).
+    values:
+      low: nice to have
+      medium: clear benefit for a group of users or maintainers
+      high: removes a serious or widespread problem, or a project-level risk
+  effort:
+    multi: false
+    page: false
+    doc: Relative size of the work (register entries only).
+    values:
+      small: a focused change, reviewable in one sitting
+      medium: several files or a design discussion
+      large: architectural, multi-step or needs coordination
+  risk:
+    multi: false
+    page: false
+    doc: Risk of the change breaking existing users, or of the situation if nothing is done (register entries only).
+    values:
+      low: contained; easy to revert
+      medium: touches shared behaviour; needs care
+      high: could break many users or the project's viability

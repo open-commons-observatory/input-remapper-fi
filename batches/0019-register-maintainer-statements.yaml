@@ -1,0 +1,82 @@
+# Register entries drawn from what the maintainer has written (issues #853 and #177, PRs #960 #964 #1003 #1068, issues #526 #1333) and from the health page.
+# Verified 2026-09-20: statements read in full; item states checked in the database. Summaries are paraphrased. Judgements (value, effort, risk) are the analyst's.
+- id: maintainer-stepped-back
+  type: risk
+  title: "The maintainer has largely stepped back; pull-request review is the one channel he still uses"
+  summary: "Issue #853, opened by the maintainer in February 2024, says issues are piling up, that he moved on to other hobbies some time ago, that the co-maintainer is busy elsewhere too, and that he still reviews pull requests but nobody should expect more. In March 2025 he said he had worked on the project a lot since the previous autumn after a serious bug report, hoped that was temporary, and no longer uses the tool himself. In March 2026 he said he very rarely reads issues now, mostly checks that recent commits broke nothing, only occasionally fixes a reproducible bug, is not motivated to build feature requests, and handles packager emails and critical bugs when he finds time, typically in winter. The 2021 contribution guide (#177) already said he would not develop much new after 2.0. The health page shows the same shift in numbers. The numbers alone cannot separate busy from gone; his own words say he still merges pull requests and does little else. Consequence for contributors: a proposal has to be small, tested and self-explanatory."
+  status: open
+  items: [853, 177]
+  tags:
+    dimension: [people]
+    value: [high]
+    effort: [large]
+    risk: [high]
+    conf: [stated]
+- id: dependency-injection-testability
+  type: improvement
+  title: "Finish the move to dependency injection so tests become easier to write"
+  summary: "In #853 the maintainer says that, looking back, he wishes he had applied the dependency-injection pattern everywhere because it would have made tests easier to write; the tool is stable thanks to its high test coverage. He started in autumn 2024: PR #960 (merged) introduced wrapper classes for path and user handling and migrations that can be replaced in tests, and added TODO comments wherever a global object should be injected instead; PR #964 (merged) continued it. He noted that injecting the macro parser is hard because mapping objects have to be serialised. PR #1068 (custom groups, still open since February 2025) lists dependency injection for groups as an unfinished item. So the direction is accepted and partly done; what is missing is someone to carry it on in reviewable steps."
+  status: in-progress
+  items: [853, 960, 964, 1068]
+  tags:
+    change_type: [preventive]
+    quality: [maintainability]
+    dimension: [information-technology]
+    value: [high]
+    effort: [large]
+    risk: [medium]
+    conf: [stated]
+- id: architecture-hard-to-approach
+  type: improvement
+  title: "The architecture is hard for newcomers to approach; a contributor guide and small clean-ups would lower the cost"
+  summary: "In March 2026 the maintainer wrote that he would welcome contributors but that the architecture and code are very complex, which he attributes to his inexperience at the start, the quirks of the different kinds of input, security (not running everything as root) and Linux integration (udev, autostart, service, D-Bus). The 2021 guide (#177) promises help finding the right place in the code and asks for unit tests, pylint and black. The 2024 macro rework (#1003, merged) shows the direction taken: more classes, judged bulkier than before but worth it. Proposal (the analyst's, not requested by the maintainer): a short architecture guide for contributors covering the service, reader, injector and group concepts, plus small preventive refactors that reduce the entry cost."
+  status: open
+  items: [853, 177, 1003]
+  tags:
+    change_type: [preventive]
+    quality: [maintainability]
+    dimension: [people, information-technology]
+    value: [medium]
+    effort: [medium]
+    risk: [low]
+    conf: [inferred]
+- id: qt-user-interface
+  type: request
+  title: "A Qt user interface instead of GTK"
+  summary: "Issue #526 asks for the GTK interface to be ported to Qt. The 2021 guide (#177) lists it under possibly complicated work for contributors, and in July 2026 the maintainer, discussing tray-icon support (#1333), still talks about what would happen if a new Qt interface were ever written. He does not plan to build it himself; it needs a contributor with time."
+  status: open
+  items: [526, 177, 1333]
+  tags:
+    change_type: [additive]
+    quality: [interaction-capability, flexibility]
+    dimension: [information-technology]
+    value: [medium]
+    effort: [large]
+    risk: [medium]
+    conf: [stated]
+- id: backlog-not-triaged
+  type: improvement
+  title: "Nobody is triaging the open issue backlog"
+  summary: "The register and health pages show hundreds of open issues, a growing share of new issues that never get a reply, and Discussions left unanswered. In March 2026 (#853) a user offered to work as a volunteer support engineer and go through old issues that may no longer reproduce. The maintainer thanked them but doubted a clean backlog would change much for him, and said he could not promise to honor the effort; he also mentioned a private planning board that others cannot open. Whether the offer was taken up is not visible. A triage helper is a way to help without touching the code, but only if the maintainer agrees to give them the rights to label and close."
+  status: open
+  items: [853]
+  tags:
+    dimension: [processes, people]
+    value: [medium]
+    effort: [medium]
+    risk: [low]
+    conf: [inferred]
+- id: character-injection-limits
+  type: problem
+  title: "Arbitrary characters cannot be injected because the tool sends key codes, not characters"
+  summary: "Several users ask to map a key to a symbol, emoji or non-Latin character. The tool sends kernel key codes and the desktop environment decides which symbol appears, so a character without a key in the active layout cannot be produced reliably (#195, #209, #210). A Unicode-entry macro was shown to be technically possible but declined because it depends on the application (#101). In June 2024 the maintainer said the real fix lies below the tool: the Linux input stack should allow injecting any character instead of any key code, and allow several mapping tools to work on top of each other."
+  status: known-error
+  workaround: "Use the xmodmap-based symbol names, or a macro that holds a modifier while pressing a key that exists in the layout. The Ctrl+Shift+U hex entry works only in some GTK applications and breaks in others."
+  items: [101, 195, 209, 210]
+  tags:
+    dimension: [partners]
+    quality: [functional-suitability, compatibility]
+    value: [medium]
+    effort: [large]
+    risk: [medium]
+    conf: [stated]

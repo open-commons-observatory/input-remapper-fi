@@ -1,0 +1,27 @@
+# tests: a valid register batch (one entry of each of three types; the first is a known error)
+- id: docs-gap
+  type: problem
+  title: "Users cannot find how to uninstall"
+  summary: "Several items ask how to remove the software; the answer exists but is hard to find."
+  status: known-error
+  workaround: "Run the uninstall script shipped with the package."
+  items: [1, 3]
+  tags:
+    change_type: [corrective]
+    quality: [interaction-capability]
+    dimension: [information-technology]
+    value: [medium]
+    effort: [small]
+    risk: [low]
+- id: dark-theme
+  type: request
+  title: "A dark theme"
+  summary: "One user asks for a dark theme."
+  items: [2]
+  tags: {change_type: [additive], quality: [interaction-capability], value: [low], effort: [medium], risk: [low]}
+- id: one-person-carries-it
+  type: risk
+  title: "One person makes nearly every change"
+  summary: "Nearly all commits and replies come from a single maintainer."
+  items: [1]
+  tags: {dimension: [people], value: [high], effort: [large], risk: [high]}

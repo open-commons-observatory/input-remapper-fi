@@ -1,16 +1,42 @@
-# Problem registry
+# Register
 
-A problem is a recurring failure with one root cause and (usually) one fix. Many items point at one problem.
+Everything worth acting on, in one list (the ITIL 4 *continual improvement register*). Entry types: **problem** (a root cause behind many items),
+**request** (a new capability), **improvement** (refactoring, tests, docs, process) and **risk** (something that could hurt the project).
+A problem that has a workaround but no fix is a **known error**. Each entry says what kind of change it is ([ISO/IEC/IEEE 14764](../playbook/methodology.md)),
+and how much value, effort and risk it carries.
 
-| Problem | Status | Items |
-|---|---|---|
-| [Asks that upstream already meets](problems/already-fixed-or-documented-upstream.md) | closed | 4 |
-| [Only a systemd unit ships; no OpenRC, runit or sysv scripts](problems/no-non-systemd-init-scripts.md) | open | 2 |
-| [Presets that follow the focused application are impossible on Wayland, and the…](problems/per-app-switching-wayland.md) | open | 7 |
-| [Requested features still missing upstream (each a separate PR)](problems/requested-features-still-missing.md) | open | 5 |
-| [Injection fails when the uinput kernel module is not loaded](problems/uinput-module-not-loaded.md) | open | 3 |
+## improvement (3)
 
-## Actionable items not yet assigned to a problem (52)
+| Entry | Status | Change | Value | Effort | Risk | Evidence |
+|---|---|---|---|---|---|---|
+| [Finish the move to dependency injection so tests become easier to wri…](register/dependency-injection-testability.md) | in-progress | preventive | high | large | medium | 4 |
+| [The architecture is hard for newcomers to approach; a contributor gui…](register/architecture-hard-to-approach.md) | open | preventive | medium | medium | low | 3 |
+| [Nobody is triaging the open issue backlog](register/backlog-not-triaged.md) | open | - | medium | medium | low | 1 |
+
+## problem (5)
+
+| Entry | Status | Change | Value | Effort | Risk | Evidence |
+|---|---|---|---|---|---|---|
+| [Asks that upstream already meets](register/already-fixed-or-documented-upstream.md) | closed | - | - | - | - | 4 |
+| [Arbitrary characters cannot be injected because the tool sends key co…](register/character-injection-limits.md) | known-error | - | medium | large | medium | 4 |
+| [Only a systemd unit ships; no OpenRC, runit or sysv scripts](register/no-non-systemd-init-scripts.md) | open | additive | medium | medium | low | 2 |
+| [Presets that follow the focused application are impossible on Wayland…](register/per-app-switching-wayland.md) | open | perfective | medium | small | low | 7 |
+| [Injection fails when the uinput kernel module is not loaded](register/uinput-module-not-loaded.md) | open | corrective | medium | small | low | 3 |
+
+## request (2)
+
+| Entry | Status | Change | Value | Effort | Risk | Evidence |
+|---|---|---|---|---|---|---|
+| [A Qt user interface instead of GTK](register/qt-user-interface.md) | open | additive | medium | large | medium | 3 |
+| [Requested features still missing upstream (each a separate PR)](register/requested-features-still-missing.md) | open | additive | medium | medium | low | 5 |
+
+## risk (1)
+
+| Entry | Status | Change | Value | Effort | Risk | Evidence |
+|---|---|---|---|---|---|---|
+| [The maintainer has largely stepped back; pull-request review is the o…](register/maintainer-stepped-back.md) | open | - | high | large | high | 2 |
+
+## Actionable items not yet in a register entry (49)
 
 | Item | Potential | Title |
 |---|---|---|
@@ -54,11 +80,8 @@ A problem is a recurring failure with one root cause and (usually) one fix. Many
 | [#175](https://github.com/sezanzeb/input-remapper/issues/175) | docs-fix | Can't map wheel click on Razer DeathAdder Chroma |
 | [#180](https://github.com/sezanzeb/input-remapper/issues/180) | docs-fix | Can't map broken keys |
 | [#191](https://github.com/sezanzeb/input-remapper/issues/191) | docs-fix | Translations for offline docs |
-| [#195](https://github.com/sezanzeb/input-remapper/issues/195) | docs-fix | some mappings not available |
 | [#199](https://github.com/sezanzeb/input-remapper/issues/199) | docs-fix | Buttons suddenly unrecognized |
 | [#208](https://github.com/sezanzeb/input-remapper/issues/208) | docs-fix | key-mapper.service start operation timed out. Terminating. |
-| [#209](https://github.com/sezanzeb/input-remapper/issues/209) | docs-fix | Can we map a key to arbitrary unicode char? |
-| [#210](https://github.com/sezanzeb/input-remapper/issues/210) | docs-fix | Cyrillic symbols not getting injected |
 | [#212](https://github.com/sezanzeb/input-remapper/issues/212) | docs-fix | Autoloading not working on sway |
 | [#226](https://github.com/sezanzeb/input-remapper/issues/226) | docs-fix | Getting Confusing Feedback |
 | [#238](https://github.com/sezanzeb/input-remapper/issues/238) | docs-fix | key-mapper does not work in all software, but why? |

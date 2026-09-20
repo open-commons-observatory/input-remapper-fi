@@ -1,0 +1,99 @@
+# Project health
+
+Measured from the database, following the [CHAOSS](https://chaoss.community) metrics for project health: responsiveness (time to first response, change request
+closure ratio), contributor sustainability (contributor absence factor) and release frequency. **Bots are excluded from every response number.** These figures describe
+activity. They cannot tell a busy maintainer from one who has stepped back, and they say nothing about quality; read them next to the [register](register.md).
+Only aggregates are shown: no person other than the configured maintainers is singled out.
+
+## Who is talking
+
+Comments on issues and pull requests (including code-review comments), per year.
+
+{% if activity %}
+| Year | By maintainers | By everyone else | Maintainer share |
+|---|---|---|---|
+{% for r in activity %}
+| {{ r.year }} | {{ r.by_maintainers }} | {{ r.by_others }} | {{ ((100 * r.by_maintainers) / (r.by_maintainers + r.by_others)) | round(0) | int if (r.by_maintainers + r.by_others) else 0 }}% |
+{% endfor %}
+{% else %}
+No comment data yet (run `fi acquire`).
+{% endif %}
+
+## Responsiveness: time to first response
+
+Days until a human other than the author first commented on an issue, per year the issue was opened. "No response" counts issues that never got one.
+
+{% if unanswered %}
+| Year opened | Issues | Median days to first response | No response | Share with none |
+|---|---|---|---|---|
+{% for u in unanswered %}
+{% set d = ttfr | selectattr('year', 'equalto', u.year) | map(attribute='days') | sort | list %}
+| {{ u.year }} | {{ u.issues }} | {{ d[(d | length) // 2] if d else '-' }} | {{ u.no_response }} | {{ ((100 * u.no_response) / u.issues) | round(0) | int }}% |
+{% endfor %}
+{% else %}
+No data.
+{% endif %}
+
+## Change request closure
+
+Pull requests opened and closed (merged or declined) per year. A ratio below 100% means the backlog of pull requests grew.
+
+{% if pr_opened %}
+| Year | Opened | Closed | Merged | Closure ratio |
+|---|---|---|---|---|
+{% for o in pr_opened %}
+{% set c = pr_closed | selectattr('year', 'equalto', o.year) | list %}
+| {{ o.year }} | {{ o.opened }} | {{ c[0].closed if c else 0 }} | {{ c[0].merged if c else 0 }} | {{ ((100 * (c[0].closed if c else 0)) / o.opened) | round(0) | int }}% |
+{% endfor %}
+{% else %}
+No pull requests.
+{% endif %}
+
+## Contributor sustainability: contributor absence factor
+
+The smallest number of people who made at least half of the commits in the year (formerly "bus factor"). 1 means one person carries the project.
+
+{% if commits %}
+| Year | Commits | Contributors | Absence factor |
+|---|---|---|---|
+{% for year, rows in commits | groupby('year') %}
+{% set total = rows | sum(attribute='n') %}
+{% set ns = namespace(acc=0, k=0) %}
+{% for r in rows %}{% if ns.acc * 2 < total %}{% set ns.acc = ns.acc + r.n %}{% set ns.k = ns.k + 1 %}{% endif %}{% endfor %}
+| {{ year }} | {{ total }} | {{ rows | length }} | {{ ns.k }} |
+{% endfor %}
+{% else %}
+No commits acquired.
+{% endif %}
+
+## Releases
+
+{% if releases %}
+| Year | Releases (excluding pre-releases) |
+|---|---|
+{% for r in releases %}
+| {{ r.year }} | {{ r.releases }} |
+{% endfor %}
+{% else %}
+No GitHub releases recorded.
+{% endif %}
+
+## Discussions
+
+{% if discussions %}
+| Year | Started | With no reply |
+|---|---|---|
+{% for r in discussions %}
+| {{ r.year }} | {{ r.discussions }} | {{ r.no_reply }} |
+{% endfor %}
+{% else %}
+No GitHub Discussions recorded.
+{% endif %}
+
+## Open backlog today
+
+| | Open | Oldest opened |
+|---|---|---|
+{% for b in backlog %}
+| {{ b.kind }} | {{ b.open_items }} | {{ b.oldest }} |
+{% endfor %}

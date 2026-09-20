@@ -38,4 +38,5 @@ git diff --diff-filter=D --name-only HEAD template/main -- tools tests .github p
 
 This replaces the tooling and documentation and leaves your data and configuration alone (`fi.yaml`, `taxonomy.yaml`, `SCOPE.md`,
 `batches/`, `decisions/`, `data/`, `docs/generated/`). If you customised a template or query, run `git diff template/main -- docs/templates`
-first. A schema change would ship as a numbered migration in `db/migrations/` (none exists yet).
+first. A schema change ships as a numbered migration in `db/migrations/`. After taking a template update that adds one, run `python tools/fi.py db init`: it applies the pending migrations in place and keeps your data
+(a database created before migrations existed is recognised and upgraded).

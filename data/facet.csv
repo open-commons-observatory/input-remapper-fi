@@ -1,13 +1,19 @@
 name,multi,page,doc
 cause,True,True,Root cause — use unknown when not established; grow this list as you read
+change_type,False,True,What kind of change this is (ISO/IEC/IEEE 14764 maintenance types). Reactive = corrective + adaptive; proactive = the rest.
 component,True,False,Which component of input-remapper
 conf,False,False,Confidence of the root cause
 ctype,False,False,What a commit is
 de_os,True,False,Desktop environment or distro involved
 device_type,True,False,What type of input device is involved
+dimension,True,False,Which of ITIL 4's four dimensions the entry belongs to; the lens for a project-level assessment.
+effort,False,False,Relative size of the work (register entries only).
 impact,True,False,Effect on the user
 kind,False,True,What the issue is
 layer,True,True,Where in the system the problem sits
 outcome,False,False,How the issue ended
 pr_potential,False,True,Actionability: how likely a PR could close this. Filled after reading; assessed for the current state of the fork (grenudi/input-remapper). This facet is the bridge between the dataset and the contribution plan.
+quality,True,True,Which product-quality characteristic is affected (ISO/IEC 25010:2023).
+risk,False,False,"Risk of the change breaking existing users, or of the situation if nothing is done (register entries only)."
 symptom,True,False,"What the reporter observed — weak labels derived from text; a search aid, not a diagnosis"
+value,False,False,Relative benefit if the register entry is resolved (register entries only).

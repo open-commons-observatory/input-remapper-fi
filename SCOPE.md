@@ -34,12 +34,12 @@ Deliverable is the dataset + registry + a prioritised PR queue. The fork `grenud
 | Issues | All (open + closed) in sezanzeb/input-remapper | `full` (entire thread via API) |
 | Pull Requests | All PRs (share the issue numbering) | `full` |
 | Commits (z1) | All commits in sezanzeb/input-remapper | `title` (subject + file list); `source` for constraint-bearing commits |
-| GitHub Discussions | OUT OF SCOPE | Not in REST issues API; too sparse to justify |
+| GitHub Discussions | IN SCOPE (metadata) | Corrected 2026-09-20: 221 discussions with about 450 replies, not sparse. Number, title, author, date and reply count are acquired (`fi acquire`); their text is not stored or read yet. See decision ADR-0005 in foss-insights. |
 | Wiki | OUT OF SCOPE | Read as background only; not tagged as records |
 
 ## Out of scope (written now so limits are visible at the end)
 
-- GitHub Discussions (not in REST issues API)
+- The text of GitHub Discussions (only their metadata is acquired)
 - The wiki (used as background reading, not as records)
 - Issues in any downstream forks other than grenudi/input-remapper
 - Code review comments on PRs (counted as part of the PR thread record)

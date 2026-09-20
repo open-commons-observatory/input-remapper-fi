@@ -1,0 +1,1 @@
+SELECT CAST(extract(year FROM i.created) AS int) AS year, count(*) AS issues, sum(CASE WHEN NOT EXISTS (SELECT 1 FROM item_comment c WHERE c.item_n = i.n AND c.author <> i.author AND strpos(c.author, '[bot]') = 0) THEN 1 ELSE 0 END) AS no_response FROM item i WHERE NOT i.is_pr GROUP BY 1 ORDER BY 1;

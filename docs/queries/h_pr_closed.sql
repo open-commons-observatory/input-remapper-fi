@@ -1,0 +1,1 @@
+SELECT CAST(extract(year FROM closed) AS int) AS year, count(*) AS closed, sum(CASE WHEN state = 'MERGED' THEN 1 ELSE 0 END) AS merged FROM item WHERE is_pr AND closed IS NOT NULL GROUP BY 1 ORDER BY 1;

@@ -1,0 +1,17 @@
+# tests: every entry is invalid on purpose
+- id: Bad_ID
+  type: bug
+  title: t
+  summary: s
+  items: [99]
+  tags: {colour: [red], value: [enormous]}
+- id: known
+  type: problem
+  title: t
+  summary: s
+  status: known-error
+- id: two-values
+  type: risk
+  title: t
+  summary: s
+  tags: {value: [low, high]}

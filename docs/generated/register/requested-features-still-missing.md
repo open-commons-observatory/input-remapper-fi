@@ -1,8 +1,20 @@
 # Requested features still missing upstream (each a separate PR)
 
-Status: `open`. 5 items. [Back to registry](../problems.md)
+`request` · status `open` · 5 evidence items · [Back to the register](../register.md)
 
 Open requests verified absent at upstream cb8f5fd: a text() macro (#173), an LED macro (#160; a contributor started a branch), udev-based device classification (#192), search or filter of the mapping list (#207), desktop notifications when a device is mapped (#116). These are separate PRs, grouped only because each is a small missing feature.
+
+| Facet | Values |
+|---|---|
+| change_type | additive |
+| conf | inferred |
+| dimension | information-technology |
+| effort | medium |
+| quality | functional-suitability |
+| risk | low |
+| value | medium |
+
+## Evidence
 
 | Item | State | Title | Summary |
 |---|---|---|---|

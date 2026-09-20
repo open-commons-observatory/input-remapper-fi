@@ -1,0 +1,222 @@
+n,title,author,created,comments,answered
+20,Preset Switching per application,rimko,2021-01-10,5,False
+26,how is the Windows Key defined in mapping?,cxj05h,2021-01-22,1,True
+34,Caps Lock as Escape and Control,sezanzeb,2021-02-03,4,False
+39,Multiple modifier keys?,neonWhiteout,2021-02-12,1,True
+52,Does the keyboard remapping use xkb instead of xmodmap for xorg?,Srijan1214,2021-03-03,1,False
+63,Map keyboard key to mouse movemennt,dnikic,2021-03-16,3,False
+87,What is the magic code for the pipe symbol? It looks like this: |,byron-hawkins,2021-04-11,1,False
+97,easy way to change profile,Yueh72,2021-04-16,2,False
+108,A way to assign multiple actions to a mouse button,dudethis,2021-04-28,1,False
+111,Auxiliary/External Docs?,Trequetrum,2021-05-18,1,True
+113,When does the pip package get updated?,HolySoap,2021-05-23,1,False
+119,Map a key sequence to type a character,RonSMeyer,2021-06-04,1,False
+134,Auto load on os start,ahmadhasannudin,2021-07-07,4,False
+139,Cursor focus not detected by the mouse wheel.,robkam,2021-07-09,0,False
+156,Fedora dependency,rimko,2021-08-02,2,False
+158,CLI console and Script executed,cybermaus,2021-08-02,1,False
+163,"Feature: Sort ""Key"" and ""Mapping"" columns",KayTaneJupiter,2021-08-15,1,False
+164,Razer Tartarus v2 works,KayTaneJupiter,2021-08-15,3,False
+166,Help with syntax for nested combos and macros.,BornOfStygian,2021-08-16,1,False
+169,press and hold key for certain duration of time,ZeRenCZ,2021-08-19,2,True
+179,Is there a way to load the configuration into the SDDM login screen?,HolySoap,2021-09-01,1,False
+188,"Macro ""if"" functions dont work.",Funky-Punky,2021-10-07,1,True
+190,Key-mapper updating,a-e-egorov,2021-10-12,1,False
+194,Multistroke,KoljaL,2021-10-15,1,True
+215,How to map to get lower than or greater than symbols ?,jeanpat,2021-11-26,2,False
+227,More control over uinput devices (Keymapper 2.0 !?),jonasBoss,2021-12-07,3,False
+233,Remap keys for particular window class,petrstepanov,2021-12-13,1,False
+237,DPI Change via Key Press,QuentinDOS,2021-12-18,1,False
+244,error in terminal injection,ZeRenCZ,2021-12-29,2,False
+245,description column,ZeRenCZ,2021-12-29,2,False
+249,"How to put the mouse in a specific position x,y and click on it?",diegoparra,2022-01-04,3,False
+251,Feature: map keys for different programs,mikdmst1,2022-01-07,2,False
+255,Should we use type hints?,jonasBoss,2022-01-12,2,False
+260,log levels,sezanzeb,2022-01-16,1,False
+272,Alt tab in Windows or Super tab in Gnome,technewsguy,2022-01-27,2,False
+294,input-remapper-xautopresets,DreadPirateLynx,2022-02-11,4,False
+305,Automatic target,sezanzeb,2022-02-18,3,False
+313,hold command help pls,CODICMAN,2022-02-24,1,False
+334,CPU usage compared to other options out there,Strykar,2022-03-10,0,False
+367,Repeating macro.,Plyply99,2022-04-14,2,False
+398,Double key pressing events configuration?,offray,2022-05-10,2,False
+406,Send MIDI event,DreadPirateLynx,2022-05-18,1,False
+423,Send keystrokes,tonyrumans,2022-06-30,2,False
+428,Any way to remap a mouse button to another mouse button?,imperfectlink,2022-07-13,1,True
+443,Block default action,pintassilgo,2022-07-26,1,False
+451,Global config for all keyboards,nullbyto,2022-08-04,1,True
+456,Mouse Axis to keyboard,thedrakeraider,2022-08-10,1,False
+461,hold_keys(q) repeats when used with mouse button,heartburn22,2022-08-24,1,False
+464,Gamepad emulation,zehthales,2022-09-01,2,False
+465,Trying to emulate hitbox controller rules,zehthales,2022-09-01,2,False
+470,input-remapper install error,jbealle,2022-09-03,1,False
+474,how to map Menu to Meta?,Oreolek,2022-09-13,1,True
+476,Triple Click,sirmbhe,2022-09-14,2,True
+482,'input-remapper-control --list' without 'sudo',DreadPirateLynx,2022-09-21,3,False
+491,how to swap alt and altgr?,geschaenk,2022-10-12,1,False
+499,Input Remapper settings,Aqua1ung,2022-10-17,1,True
+504,Device naming,Aqua1ung,2022-10-21,1,False
+512,Remap of Windows key,stygge-ulv,2022-10-23,2,False
+513,right mouse button remap to left mouse button and back,ZeRenCZ,2022-10-23,0,False
+521,Different modifiers for same mouse button?,wh0isit,2022-10-28,0,False
+541,How to remap Super_L as something else ?,rpringadi,2022-11-15,0,False
+563,Initial delay,rcpoison,2022-12-01,1,True
+575,Assign key to change preset,jimfenton75,2022-12-11,0,False
+580,Toggle to repeat,Legionsys,2022-12-20,1,False
+584,Multiple instances of input-remapper-service in system processes,a-e-egorov,2022-12-25,1,False
+585,Scrolling button,MikelArdRi,2022-12-26,2,False
+587,Steam Deck Installation,MadogPL,2022-12-29,1,False
+598,Remap CTRL+A to ALT+A,nicolas-t,2023-01-22,0,False
+601,Suggestion for Xbox-Style controller that has working paddles/extra buttons?,Mindus-Amitiel-Debsin,2023-01-29,1,False
+606,more robust joystic/HOTAS support,m9365428,2023-02-01,1,False
+608,Mac-style Keyboard Bindings on a Windows Keyboard with Alt as Cmd,ubunatic,2023-02-04,2,False
+610,You can throw your mouse away with this keyboard remapping| vim gang,cutbypham,2023-02-07,3,False
+622,[WAYLAND] How to enable mappings with compositor (manual) startup?,pauromateusu,2023-02-17,0,False
+624,How do I enable presets at startup?,adriaan35134231451324,2023-02-18,1,False
+643,Using multiple modifiers inside if_tap and modify,rRobis,2023-03-03,1,True
+650,Controlling volume with analog stick,zany130,2023-03-05,1,True
+660,Help inverting a key,JesseCSlater,2023-03-15,1,False
+670,Bursty typist issues,pablos-here,2023-03-27,0,False
+675,v2.0 in Debian Bookworm?,HibGut,2023-03-30,2,False
+678,Hair trigger?,burntbyhellfire,2023-04-02,1,False
+679,2.0 fails on OpenSuse Tumbleweed,KayTaneJupiter,2023-04-03,1,False
+688,Keymap Layering/Shifting with Assigned Key (Like Hypershift in Synapse for Keypads),MicHaeL-MonStaR,2023-04-17,2,False
+693,Output Section as List like Input Section,MicHaeL-MonStaR,2023-04-27,0,False
+696,HowTo Ubuntu 22.04 desktop zoom,mrspirytus,2023-05-01,1,False
+704,Record doesn't pick up Razer Orbweaver,MABowser,2023-05-10,1,False
+713,Razer Tartarus v2 and Steam Deck,Mcdonnellpatrick,2023-05-24,0,False
+722,Multistroke / Repeat Slow Modified Keypress,Myrkskog,2023-06-07,1,False
+724,"Found a Config but seems the format has changed, help please.",KAGEYAM4,2023-06-08,1,True
+726,Key names for dpad directional,ebbisis,2023-06-12,1,False
+734,Leetmouse Integration,Myrkskog,2023-07-05,0,False
+735,+How to Input Unicode Characters in Input Remapper,Lady-Fitzgerald,2023-07-10,6,False
+738,Can't use touchpad's BTN_TOUCH event without breaking touchpad's functionality,hxka,2023-07-12,0,False
+740,Mouse right-click button delay?,rafikiphoto,2023-07-14,5,True
+741,Modifier ignored when playing FF14,Masters2150,2023-07-16,0,False
+748,Key acting as toggle,Fito-wolf,2023-08-09,0,False
+751,Error Request to autoload .. before a user told the service about their session using set_config_dir,KAGEYAM4,2023-08-16,1,True
+759,Can I disable the need for a Password?,MicHaeL-MonStaR,2023-08-27,0,False
+760,Cannot Remap F13 / XF86Tools,montanajava,2023-09-03,1,False
+762,1+1+2+3+4+1 outputs 4321,RickAndTired,2023-09-03,0,False
+782,How can I press 4 keys within a macro?,RickAndTired,2023-10-09,0,False
+784,Using input remapper with an Avupal air mouse,TonyginSLC,2023-10-10,0,False
+791,Hi I am new here and the app doesn't work,ghost,2023-10-23,0,False
+793,Macro for navigate back in browser?,nemanjam,2023-10-26,1,True
+797,Toggle on/off option for Input remapper,mkooner,2023-10-29,0,False
+799,Bottom Trigger key codes,MihinMUD,2023-11-01,1,True
+806,Presets not working with 2.0 update,owenn50,2023-11-10,1,False
+811,"What's ""Video Bus""?",HubKing,2023-11-21,2,False
+817,2.0.1 in Ubuntu,Codyport,2023-12-02,1,False
+824,[Question] Is there anyway to auto start the config/auto apply the rules?,benyaminl,2023-12-16,1,True
+832,Make pause a configurable range that input-remapper randomly selects from,Strykar,2024-01-11,0,False
+834,Resolved,gvimlag,2024-01-15,0,False
+836,Configure system wide,orontee,2024-01-19,0,False
+838,Toggle key,hardbrocklife,2024-01-24,3,False
+843,Change Mapping From Program,abrombo,2024-01-31,0,False
+850,Command line way of switching to an existing preset (eg for a mouse)?,Ultome,2024-02-22,2,False
+852,Export and import Settings,Dnarts,2024-02-24,1,False
+855,How are numpad buttons named?,Sibseven,2024-03-01,1,False
+862,Ignore scroll when modifier is used,mattbatt,2024-03-14,3,False
+864,inject text strings,lucentwolf,2024-03-19,1,False
+867,How to survive a system reboot?,HubKing,2024-03-25,1,True
+871,mouse middle button as right button,rumly111,2024-04-06,1,False
+876,The Startup command in ubuntu,Amr-X,2024-04-23,0,False
+883,"Do I need to do something after system update (i.e., kernel)?",HubKing,2024-05-02,0,False
+887,Detectability/Bannability in games?,TheOverpassArsonist,2024-05-09,0,False
+889,disable original function of the scuf envision  g keys,zany130,2024-05-11,1,True
+890,Mapping a combo involving the dpad disables the dpad for the original controller,zany130,2024-05-12,1,False
+896,Unexpected(?) behavior when remapping CAPS_LOCK to CONTROL_R,ghost,2024-05-23,0,False
+898,Remap Function button,AJeschor,2024-05-25,0,False
+907,Use caps lock (also as) as a modifier,3v1n0,2024-06-15,0,False
+908,Way to execute an action when all input buttons have been released?,sabudum,2024-06-15,2,True
+910,Thank you for this project! Its a big deal for accessibility!,blamarche,2024-06-17,0,False
+916,Drag-lock for trackballs,dr-diem,2024-07-01,0,False
+919,Save and Reload,sk5268,2024-07-05,1,False
+920,Add random number in macro,KvaGram,2024-07-05,0,False
+923,Is there a different input mapper that would work with Steam Deck?,randomname42,2024-07-17,1,False
+947,Double-Click does not work,DerkWehler,2024-08-26,0,False
+950,Need help on Input Remapper,81ginner,2024-09-08,1,False
+961,Two input devices - keyboard and mouse,nemanjam,2024-09-28,1,True
+975,Cost me 2 years to find this amazing app,ForteDexe,2024-10-17,0,False
+985,What version python should I be using?,jmorri11,2024-10-25,1,False
+991,Home row mods and one shot keys,dafzor,2024-10-27,1,False
+995,"Swapping ALT and Control as well as Control + Tab, Control + F4 etc to be triggered from ALT + Tab ... Alt + F4 ... etc",momomo,2024-11-02,0,False
+998,Some thoughts,madprops,2024-11-05,0,False
+1001,Is it possible to use a button for a combo but also by itself?,madprops,2024-11-08,0,False
+1002,Multiple modifiers,madprops,2024-11-08,0,False
+1008,Using the output of a command as action for a remapped key?,cmvizitiu,2024-11-19,1,False
+1012,Windows Copilot Key,karypid,2024-12-09,0,False
+1033,mod_tap or if_single ?,alangomezhuerta,2025-01-05,1,False
+1034,Help with Creating a Macro in InputRemapper to Simultaneously Hold a Key and Mouse Button,northmind,2025-01-09,0,False
+1036,Should the 'autoload' setting auto-save?,user-1-2-3-4-5,2025-01-15,0,False
+1038,Mousebutton toggle,spencereid1,2025-01-21,0,False
+1039,if_tap hold question,urnati,2025-01-23,1,False
+1041,Disabling a device,rdong8,2025-01-24,0,False
+1057,Invert @ and < keys on apple magic keyboard,OLRIK77,2025-02-04,1,False
+1066,Binding keydown and keyup separately,m1neral-rocks,2025-02-18,1,False
+1069,Dell Premier Collaboration Keyboard - KB900. Looking for community interest to hack the zoom and teams touch controls,nomisma-qt,2025-02-27,0,False
+1072,"I want to trigger a key combo on Presses, not after Presses+Release",jackthenewbie,2025-03-02,0,False
+1078,Shift modifier not working in firefox console,dnbence,2025-03-12,0,False
+1090,Feature request: Automate the stopping and resuming of injection when recording a remap.,sabudum,2025-04-13,0,False
+1097,Getting something similar to Space 2 C,offray,2025-04-20,0,False
+1098,Prevent Input mapper keybinds loading at startup?,pookshuman,2025-04-23,1,False
+1100,I need a help with a script,Matuskaa,2025-04-24,1,False
+1104,Is  greater key (>)  available ?,SweetKaktus,2025-05-08,3,False
+1110,is there a way to stop a key?,Deniiguess,2025-06-06,0,False
+1113,Wait and cursor keys,peterfreeth,2025-06-13,0,False
+1116,Help Needed - How to Make Middle Mouse Button a Drag-Lock,cerrec,2025-06-21,6,True
+1117,"How to remap other buttons on keyboard? Those next to the keys. Exp. ""airplane-mode"", ""mute"" etc.",carsten88,2025-06-25,0,False
+1120,Repeat mouse click when button is held,edspark,2025-06-30,2,True
+1121,No captura correctamente la tecla less<,Soul3vans,2025-07-01,0,False
+1122,How to map a key to produce tilde (~)?,javafanboy,2025-07-02,1,False
+1123,One button do different shortcuts per active application?,carsten88,2025-07-07,1,False
+1124,Toggle behavior to turn macro on/off,checkybox,2025-07-09,1,False
+1125,macro to repeat a string of keys while key held,TakeyaSaito,2025-07-13,1,True
+1129,Need help:  SUPER noobie old Mom trying to rebind my Razer Naga,tranquilsea3,2025-07-19,1,False
+1136,How to bind keyboard Up arrow Down arrow Right arrow and Left arrow to my mouse,tranquilsea3,2025-07-28,1,False
+1139,Hold down key until released,d1g1t,2025-08-02,0,False
+1142,Add Provision to Force Use of DeviceType.UNKNOWN Devices,ewhac,2025-08-10,1,False
+1144,Device capabilities.md Thrustmaster MFD2 Cougar pack,ZargosL,2025-08-13,1,False
+1149,L_ALT modifier + Scroll wheel,scrymglin,2025-08-22,0,False
+1157,Key presses interrupting key held down,Larhanya,2025-09-01,2,True
+1159,"Failed to apply preset ""name""",theking2,2025-09-04,0,False
+1160,Remap key press when caps lock is on,siddhpant,2025-09-08,0,False
+1162,kemove 61,theking2,2025-09-17,0,False
+1164,Use remote control to assign keyboard input,lhow,2025-09-19,1,False
+1171,Unable to create a macro / key sequence,fdumptch,2025-09-28,2,False
+1175,Injecting a sequence of keystrokes,peterfreeth,2025-10-04,0,False
+1179,Can i map Dualshock 4 Gyroscope to left analog X axis?,gabichulas,2025-10-10,0,False
+1188,Fix keyboard repeat rate and delay,ekkal,2025-10-22,0,False
+1189,Assign Presets to Programs/Games,adamthegameguy,2025-10-25,1,False
+1208,Horizontal scroll with left shift and mouse wheel,wernerdiers,2025-11-14,1,False
+1213,can't map to nordic letters.,MartinTCode,2025-11-16,1,False
+1214,"[SOLVED] The "" = "" key is inserted into the macro, but then it doesn't work",Eta-Beta,2025-11-18,1,False
+1220,"New mouse: Logitech G502 SE Hero.  Input Remapper not reading the DPI Shift (Button G6), DPI Down (Button G7), DPI Up (Button G8)",tranquilsea3,2025-11-28,1,False
+1223,Turbo Button Functionality,persecom,2025-12-02,0,False
+1224,Razer Naga Mouse wheel tilt,Gahlah,2025-12-06,0,False
+1228,injection not working again on Bazzite.,gothicshark,2025-12-11,1,False
+1229,Only one gamepad uinput?,simonwiles,2025-12-26,0,False
+1240,Trackball scroll,cdarken,2026-01-11,0,False
+1252,How do i assign dpad from virtual gamepad to my keyboard?,Myrukora,2026-02-02,0,False
+1255,"""toggle"" is not a macro",TaiRakasha,2026-02-15,1,True
+1259,Toggle and Auto-Walking in Games,TaiRakasha,2026-02-20,0,False
+1270,Input Remapper Disappeared,MicHaeL-MonStaR,2026-03-18,0,False
+1271,Alternating outputs on same input?,Qaus-Sphene,2026-03-18,0,False
+1272,Turn preset on and off with the same keypress,jackojmi,2026-03-21,1,True
+1277,Curious about handling of unmapped inputs,Juanc1to,2026-03-27,0,False
+1279,Visual indication of a variable,emv33,2026-03-29,0,False
+1283,Ulanzi D100H Custom Mapping for KdenLIVE,simon-anderson,2026-04-10,1,False
+1286,my documentation - hope it help someone,gNosTic-XXX,2026-04-28,0,False
+1287,Can you map only to specific programs/windows?,geextahslex,2026-04-28,1,False
+1295,dependencies,truethug,2026-05-22,0,False
+1298,Wondering if my mouse is supported,Alphay2k,2026-05-26,0,False
+1306,"How can I press two keys at the same time, with a 200-millisecond pause between keystrokes for the second key?",Kharim85,2026-06-04,0,False
+1308,How to cycle a key while holding it?,a584-droid,2026-06-09,0,False
+1320,Thank you for createing this software!,ArtoseAshwood,2026-06-28,1,False
+1323,[Solved] How I used macros to map my keyboard and mouse - separate key bindings,ravmurth,2026-07-05,0,False
+1330,Bug: Analog joystick axes with 0–65535 range are never detected by the recorder,FireRayo,2026-07-18,0,False
+1339,Keyboard to Axis?,GeneralFlaw,2026-07-31,1,False
+1344,"Use ""Generic"" modifiers for hotkeys",My1,2026-08-06,0,False
+1345,Messing with Copilot,My1,2026-08-06,0,False
+1353,Add Support for Racing Wheels with Inverted Analog,Zliquat,2026-08-30,0,False
+1355,Mouse axes to key presses with a threshold,Kzer-Za,2026-09-05,1,True

@@ -1,0 +1,25 @@
+# {{ entry[0].title }}
+
+`{{ entry[0].type }}` · status `{{ entry[0].status }}` · {{ items | length }} evidence items · [Back to the register](../register.md)
+
+{% if entry[0].workaround %}
+**Known error.** Workaround until it is fixed: {{ entry[0].workaround }}
+
+{% endif %}
+{{ entry[0].summary }}
+
+{% if tags %}
+| Facet | Values |
+|---|---|
+{% for t in tags %}
+| {{ t.facet }} | {{ t.vals }} |
+{% endfor %}
+
+{% endif %}
+## Evidence
+
+| Item | State | Title | Summary |
+|---|---|---|---|
+{% for r in items %}
+| [#{{ r.n }}](https://github.com/{{ vars.source }}/issues/{{ r.n }}) | {{ r.state }} | {{ r.title | cell(70) }} | {{ r.summary | cell(200) }} |
+{% endfor %}

@@ -1,8 +1,20 @@
 # Injection fails when the uinput kernel module is not loaded
 
-Status: `open`. 3 items. [Back to registry](../problems.md)
+`problem` · status `open` · 3 evidence items · [Back to the register](../register.md)
 
 Injection fails with "could not open uinput device" when the uinput kernel module is not loaded (reported on Arch and postmarketOS; fixed by running modprobe uinput, sometimes needed after a kernel upgrade). Verified at upstream cb8f5fd: no modprobe, modules-load.d file or troubleshooting note exists in the docs, install scripts, packaging or data/. Candidate PR: ship a modules-load.d entry for uinput with the package and add a troubleshooting note to the README. Not yet tested on a distribution.
+
+| Facet | Values |
+|---|---|
+| change_type | corrective |
+| conf | inferred |
+| dimension | information-technology, partners |
+| effort | small |
+| quality | reliability |
+| risk | low |
+| value | medium |
+
+## Evidence
 
 | Item | State | Title | Summary |
 |---|---|---|---|

@@ -41,3 +41,9 @@ tagging, reading and honesty still hold). These are new, found while rebuilding 
 22. **Group before you plan PRs, and prune before you group.** Checking 2021-era "docs-fix" items against current docs removed four of them (already covered) before any PR was written.
 23. **A push you did not check did not happen.** `fi db push ... | tail -1 && git push` printed a credential hint, the chain continued, and GitHub kept a stale database.
     Never pipe a gating command through `tail`; check its exit status. The server needs `GITHUB_TOKEN` at *start*, not at call time.
+24. **psycopg reads `%` in a query as a placeholder.** `LIKE '%[bot]'` in a SQL file fails once parameters are passed; use `strpos()`.
+25. **Measure before you declare something out of scope.** The first scope note called GitHub Discussions "too sparse to justify". The repository had 221 discussions and about 450 replies.
+26. **`git diff --diff-filter=D` needs `--no-renames`.** Git pairs a deleted file with an added one as a rename, so the "deleted files" list came back empty exactly in the case of a rename.
+27. **Parse hand-written YAML before using it.** An unquoted `: ` inside a value (`processes: how work flows: review`) broke the vocabulary again, one hour after lesson 17. Load the file in Python first.
+28. **A closed pipe is not an error for a read-only command, but is for a writer.** `fi status | head` should stop quietly; `fi db init | head` must not die between a migration and its commit. Tests capture output first.
+29. **A health metric cannot tell busy from gone.** Read activity numbers next to what the maintainer said, and record the risk as an entry with both as evidence.

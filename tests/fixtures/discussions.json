@@ -1,0 +1,4 @@
+[
+ {"number":1,"title":"How do I map a key?","createdAt":"2021-05-01T00:00:00Z","author":{"login":"dave"},"comments":{"totalCount":2},"answer":{"id":"a1"}},
+ {"number":2,"title":"Nobody answered this","createdAt":"2022-05-01T00:00:00Z","author":null,"comments":{"totalCount":0},"answer":null}
+]

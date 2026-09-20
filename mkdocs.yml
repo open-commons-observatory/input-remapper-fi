@@ -9,8 +9,9 @@ theme:
 nav:
   - Home: index.md
   - Coverage: coverage.md
+  - Health: health.md
   - Triage: triage.md
-  - Problems: problems.md
+  - Register: register.md
   - Provenance: provenance.md
 markdown_extensions:
   - tables

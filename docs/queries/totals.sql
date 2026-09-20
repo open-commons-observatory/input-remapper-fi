@@ -1,1 +1,1 @@
-SELECT (SELECT count(*) FROM item) AS items, (SELECT count(*) FROM item WHERE is_pr) AS prs, (SELECT count(*) FROM analysis) AS analysed, (SELECT count(*) FROM tag) AS tags, (SELECT count(*) FROM git_commit) AS commits, (SELECT count(*) FROM problem) AS problems;
+SELECT (SELECT count(*) FROM item) AS items, (SELECT count(*) FROM item WHERE is_pr) AS prs, (SELECT count(*) FROM analysis) AS analysed, (SELECT count(*) FROM tag) AS tags, (SELECT count(*) FROM git_commit) AS commits, (SELECT count(*) FROM register) AS register;

@@ -1,8 +1,20 @@
 # Only a systemd unit ships; no OpenRC, runit or sysv scripts
 
-Status: `open`. 2 items. [Back to registry](../problems.md)
+`problem` · status `open` · 2 evidence items · [Back to the register](../register.md)
 
 Only data/input-remapper.service ships, so the daemon cannot be autostarted on OpenRC, runit or sysv systems (Gentoo, Artix, Alpine, postmarketOS). In #15 the maintainer asked for a PR and community members posted working OpenRC and runit scripts in the thread. Verified at upstream cb8f5fd: no OpenRC, runit or sysv files in the repository. Candidate PR: contributed init scripts plus a README section; needs someone who can test on those systems.
+
+| Facet | Values |
+|---|---|
+| change_type | additive |
+| conf | inferred |
+| dimension | partners |
+| effort | medium |
+| quality | compatibility, flexibility |
+| risk | low |
+| value | medium |
+
+## Evidence
 
 | Item | State | Title | Summary |
 |---|---|---|---|
