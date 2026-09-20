@@ -1,11 +1,11 @@
 name: input-remapper
-title: "input-remapper: problem atlas"
+title: "input-remapper: FOSS Insights"
 tagline: "An evidence-backed, versioned map of the problems reported against sezanzeb/input-remapper, and a queue of pull requests that could close them."
-repo: open-commons-observatory/input-remapper-oco-atlas
+repo: open-commons-observatory/input-remapper-fi
 source:
   repo: sezanzeb/input-remapper
   maintainers: [sezanzeb, jonasBoss]
-database: atlas
+database: fi
 taxonomy: taxonomy.yaml
 pie_facet: pr_potential
 required_facets: [kind, conf]

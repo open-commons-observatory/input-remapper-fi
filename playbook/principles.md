@@ -3,7 +3,7 @@
 The rules the first run followed (or paid for not following), revised for the database-backed method. Every phase refers back to them.
 
 1. **The database is the source of truth.** Generated pages, CSV and indexes are derived: regenerate, never hand-edit.
-2. **Atomic batches.** All manual tagging goes through a batch file applied by `atlas apply`. The whole batch is validated first;
+2. **Atomic batches.** All manual tagging goes through a batch file applied by `fi apply`. The whole batch is validated first;
    one bad line rejects everything and nothing is written. Applied batches are archived in git.
 3. **A controlled vocabulary the database enforces.** A tag is `facet:value`; values outside `taxonomy.yaml` cannot be stored.
    A batch line is the full truth for its item: its previous tags are replaced.

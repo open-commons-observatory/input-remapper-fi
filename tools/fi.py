@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""atlas: acquire -> read -> tag -> validate -> render, on a version-controlled Postgres-compatible
-database (Doltgres). One tool, one config (atlas.yaml), one vocabulary (taxonomy.yaml).
+"""fi: acquire -> read -> tag -> validate -> render, on a version-controlled Postgres-compatible
+database (Doltgres). One tool, one config (fi.yaml), one vocabulary (taxonomy.yaml).
 
-  atlas db up|down|init|pull|push  manage the database server and its copy in GitHub (refs/dolt/data)
-  atlas acquire                  fetch issues, PRs and commits from GitHub into the database
-  atlas next [-n 12]             which unread items come next (state lives in the database)
-  atlas read N [N...]            print threads to read (API, never HTML)
-  atlas apply BATCH.tsv          validate a whole batch, then write it atomically and commit
-  atlas status | check           coverage numbers computed now; quality warnings
-  atlas export                   deterministic CSV of every table into data/ (reviewable on GitHub)
-  atlas render                   render Markdown pages from SQL + templates
-  atlas sql "SELECT ..."         run any SQL (add --commit MSG to record a change)
+  fi db up|down|init|pull|push  manage the database server and its copy in GitHub (refs/dolt/data)
+  fi acquire                  fetch issues, PRs and commits from GitHub into the database
+  fi next [-n 12]             which unread items come next (state lives in the database)
+  fi read N [N...]            print threads to read (API, never HTML)
+  fi apply BATCH.tsv          validate a whole batch, then write it atomically and commit
+  fi status | check           coverage numbers computed now; quality warnings
+  fi export                   deterministic CSV of every table into data/ (reviewable on GitHub)
+  fi render                   render Markdown pages from SQL + templates
+  fi sql "SELECT ..."         run any SQL (add --commit MSG to record a change)
 """
 import argparse, base64, csv, json, os, pathlib, re, shutil, subprocess, sys, time
 import urllib.error, urllib.parse, urllib.request
@@ -32,16 +32,16 @@ TABLE_KEYS = {  # deterministic export order
 
 # ---------------------------------------------------------------- config / connection
 def cfg():
-    c = yaml.safe_load((ROOT / "atlas.yaml").read_text())
-    if os.environ.get("ATLAS_REPO"):
-        c["repo"] = os.environ["ATLAS_REPO"]
-    if os.environ.get("ATLAS_DATABASE"):      # tests use a private database on a shared server
-        c["database"] = os.environ["ATLAS_DATABASE"]
+    c = yaml.safe_load((ROOT / "fi.yaml").read_text())
+    if os.environ.get("FI_REPO"):
+        c["repo"] = os.environ["FI_REPO"]
+    if os.environ.get("FI_DATABASE"):      # tests use a private database on a shared server
+        c["database"] = os.environ["FI_DATABASE"]
     return c
 
 
 def home():
-    return pathlib.Path(os.environ.get("ATLAS_HOME") or pathlib.Path.home() / ".cache" / "oco-atlas" / cfg()["name"])
+    return pathlib.Path(os.environ.get("FI_HOME") or pathlib.Path.home() / ".cache" / "foss-insights" / cfg()["name"])
 
 
 def dsn(dbname):
@@ -63,7 +63,7 @@ def server_up():
 
 
 def die(msg):
-    sys.exit(f"atlas: {msg}")
+    sys.exit(f"fi: {msg}")
 
 
 # ---------------------------------------------------------------- database helpers
@@ -101,7 +101,7 @@ def run_sql_file(conn, path):
 
 
 def taxonomy():
-    t = yaml.safe_load((ROOT / (os.environ.get("ATLAS_TAXONOMY") or cfg().get("taxonomy", "taxonomy.yaml"))).read_text())["facets"]
+    t = yaml.safe_load((ROOT / (os.environ.get("FI_TAXONOMY") or cfg().get("taxonomy", "taxonomy.yaml"))).read_text())["facets"]
     for name, f in t.items():
         for v in f["values"]:
             if not isinstance(v, str):
@@ -178,11 +178,11 @@ def cmd_db_up(a=None):
 
 
 def cmd_db_down(a=None):
-    """Stop the server that `atlas db up` started. Restart it after exporting GITHUB_TOKEN if push or clone needs credentials."""
+    """Stop the server that `fi db up` started. Restart it after exporting GITHUB_TOKEN if push or clone needs credentials."""
     import signal
     pidfile = home() / "server.pid"
     if not pidfile.exists():
-        die(f"no {pidfile}; the server was not started by atlas. Stop the doltgres process yourself.")
+        die(f"no {pidfile}; the server was not started by fi. Stop the doltgres process yourself.")
     try:
         os.kill(int(pidfile.read_text()), signal.SIGTERM)
     except ProcessLookupError:
@@ -235,14 +235,18 @@ def cmd_db_pull(a=None):
 
 def cmd_db_push(a=None):
     with connect() as conn:
-        remotes = [r["name"] for r in conn.execute("SELECT name FROM dolt_remotes").fetchall()]
-        if "origin" not in remotes:
+        urls = {r["name"]: r["url"] for r in conn.execute("SELECT name, url FROM dolt_remotes").fetchall()}
+        if "origin" in urls and urls["origin"].replace("git+", "", 1).rstrip("/") != repo_url().rstrip("/"):
+            print(f"repository address changed: {urls['origin']} -> {repo_url()}")     # e.g. the repo was renamed
+            conn.execute("SELECT dolt_remote('remove', 'origin')")
+            del urls["origin"]
+        if "origin" not in urls:
             conn.execute(sql.SQL("SELECT dolt_remote('add', 'origin', {})").format(sql.Literal(repo_url())))
         try:
             out = conn.execute("SELECT dolt_push('origin', 'main')").fetchone()
         except psycopg.Error as e:
             msg = str(e).splitlines()[0]
-            hint = ("\n  The server was probably started without GITHUB_TOKEN. Export it, then run `atlas db down` and `atlas db up`, and push again."
+            hint = ("\n  The server was probably started without GITHUB_TOKEN. Export it, then run `fi db down` and `fi db up`, and push again."
                     if "Username" in str(e) or "credential" in str(e).lower() else "")
             die(f"database push FAILED, GitHub does not have your latest data: {msg}{hint}")
         print("pushed database to", repo_url())
@@ -252,7 +256,7 @@ def cmd_db_push(a=None):
 # ---------------------------------------------------------------- GitHub API
 def gh(path, params=None):
     url = "https://api.github.com" + path + ("?" + urllib.parse.urlencode(params) if params else "")
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": "oco-atlas"}
+    headers = {"Accept": "application/vnd.github+json", "User-Agent": "foss-insights"}
     if os.environ.get("GITHUB_TOKEN"):
         headers["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
     for attempt in range(4):
@@ -377,7 +381,7 @@ def parse_batch(path, tax, item_ids):
             continue
         n, depth, tags = int(m.group(1)), "full", set()
         if n not in item_ids:
-            errors.append(f"{where}: item #{n} is not in the database (run `atlas acquire`)")
+            errors.append(f"{where}: item #{n} is not in the database (run `fi acquire`)")
         if n in rows:
             errors.append(f"{where}: item #{n} appears twice in this batch")
         for tok in parts[2].split():
@@ -426,7 +430,7 @@ def cmd_apply(a):
     with connect() as conn:
         drift = taxonomy_drift(conn)
         if drift:
-            die("taxonomy.yaml and the database disagree; run `atlas db init` to load the file (or fix the file):\n  " + "\n  ".join(drift[:8]))
+            die("taxonomy.yaml and the database disagree; run `fi db init` to load the file (or fix the file):\n  " + "\n  ".join(drift[:8]))
         if a.batch.endswith(".sql"):
             return apply_sql_batch(conn, a)
         tax = taxonomy_from_db(conn)
@@ -523,7 +527,7 @@ def cmd_sql(a):
 
 # ---------------------------------------------------------------- CLI
 def main():
-    p = argparse.ArgumentParser(prog="atlas", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p = argparse.ArgumentParser(prog="fi", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
     db = sub.add_parser("db", help="database server and its GitHub copy")
     dbs = db.add_subparsers(dest="sub", required=True)

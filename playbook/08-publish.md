@@ -1,9 +1,9 @@
 # 8. Publish
 
 ```bash
-python tools/atlas.py render        # docs/generated/*.md and mkdocs.yml, from SQL files + Jinja templates
-python tools/atlas.py export        # data/*.csv, primary-key sorted, reviewable in a pull request
-python tools/atlas.py db push       # the database itself, into refs/dolt/data
+python tools/fi.py render        # docs/generated/*.md and mkdocs.yml, from SQL files + Jinja templates
+python tools/fi.py export        # data/*.csv, primary-key sorted, reviewable in a pull request
+python tools/fi.py db push       # the database itself, into refs/dolt/data
 git add -A && git commit -m "regenerate" && git push
 ```
 

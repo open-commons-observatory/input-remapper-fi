@@ -1,4 +1,4 @@
--- OCO Atlas core schema (Postgres dialect, runs on Doltgres). Each statement ends with ';' at end of line.
+-- FOSS Insights core schema (Postgres dialect, runs on Doltgres). Each statement ends with ';' at end of line.
 -- The vocabulary lives in tables so the database itself refuses a tag that is not in the taxonomy.
 CREATE TABLE facet (
   name  text PRIMARY KEY,

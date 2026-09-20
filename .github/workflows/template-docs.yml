@@ -1,0 +1,59 @@
+name: Template documentation site
+# Publishes the method (README, playbook, decisions) of THIS template as a website. FI repositories created from the template skip it.
+on:
+  push:
+    branches: [main]
+    paths: ['README.md', 'playbook/**', 'decisions/**', '.github/workflows/template-docs.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages-template
+  cancel-in-progress: true
+jobs:
+  build:
+    if: github.repository == 'open-commons-observatory/foss-insights'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with: { python-version: '3.12', cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Assemble the site sources
+        run: |
+          mkdir -p site-src
+          cp README.md site-src/index.md
+          cp -r playbook site-src/playbook
+          cp -r decisions site-src/decisions
+          cat > mkdocs.yml <<'YML'
+          site_name: FOSS Insights
+          site_description: Business insights for open-source projects
+          repo_url: https://github.com/open-commons-observatory/foss-insights
+          docs_dir: site-src
+          site_dir: _site
+          theme:
+            name: material
+          markdown_extensions:
+            - tables
+            - pymdownx.superfences:
+                custom_fences:
+                  - name: mermaid
+                    class: mermaid
+                    format: !!python/name:pymdownx.superfences.fence_code_format
+          YML
+      - run: zensical build
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with: { path: _site }
+  deploy:
+    needs: build
+    if: github.repository == 'open-commons-observatory/foss-insights'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

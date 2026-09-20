@@ -5,8 +5,8 @@ Items are symptoms; a **problem** is a recurring failure with one root cause and
 `closed`, `wontfix`.
 
 ```bash
-python tools/atlas.py sql "INSERT INTO problem VALUES ('bt-autoload', 'Bluetooth devices are not autoloaded', 'udev fires before the device is ready ...', 'open')"
-python tools/atlas.py sql "INSERT INTO problem_item VALUES ('bt-autoload', 25), ('bt-autoload', 107), ('bt-autoload', 274)" --commit "registry: bt-autoload"
+python tools/fi.py sql "INSERT INTO problem VALUES ('bt-autoload', 'Bluetooth devices are not autoloaded', 'udev fires before the device is ready ...', 'open')"
+python tools/fi.py sql "INSERT INTO problem_item VALUES ('bt-autoload', 25), ('bt-autoload', 107), ('bt-autoload', 274)" --commit "registry: bt-autoload"
 ```
 
 The rendered `problems.md` also lists **actionable items not yet assigned to a problem** (`pr_potential` of `code-fix` or

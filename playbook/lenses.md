@@ -14,7 +14,7 @@ A lens is the purpose you apply to a corpus. Pick the closest, adjust, and decid
 | **Successor comparison** | Which old findings still hold in the successor or fork? | two corpora, one vocabulary, a status facet | side-by-side table | [planned] (schema is single-corpus) |
 | **Design history** | Why is it built this way? | commits in date order; decision-bearing commits | timeline | [planned] (commit analysis) |
 | **Detector input** | How are failures detected; where does measurement mislead? | read for validity, false positives and negatives | notes per detector | [ok] |
-| **Refresh** | What is new since the last run? | none | updated pages | [ok] (`atlas acquire`, then `atlas next`) |
+| **Refresh** | What is new since the last run? | none | updated pages | [ok] (`fi acquire`, then `fi next`) |
 
 `pr_potential` values: `code-fix`, `docs-fix`, `needs-design`, `upstream-dep`, `close-duplicate`, `wontfix`, `unknown`. Assess with
 `conf:inferred` until a maintainer confirms.

@@ -1,8 +1,8 @@
 # 6. Quality and honesty
 
 ```bash
-python tools/atlas.py status     # coverage, computed now
-python tools/atlas.py check      # warnings; add --strict to fail CI on any
+python tools/fi.py status     # coverage, computed now
+python tools/fi.py check      # warnings; add --strict to fail CI on any
 ```
 
 - **Coverage is computed, never recalled.** Any number you state about what was read comes from `status` or the coverage page at
@@ -12,7 +12,7 @@ python tools/atlas.py check      # warnings; add --strict to fail CI on any
 - **Correct in the open.** Fix the row (a new batch line), let the commit history show it, and note the correction in the log.
 - **Trust constraints, not validators that skip things.** The database refuses bad tags; a hand-written checker that "passes"
   because it ignored a malformed token did exactly that once (see [lessons](lessons.md)).
-- **Determinism:** `atlas render` and `atlas export` produce byte-identical output for the same database commit; CI enforces it.
+- **Determinism:** `fi render` and `fi export` produce byte-identical output for the same database commit; CI enforces it.
 
 Before publishing a summary, run a review pass: sample a few items and re-read them against their thread, check the top
 counts by hand, and confirm every generalisation names the items behind it.

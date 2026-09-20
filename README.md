@@ -1,9 +1,9 @@
-# input-remapper-oco-atlas
+# input-remapper-fi
 
-An [OCO Atlas](https://github.com/open-commons-observatory/oco-atlas) of [sezanzeb/input-remapper](https://github.com/sezanzeb/input-remapper):
+An [FOSS Insights](https://github.com/open-commons-observatory/foss-insights) of [sezanzeb/input-remapper](https://github.com/sezanzeb/input-remapper):
 an evidence-backed, versioned map of the problems reported against it, and a queue of pull requests that could close them.
 
-**Read it:** https://open-commons-observatory.github.io/input-remapper-oco-atlas/ (the same pages are readable on GitHub in
+**Read it:** https://open-commons-observatory.github.io/input-remapper-fi/ (the same pages are readable on GitHub in
 [`docs/generated/`](docs/generated/index.md)). Start with [coverage](docs/generated/coverage.md): it says what has and has not been read,
 with numbers computed from the database when the pages were rendered.
 
@@ -18,10 +18,10 @@ with numbers computed from the database when the pages were rendered.
 ```bash
 pip install -r requirements.txt && tools/install-doltgres.sh
 export GITHUB_TOKEN=...                      # environment only
-python tools/atlas.py db pull                # clone the database from this repo
-python tools/atlas.py status                 # where things stand
-python tools/atlas.py next -n 12             # what to read next
-python tools/atlas.py read $(python tools/atlas.py next -n 12)
+python tools/fi.py db pull                # clone the database from this repo
+python tools/fi.py status                 # where things stand
+python tools/fi.py next -n 12             # what to read next
+python tools/fi.py read $(python tools/fi.py next -n 12)
 ```
 
 Then write `batches/00NN-*.tsv`, `atlas apply` it, `atlas db push`, `atlas render`, `atlas export`, commit and push

@@ -2,7 +2,7 @@
 
 # Goal presets
 
-Pick the closest preset, tick its procedures in your copy of [`templates/plan.md`](templates/plan.md), then adjust. `●` = do, `○` = optional, blank = skip.
+Pick the closest preset, tick its procedures in your copy of `templates/plan.md` (v1 only; removed in v2), then adjust. `●` = do, `○` = optional, blank = skip.
 
 | Procedure | G1 Quick landscape | G2 Exhaustive dataset | G3 Rule catalogue | G4 Successor comparison | G5 Design history | G6 Support/docs burden | G7 Detector / oracle input | G8 Refresh an existing analysis | G9 PR triage |
 |---|---|---|---|---|---|---|---|------|

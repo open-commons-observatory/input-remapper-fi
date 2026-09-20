@@ -1,4 +1,4 @@
-# input-remapper: problem atlas
+# input-remapper: FOSS Insights
 
 An evidence-backed, versioned map of the problems reported against sezanzeb/input-remapper, and a queue of pull requests that could close them.
 

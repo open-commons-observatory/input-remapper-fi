@@ -1,5 +1,5 @@
 # Starter vocabulary. A tag is facet:value and only values listed here are accepted by the database.
-# Quote values that YAML would read as booleans (yes/no/on/off): atlas rejects non-string keys.
+# Quote values that YAML would read as booleans (yes/no/on/off): fi rejects non-string keys.
 # page: true generates one page per used value under by/<facet>/<value>.md
 facets:
   kind:

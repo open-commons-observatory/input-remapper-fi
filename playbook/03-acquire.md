@@ -1,8 +1,8 @@
 # 3. Acquire
 
 ```bash
-python tools/atlas.py acquire            # issues + PRs + commits of source.repo
-python tools/atlas.py acquire --items-only
+python tools/fi.py acquire            # issues + PRs + commits of source.repo
+python tools/fi.py acquire --items-only
 ```
 
 Uses the GitHub REST API (never scraped HTML: a scraped page holds only part of a long thread). It is idempotent: re-running
